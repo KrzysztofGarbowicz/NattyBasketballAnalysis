@@ -16,13 +16,11 @@ var svg = d3.select("#my_dataviz")
 d3.csv("data/shot.csv", function(data) {
 
   // List of subgroups = header of the csv files = soil condition here
-  var subgroups = data.columns.slice(1)
-  // svg.append("p")
-  // document.write(subgroups);
+  var subgroups = data.columns.slice(1,-1)
+  // document.write(subgroups)
 
   // List of groups = species here = value of the first column called group -> I show them on the X axis
   var groups = d3.map(data, function(d){return(d.type)}).keys()
-  // document.write(groups)
 
   // Add X axis
   var x = d3.scaleBand()
@@ -43,7 +41,7 @@ d3.csv("data/shot.csv", function(data) {
   // color palette = one color per subgroup
   var color = d3.scaleOrdinal()
     .domain(subgroups)
-    .range(d3.schemeSet2);
+    .range(['#C7EFCF','#FE5F55','#EEF5DB'])
 
   //stack the data? --> stack per subgroup
   var stackedData = d3.stack()
@@ -54,27 +52,39 @@ d3.csv("data/shot.csv", function(data) {
 
 
   // ----------------
-  // Highlight a specific subgroup when hovered
+  // Create a tooltip
   // ----------------
+  var tooltip = d3.select("#my_dataviz")
+    .append("div")
+    .style("opacity", 0)
+    .attr("class", "tooltip")
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "1px")
+    .style("border-radius", "5px")
+    .style("padding", "10px")
+    .style("position", "absolute")
 
-  // What happens when user hover a bar
+  // Three function that change the tooltip when user hover / move / leave a cell
   var mouseover = function(d) {
-    // what subgroup are we hovering?
-    var subgroupName = d3.select(this.parentNode).datum().key; // This was the tricky part
+    var subgroupName = d3.select(this.parentNode).datum().key;
     var subgroupValue = d.data[subgroupName];
-    // Reduce opacity of all rect to 0.2
-    d3.selectAll(".myRect").style("opacity", 0.2)
-    // Highlight all rects of this subgroup with opacity 0.8. It is possible to select them since they have a specific class = their name.
-    d3.selectAll("."+subgroupName)
-      .style("opacity", 1)
-    }
-
-  // When user do not hover anymore
+    tooltip
+        .html(subgroupName + "<br>" + subgroupValue + "/" + (subgroupValue/d.data["sum"]*100).toFixed(2) + "%")
+        .style("opacity", 1)
+  }
+  var mousemove = function(d) {
+    tooltip
+      .style("left", (d3.mouse(this)[0]) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
+      .style("top", (d3.mouse(this)[1]+180) + "px")
+  }
   var mouseleave = function(d) {
-    // Back to normal opacity: 0.8
-    d3.selectAll(".myRect")
-      .style("opacity",0.8)
-    }
+    tooltip
+      .style("opacity", 0)
+  }
+
+
+
 
   // Show the bars
   svg.append("g")
@@ -83,7 +93,6 @@ d3.csv("data/shot.csv", function(data) {
     .data(stackedData)
     .enter().append("g")
       .attr("fill", function(d) { return color(d.key); })
-      .attr("class", function(d){ return "myRect " + d.key }) // Add a class to each subgroup: their name
       .selectAll("rect")
       // enter a second time = loop subgroup per subgroup to add all rectangles
       .data(function(d) { return d; })
@@ -94,6 +103,7 @@ d3.csv("data/shot.csv", function(data) {
         .attr("width",x.bandwidth())
         .attr("stroke", "grey")
       .on("mouseover", mouseover)
+      .on("mousemove", mousemove)
       .on("mouseleave", mouseleave)
 
 })
