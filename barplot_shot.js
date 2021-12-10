@@ -76,7 +76,7 @@ d3.csv("data/shot.csv", function(data) {
   var mousemove = function(d) {
     tooltip
       .style("left", (d3.mouse(this)[0]) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
-      // .style("top", (d.pageY+d3.mouse(this)[1]) + "px")
+      // .style("top", (d3.mouse(this)[1]) + "px")
       // .style("z-index", 1)
   }
   var mouseleave = function(d) {
