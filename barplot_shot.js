@@ -1,16 +1,16 @@
 // set the dimensions and margins of the graph
-var margin = {top: 10, right: 30, bottom: 20, left: 50},
-    width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+var margin_shot = {top: 10, right: 30, bottom: 20, left: 50},
+    width_shot = 460 - margin_shot.left - margin_shot.right,
+    height_shot = 400 - margin_shot.top - margin_shot.bottom;
 
 // append the svg object to the body of the page
-var svg = d3.select("#my_dataviz")
+var svg_shot = d3.select("#shot_dataviz")
   .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("width", width_shot + margin_shot.left + margin_shot.right)
+    .attr("height", height_shot + margin_shot.top + margin_shot.bottom)
   .append("g")
     .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
+          "translate(" + margin_shot.left + "," + margin_shot.top + ")");
 
 // Parse the Data
 d3.csv("data/shot.csv", function(data) {
@@ -25,17 +25,17 @@ d3.csv("data/shot.csv", function(data) {
   // Add X axis
   var x = d3.scaleBand()
       .domain(groups)
-      .range([0, width])
+      .range([0, width_shot])
       .padding([0.2])
-  svg.append("g")
-    .attr("transform", "translate(0," + height + ")")
+  svg_shot.append("g")
+    .attr("transform", "translate(0," + height_shot + ")")
     .call(d3.axisBottom(x).tickSizeOuter(0));
 
   // Add Y axis
   var y = d3.scaleLinear()
     .domain([0, 80000])
-    .range([ height, 0 ]);
-  svg.append("g")
+    .range([ height_shot, 0 ]);
+  svg_shot.append("g")
     .call(d3.axisLeft(y));
 
   // color palette = one color per subgroup
@@ -54,7 +54,7 @@ d3.csv("data/shot.csv", function(data) {
   // ----------------
   // Create a tooltip
   // ----------------
-  var tooltip = d3.select("#my_dataviz")
+  var tooltip = d3.select("#shot_dataviz")
     .append("div")
     .style("opacity", 0)
     .attr("class", "tooltip")
@@ -76,7 +76,8 @@ d3.csv("data/shot.csv", function(data) {
   var mousemove = function(d) {
     tooltip
       .style("left", (d3.mouse(this)[0]) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
-      .style("top", (d3.mouse(this)[1]+180) + "px")
+      // .style("top", (d.pageY+d3.mouse(this)[1]) + "px")
+      // .style("z-index", 1)
   }
   var mouseleave = function(d) {
     tooltip
@@ -87,7 +88,7 @@ d3.csv("data/shot.csv", function(data) {
 
 
   // Show the bars
-  svg.append("g")
+  svg_shot.append("g")
     .selectAll("g")
     // Enter in the stack data = loop key per key = group per group
     .data(stackedData)
