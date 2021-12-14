@@ -1,19 +1,147 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>NBA</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-				
-		<!-- FUNCTIONS -->		
-		<script src="code.js"></script>
-		
-		<!-- STYLE SHEETS -->
-		<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="main.css">
+<!-- template: https://www.w3schools.com/w3css/tryw3css_templates_start_page.htm -->
 
-	</head>
-	<body>
-		<h1 style="font-family: comic sans ms;"><marquee behavior=alternate width="500″ scrollamount="8″ scrolldelay="95″ height="37″ bgcolor="#00FFFF">Natty Basketball Analysis</marquee></h1>
-		<iframe src="https://www.youtube.com/embed/ehecn0bfOhI?autoplay=1" style="opacity:0" frameborder="0"></iframe>
-	</body>
+<html lang="en">
+<title>NattyBasketballAnalysis</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+.circle:hover{
+  stroke: black;
+  stroke-width: 4px;
+  fill: blue;
+}
+html {
+  scroll-behavior: smooth;
+}
+</style>
+
+
+
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 4</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">NattyBasketballAnalysis</h1>
+  <p class="w3-xlarge">Smart analytics of the NBA.</p>
+  <a class="w3-button w3-black w3-padding-large w3-large w3-margin-top" href="#start">Get Started</a>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1 id="start">Substitutions</h1>
+      <form>
+			<label for="team">Select team:</label>
+			<select id="selectTeam" name="team" onchange="switchTeam()">
+				<option value="ATL">ATL</option>
+				<option value="BOS">BOS</option>
+				<option value="BRK">BRK</option>
+				<option value="CHI">CHI</option>
+				<option value="CHO">CHO</option>
+				<option value="CLE">CLE</option>
+				<option value="DAL">DAL</option>
+				<option value="DEN">DEN</option>
+				<option value="DET">DET</option>
+				<option value="GSW">GSW</option>
+				<option value="HOU">HOU</option>
+				<option value="IND">IND</option>
+				<option value="LAC">LAC</option>
+				<option value="LAL">LAL</option>
+				<option value="MEM">MEM</option>
+				<option value="MIA">MIA</option>
+				<option value="MIL">MIL</option>
+				<option value="MIN">MIN</option>
+				<option value="NOP">NOP</option>
+				<option value="NYK">NYK</option>
+				<option value="OKC">OKC</option>
+				<option value="ORL">ORL</option>
+				<option value="PHI">PHI</option>
+				<option value="PHO">PHO</option>
+				<option value="POR">POR</option>
+				<option value="SAC">SAC</option>
+				<option value="SAS">SAS</option>
+				<option value="TOR">TOR</option>
+				<option value="UTA">UTA</option>
+				<option value="WAS">WAS</option>
+			</select>
+			
+		</form>
+		<span>
+			
+			  Zoom: <input type="range" min="0" max="10000" value="5" class="slider" id="fdg_zoom">
+			  x: <input type="range" min="0" max="100" value="50" class="slider" id="fdg_x">
+			  y: <input type="range" min="0" max="100" value="50" class="slider" id="fdg_y">
+		</span>
+		<br>
+		<svg style="border: 10px solid; user-select: none" width="200px" height="200px" id="fdg"></svg>
+		<script src="fdg.js"></script>
+	</div>			
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+      <h1>Point distribution</h1>
+	<p>
+		<label>Select Quarter</label>
+		<select id="selectquarter"></select>
+	</p>
+	<p>
+		<label>bin size</label>
+		<input type="range" min="10" max="70" step="10" value="20" id="nBin">
+	</p>
+	<div id="distribution"></div>
+	<script src="pointdistribution.js"></script>
+  </div>
+</div>
+
+
+<!-- Third Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Bubblemap</h1>
+      <div class="tooltip" id="maptooltip"><br><br></div>
+<svg style="border:solid" id="bubblemap" width="800" height="400"></svg>
+<script src="./bubblemap.js"></script>
+	</div>			
+  </div>
+</div>
+
+
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Knowledge is power.</h1>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+ <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+</body>
 </html>
