@@ -1,7 +1,7 @@
 // set the dimensions and margins of the graph
-var margin = {top: 30, right: 30, bottom: 70, left: 60},
-    width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+var margin = {top: 10, right: 30, bottom: 20, left: 50},
+    width = 660 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
@@ -16,6 +16,12 @@ var svg = d3.select("#my_dataviz")
 d3.csv("data/2_pt_jump_shots/HOU_2pt_jumpshts.csv", function(data) {
 
 var team_range = d3.map(data, function(d) { return d.NumberOfShots; }).keys()
+
+console.log('*' * 100)
+var subgroups = data.columns.slice(1,-1)
+console.log(subgroups)
+console.log('*' * 100)
+
 console.log(team_range)
 console.log('data data data data')
 console.log(data)
