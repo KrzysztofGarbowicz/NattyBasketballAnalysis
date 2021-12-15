@@ -1,7 +1,7 @@
 // set the dimensions and margins of the graph
 var margin = {top: 10, right: 30, bottom: 20, left: 50},
     width = 660 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    height = 450 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
@@ -45,6 +45,7 @@ svg.append("g")
 // Add Y axis
 var y = d3.scaleBand()
     .range([height, 0]) 
+    .ticks(10)
     .domain([0, team_range[0]]);
 svg.append("g")
   .call(d3.axisLeft(y));
@@ -52,14 +53,14 @@ svg.append("g")
 console.log('!!')
 
 // Bars
-svg.selectAll("rect")
+svg.selectAll("teambar_bar")
   .data(data)
   .enter()
   .append("rect")
     .attr("x", function(d) { return x(d.Name); })
     .attr("y", function(d) { return y(d.NumberOfShots); })
     .attr("width", x.bandwidth())
-    .attr("height", function(d) { return y(d.NumberOfShots); })
+    .attr("height", function(d) { return height - y(d.NumberOfShots); })
     .attr("fill", "#69b3a2")
 
 })
