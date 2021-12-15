@@ -2,6 +2,7 @@ var quarter=1
 var binsize=30
 
 // set the dimensions and margins of the graph
+
 var margin = {top: 50, right: 50, bottom: 50, left: 50},
     pd_width = 600 - margin.left - margin.right,
     pd_height = 600 - margin.top - margin.bottom;
@@ -25,7 +26,7 @@ var pd_data = {1: [707, 654, 637, 617, 611, 579, 542, 514, 503, 477, 452, 419, 3
     .append('option')
     .text(function (d) { return d; }) // text showed in the menu
     .attr("value", function (d) { return d; }) // corresponding value returned by the button
-    
+
   // X axis: scale and draw:
   var x = d3.scaleLinear()
       .domain([0, d3.max(pd_data[quarter])])     // can use this instead of 1000 to have the max of data: d3.max(data, function(d) { return +d.price })
@@ -80,12 +81,13 @@ var pd_data = {1: [707, 654, 637, 617, 611, 579, 542, 514, 503, 477, 452, 419, 3
     u
         .exit()
         .remove()
-	
+
     // Add X axis label:
     pd_svg.append("text")
 	    .attr("text-anchor", "end")
 	    .attr("x", pd_width)
 	    .attr("y", pd_height + margin.top)
+
 	    .text("Seconds left");
 
 	// Y axis label:
@@ -95,7 +97,6 @@ var pd_data = {1: [707, 654, 637, 617, 611, 579, 542, 514, 503, 477, 452, 419, 3
 	    .attr("y", -margin.left + 14	)
 	    .attr("x", -margin.top)
 	    .text("Total point scored")
-
     }
     
 
@@ -108,7 +109,7 @@ var pd_data = {1: [707, 654, 637, 617, 611, 579, 542, 514, 503, 477, 452, 419, 3
     binsize=this.value
     update(binsize, quarter);
   });
-  
+
   // Listen to the slider?
   d3.select("#selectquarter").on("change", function(d){
     quarter = this.value
