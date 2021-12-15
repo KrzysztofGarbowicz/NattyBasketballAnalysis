@@ -32,7 +32,7 @@ console.log('data data data data')
 
 // X axis
 var x = d3.scaleBand()
-  .range([ 0, width])
+  .range([ 0, width ])
   .domain(data.map(function(d) { return d.Name; }))
   .padding(0.2);
 svg.append("g")
@@ -49,7 +49,7 @@ var y = d3.scaleBand()
 svg.append("g")
   .call(d3.axisLeft(y));
 
-console.log('$$')
+console.log('!!!!!!!!!!!$$')
 
 // Bars
 svg.selectAll("mybar")
@@ -57,7 +57,7 @@ svg.selectAll("mybar")
   .enter()
   .append("rect")
     .attr("x", function(d) { return x(d.Name); })
-    .attr("y", function(d) { return y(d[1]); })
+    .attr("y", function(d) { return y(d.NumberOfShots); })
     .attr("width", x.bandwidth())
     .attr("height", function(d) { return height - y(d.NumberOfShots); })
     .attr("fill", "#69b3a2")
