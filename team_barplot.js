@@ -36,7 +36,6 @@ var y = d3.scaleLinear()
 svg_team_dataviz.append("g")
   .call(d3.axisLeft(y));
 
-
 // Bars
 svg_team_dataviz.append("g")
   .selectAll("g")
