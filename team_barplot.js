@@ -44,12 +44,12 @@ svg.append("g")
 
 // Add Y axis
 var y = d3.scaleBand()
-    .range([team_range[0], 0]) 
+    .range([height, 0]) 
     .domain([0, team_range[0]]);
 svg.append("g")
   .call(d3.axisLeft(y));
 
-console.log('@!$**$')
+console.log('$**$')
 
 // Bars
 svg.selectAll("mybar")
