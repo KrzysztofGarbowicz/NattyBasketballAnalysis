@@ -37,17 +37,27 @@ svg_team_dataviz.append("g")
   .call(d3.axisLeft(y));
 
 // Bars
-svg_team_dataviz.append("g")
-  .selectAll("g")
-  .data(data)
-  .enter()
-  .append("g")
-    .attr("x", function(d) { return x(d.Country); })
-    .attr("width", x.bandwidth())
-    .attr("fill", "#69b3a2")
-    // no bar at the beginning thus:
-    .attr("height", function(d) { return height - y(0); }) // always equal to 0
-    .attr("y", function(d) { return y(0); })
+svg_team_dataviz.selectAll("g")
+.data(data)
+.enter()
+.append("rect")
+  .attr("x", function(d) { return x(d.Name); })
+  .attr("width", x.bandwidth())
+  .attr("fill", "#69b3a2")
+  // no bar at the beginning thus:
+  .attr("height", function(d) { return height - y(0); }) // always equal to 0
+  .attr("y", function(d) { return y(0); })
+// svg_team_dataviz.append("g")
+//   .selectAll("g")
+//   .data(data)
+//   .enter()
+//   .append("g")
+//     .attr("x", function(d) { return x(d.Country); })
+//     .attr("width", x.bandwidth())
+//     .attr("fill", "#69b3a2")
+//     // no bar at the beginning thus:
+//     .attr("height", function(d) { return height - y(0); }) // always equal to 0
+//     .attr("y", function(d) { return y(0); })
 
 
   // Show the bars
