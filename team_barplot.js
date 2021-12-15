@@ -42,7 +42,7 @@ svg.append("g")
 
 // Add Y axis
 var y = d3.scaleBand()
-    .range([ height, 0]) 
+    .range([ height, team_range]) 
     .domain([0, team_range]);
 svg.append("g")
   .call(d3.axisLeft(y));
