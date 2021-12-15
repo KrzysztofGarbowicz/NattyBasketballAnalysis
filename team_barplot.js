@@ -13,7 +13,7 @@ var svg = d3.select("#my_dataviz")
           "translate(" + margin.left + "," + margin.top + ")");
 
 // Parse the Data
-d3.csv("data\2_pt_jump_shots\HOU_2pt_jumpshts.csv", function(data) {
+d3.csv("data/2_pt_jump_shots/HOU_2pt_jumpshts.csv", function(data) {
 
 var team_range = d3.map(data, function(d) { return d.NumberOfShots; }).keys()
 
