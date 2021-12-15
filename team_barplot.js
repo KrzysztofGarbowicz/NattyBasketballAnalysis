@@ -32,7 +32,7 @@ console.log('data data data data')
 
 // X axis
 var x = d3.scaleBand()
-  .range([ 0, team_range[0] ])
+  .range([ 0, width])
   .domain(data.map(function(d) { return d.Name; }))
   .padding(0.2);
 svg.append("g")
@@ -49,7 +49,7 @@ var y = d3.scaleBand()
 svg.append("g")
   .call(d3.axisLeft(y));
 
-console.log('$**$')
+console.log('$$')
 
 // Bars
 svg.selectAll("mybar")
