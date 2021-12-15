@@ -13,9 +13,11 @@ var svg_team_dataviz = d3.select("#team_dataviz")
           "translate(" + margin_team_viz.left + "," + margin_team_viz.top + ")");
 
 // Parse the Data
-d3.csv("data\2 pt layups\HOU_2pt_layups.csv", function(data) {
+d3.csv("data\2_pt_jump_shots\HOU_2pt_jumpshts.csv", function(data) {
 
 var groups = d3.map(data, function(d) { return d.Name; }).keys()
+
+console.log(typeof groups == 'object')
 
 // X axis
 var x = d3.scaleBand()
