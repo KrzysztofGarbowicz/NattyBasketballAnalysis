@@ -47,8 +47,6 @@ var y = d3.scaleBand()
 svg.append("g")
   .call(d3.axisLeft(y));
 
-console.log('change')
-
 // Bars
 svg.selectAll("mybar")
   .data(data.keys(subgroups))
