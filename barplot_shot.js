@@ -1,10 +1,11 @@
 // set the dimensions and margins of the graph
 var margin_shot = {top: 10, right: 30, bottom: 20, left: 50},
-    width_shot = 460 - margin_shot.left - margin_shot.right,
+    width_shot = 660 - margin_shot.left - margin_shot.right,
     height_shot = 400 - margin_shot.top - margin_shot.bottom;
 
 // append the svg object to the body of the page
 var svg_shot = d3.select("#shot_dataviz")
+    // .append("div")
   .append("svg")
     .attr("width", width_shot + margin_shot.left + margin_shot.right)
     .attr("height", height_shot + margin_shot.top + margin_shot.bottom)
@@ -58,25 +59,26 @@ d3.csv("data/shot.csv", function(data) {
     .append("div")
     .style("opacity", 0)
     .attr("class", "tooltip")
-    .style("background-color", "white")
-    .style("border", "solid")
-    .style("border-width", "1px")
-    .style("border-radius", "5px")
-    .style("padding", "10px")
-    .style("position", "absolute")
+    // .style("background-color", "white")
+    // .style("border", "solid")
+    // .style("border-width", "1px")
+    // .style("border-radius", "5px")
+    // .style("padding", "10px")
+    // .style("position", "absolute")
 
   // Three function that change the tooltip when user hover / move / leave a cell
   var mouseover = function(d) {
     var subgroupName = d3.select(this.parentNode).datum().key;
     var subgroupValue = d.data[subgroupName];
     tooltip
-        .html(subgroupName + "<br>" + subgroupValue + "/" + (subgroupValue/d.data["sum"]*100).toFixed(2) + "%")
+        .html("Miss or make: " + subgroupName + "<br>" + "Shots: "+subgroupValue + " / Ratio: " + (subgroupValue/d.data["sum"]*100).toFixed(2) + "%")
         .style("opacity", 1)
   }
   var mousemove = function(d) {
     tooltip
-      .style("left", (d3.mouse(this)[0]) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
-      // .style("top", (d3.mouse(this)[1]) + "px")
+    .style("position", "absolute")
+      // .style("left", (d3.mouse(this)[0]) + width_shot -60 + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
+      // .style("top", (d3.mouse(this)[1]) - height_shot + "px")
       // .style("z-index", 1)
   }
   var mouseleave = function(d) {

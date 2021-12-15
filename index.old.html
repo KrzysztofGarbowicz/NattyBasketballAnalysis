@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>NBA</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+
+		<!-- FUNCTIONS -->
+		<script src="code.js"></script>
+		<script src="https://d3js.org/d3.v4.js"></script>
+		<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3-scale-radial.js"></script>
+
+		<!-- STYLE SHEETS -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="main.css">
+
+	</head>
+	<body>
+
+		<h1 style="font-family: comic sans ms;"><marquee behavior=alternate width="500″ scrollamount="8″ scrolldelay="95″ height="37″ bgcolor="#00FFFF">Natty Basketball Analysis</marquee></h1>
+		<!-- <iframe src="https://www.youtube.com/embed/ehecn0bfOhI?autoplay=1" style="opacity:0" frameborder="0"></iframe> -->
+		<!-- <a href="players.html">players</a> -->
+		<h2 style="font-family: comic sans ms;">Make/Miss for each shot type</h2>
+		<div id="shot_dataviz"></div>
+		<!-- <script src="circular_intensity.js"></script> -->
+		<script src="barplot_shot.js"></script>
+		<h2 style="font-family: comic sans ms;">Intensity analysis*</h2>
+		<div id="intensity_dataviz"></div>
+		<script src="circular_intensity.js"></script>
+		<p>* The intensity is calculated by the mean attempts (makes and misses).</p>
+		<h2 style="font-family: comic sans ms;">The height and weight grouped by positions</h2>
+		<div id="player_dataviz"></div>
+		<!-- <script src="circular_intensity.js"></script> -->
+		<script src="scatter_player.js"></script>
+	</body>
+</html>
