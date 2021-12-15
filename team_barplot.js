@@ -17,6 +17,10 @@ d3.csv("data/2_pt_jump_shots/HOU_2pt_jumpshts.csv", function(data) {
 
 var team_range = d3.map(data, function(d) { return d.NumberOfShots; }).keys()
 
+console.log('data data data data')
+console.log(data)
+console.log('data data data data')
+
 
 // X axis
 var x = d3.scaleBand()
