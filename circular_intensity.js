@@ -14,8 +14,8 @@ var svg_inten = d3.select("#intensity_dataviz")
     .attr("transform", "translate(" + (width_inten / 2 + margin_inten.left) + "," + (height_inten / 2 + margin_inten.top-30) + ")");
 
 // Scales
-
-function update(selectedVar) {
+function intenUpdate(selectedVar) {
+    // function update(selectedVar) {
     d3.csv("data/intensity_move_.csv", function(data) {
 
       // Scales
@@ -78,6 +78,7 @@ function update(selectedVar) {
             .attr("alignment-baseline", "middle")
 
     })
+// }
 }
 // Initialize plot
-update('move')
+intenUpdate('move')
