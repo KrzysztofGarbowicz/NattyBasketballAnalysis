@@ -47,6 +47,8 @@ var y = d3.scaleBand()
 svg.append("g")
   .call(d3.axisLeft(y));
 
+console.log('change!!!')
+
 // Bars
 svg.selectAll("mybar")
   .data(data.keys(subgroups))
@@ -58,7 +60,7 @@ svg.selectAll("mybar")
         return x(d.Name); })
     .attr("y", function(d) { return y(d[1]); })
     .attr("width", x.bandwidth())
-    .attr("height", function(d) { return y(d.NumberOfShots); })
+    .attr("height", function(d) { return y(d[0]) - y(d[1]); })
     .attr("fill", "#69b3a2")
 
 })
