@@ -49,7 +49,7 @@ var y = d3.scaleBand()
 svg.append("g")
   .call(d3.axisLeft(y));
 
-console.log('o!')
+console.log('o!aa')
 
 // Bars
 svg.selectAll("teambar_bar")
@@ -59,7 +59,7 @@ svg.selectAll("teambar_bar")
     .attr("x", function(d) { return x(d.Name.split(' - ')[0]); })
     .attr("y", function(d) { return y(d.NumberOfShots); })
     .attr("width", x.bandwidth())
-    .attr("height", function(d) { return height - y(d.NumberOfShots); })
+    .attr("height", function(d) { return y(d.NumberOfShots); })
     .attr("fill", "#69b3a2")
 
 })
