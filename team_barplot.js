@@ -19,7 +19,7 @@ var team_range = d3.map(data, function(d) { return d.NumberOfShots; }).keys()
 
 console.log('*' * 100)
 var subgroups = data.columns.slice(1,-1)
-console.log(subgroups)
+console.log(subgroups)       
 console.log('*' * 100)
 
 console.log(team_range)
@@ -49,7 +49,7 @@ svg.append("g")
 
 // Bars
 svg.selectAll("mybar")
-  .data(data)
+  .data(data.keys(subgroups))
   .enter()
   .append("rect")
     .attr("x", function(d) { 
