@@ -49,10 +49,11 @@ var y = d3.scaleBand()
 svg.append("g")
   .call(d3.axisLeft(y));
 
-console.log('??$$')
+console.log('??')
 
 // Bars
-svg.selectAll("rect")
+svg.append("g")
+  .selectAll("g")
   .data(data, function(d) { return d; })
   .enter()
   .append("rect")
