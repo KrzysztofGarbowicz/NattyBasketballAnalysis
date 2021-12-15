@@ -23,6 +23,8 @@ console.log(subgroups)
 console.log('*' * 100)
 
 console.log(team_range)
+console.log('-----------------')
+console.log(team_range[0])
 console.log('data data data data')
 console.log(data)
 console.log('data data data data')
