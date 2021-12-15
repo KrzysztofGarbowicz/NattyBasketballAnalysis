@@ -45,7 +45,7 @@ svg.selectAll("mybar")
     .attr("x", function(d) { return x(d.Name); })
     .attr("y", function(d) { return y(d.NumberOfShots); })
     .attr("width", x.bandwidth())
-    .attr("height", function(d) { return height - y(d.Value); })
+    .attr("height", function(d) { return height - y(d.NumberOfShots); })
     .attr("fill", "#69b3a2")
 
 })
