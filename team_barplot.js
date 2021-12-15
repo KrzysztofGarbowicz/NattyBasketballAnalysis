@@ -4,7 +4,7 @@ var margin_team_viz = {top: 10, right: 30, bottom: 90, left: 40},
     height_team_viz = 450 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
-var svg = d3.select("#team_dataviz")
+var svg_team_dataviz = d3.select("#team_dataviz")
   .append("svg")
     .attr("width", width_team_viz + margin_team_viz.left + margin_team_viz.right)
     .attr("height", height_team_viz + margin_team_viz.top + margin_team_viz.bottom)
@@ -22,7 +22,7 @@ var x = d3.scaleBand()
     .domain(groups)
     .range([ 0, width_team_viz ])
     .padding(0.2);
-svg.append("g")
+svg_team_dataviz.append("g")
   .attr("transform", "translate(0," + height_team_viz + ")")
   .call(d3.axisBottom(x))
 //   .selectAll("text")
@@ -33,12 +33,12 @@ svg.append("g")
 var y = d3.scaleLinear()
   .domain([0, 13000])
   .range([ height_team_viz, 0]);
-svg.append("g")
+svg_team_dataviz.append("g")
   .call(d3.axisLeft(y));
 
 
 // Bars
-svg_shot.append("g")
+svg_team_dataviz.append("g")
   .selectAll("g")
   .data(data)
   .enter()
