@@ -34,16 +34,16 @@ var x = d3.scaleBand()
   .domain(data.map(function(d) { return d.Name; }))
   .padding(0.2);
 svg.append("g")
-  .attr("transform", "translate(0," + height + ")")
   .call(d3.axisBottom(x))
+  .attr("transform", "translate(0," + height + ")")
   .selectAll("text")
     .attr("transform", "translate(-10,0)rotate(-45)")
     .style("text-anchor", "end");
 
 // Add Y axis
-var y = d3.scaleLinear()
-  .domain([0, team_range])
-  .range([ height, 0]);
+var y = d3.scaleBand()
+    .range([ height, 0]) 
+    .domain([0, team_range]);
 svg.append("g")
   .call(d3.axisLeft(y));
 
@@ -56,9 +56,9 @@ svg.selectAll("mybar")
         console.log('ddddddddddddddd')
         console.log(d)
         return x(d.Name); })
-    .attr("y", function(d) { return y(team_range); })
+    .attr("y", function(d) { return y(d[1]); })
     .attr("width", x.bandwidth())
-    .attr("height", function(d) { return height - y(d.NumberOfShots); })
+    .attr("height", function(d) { return y(d.NumberOfShots); })
     .attr("fill", "#69b3a2")
 
 })
