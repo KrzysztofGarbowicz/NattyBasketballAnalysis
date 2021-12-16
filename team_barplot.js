@@ -96,7 +96,7 @@ svg.append("g")
     .style("text-anchor", "end");
 
 // Add Y axis
-var y = d3.scaleBand()
+var y = d3.scaleLinear()
   .domain([0, team_range[0]])
   .range([ height, 0]);
 svg.append("g")
