@@ -119,6 +119,11 @@ folderMenu.data(selectFolder)
             return d;
         })
 
+
+console.log('***********')
+console.log(d3.select("#MyselectFolder").property())
+console.log(d3.select("#MyselectTeam").node().value)
+console.log('***********')
 // Parse the Data
 d3.csv("data/2_pt_jump_shots/HOU_2pt_jumpshts.csv", function(data) {
 
