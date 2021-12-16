@@ -46,6 +46,9 @@ teamMenu.data(selectTeam)
 var selectFolder = ["3ptrs", "2pt_jumpshts", "2pt_hookshts", "2pt_layups", "dunks"]
 var folderMenu = d3.select("#MyselectFolder")
 
+var selectedFolder = "3ptrs"
+var selectedTeam = "HOU"
+
 folderMenu.data(selectFolder)
         .append("select")
         .selectAll("option")
@@ -60,25 +63,25 @@ folderMenu.data(selectFolder)
         })
 
 teamMenu.on('change', function(){
-    var selectedTeam = d3.select(this)
+    selectedTeam = d3.select(this)
        .select("select")
        .property("value")
        console.log('***********')
        console.log(selectedTeam)
        console.log('***********')
 
-       drawGraph(teamName=selectedTeam)
+       drawGraph(selectedFolder, selectedTeam)
 });
 
 folderMenu.on('change', function(){
-    var selectedFolder = d3.select(this)
+    selectedFolder = d3.select(this)
        .select("select")
        .property("value")
        console.log('***********')
        console.log(selectedFolder)
        console.log('***********')
 
-       drawGraph(fileName=selectedFolder)
+       drawGraph(selectedFolder, selectedTeam)
 });        
 
 // var teamName = d3.select(teamMenu).on('change').property("value")
@@ -88,7 +91,7 @@ folderMenu.on('change', function(){
 console.log('let\'s see')
 
 // Parse the Data
-var drawGraph = function(fileName = '3ptrs', teamName = 'HOU') {
+var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
     d3.csv(`data/${fileName}/${teamName}_${fileName}.csv`, function(data) {
 
 
