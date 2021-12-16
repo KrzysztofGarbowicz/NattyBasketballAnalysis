@@ -59,7 +59,7 @@ svg.selectAll("rect")
     .attr("x", function(d) { return x(d.Name.split(" - ")[0]); })
     .attr("y", function(d) { return y(d.NumberOfShots); })
     .attr("width", x.bandwidth())
-    .attr("height", function(d) { return y(d.NumberOfShots); })
+    .attr("height", function(d) { return (height/2) - y(d.NumberOfShots); })
     .attr("fill", "#69b3a2")
 
 })
