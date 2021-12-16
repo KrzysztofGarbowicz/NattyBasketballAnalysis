@@ -1,30 +1,30 @@
 // set the dimensions and margins of the graph
-var margin = {top: 10, right: 30, bottom: 60, left: 50},
-    width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+var margin2 = {top: 10, right: 30, bottom: 60, left: 50},
+    width2 = 460 - margin2.left - margin2.right,
+    height2 = 400 - margin2.top - margin2.bottom;
 
 // append the svg object to the body of the page
 var svg2 = d3.select("#my_dataviz2")
   .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("width", width2 + margin2.left + margin2.right)
+    .attr("height", height2 + margin2.top + margin2.bottom)
   .append("g")
     .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
+          "translate(" + margin2.left + "," + margin2.top + ")");
 
 
 // List of Teams
-var selectTeam = ["NOP","TOR","LAL","LAC","CHI",
+var selectTeam2 = ["NOP","TOR","LAL","LAC","CHI",
 "CHO","DET","IND","CLE","ORL","MIN","BRK","MEM",
 "MIA","BOS","PHI","WAS","DAL","NYK","SAS","OKC",
 "UTA","SAC","PHO","DEN","POR","ATL","MIL","HOU","GSW"]
 
 var teamMenu2 = d3.select("#MyselectTeam2")
 
-teamMenu2.data(selectTeam)
+teamMenu2.data(selectTeam2)
         .append("select")
         .selectAll("option")
-        .data(selectTeam)
+        .data(selectTeam2)
        	.enter()
         .append("option")
         .attr("value", function(d){
@@ -37,16 +37,16 @@ teamMenu2.data(selectTeam)
 
 
 // List of groups (here I have one group per column)
-var selectFolder = ["3_Pt_Shots", "2_Pt_Jump_Shots", "2_Pt_Hook_Shots", "2_Pt_Layups", "Dunks"]
+var selectFolder2 = ["3_Pt_Shots", "2_Pt_Jump_Shots", "2_Pt_Hook_Shots", "2_Pt_Layups", "Dunks"]
 var folderMenu2 = d3.select("#MyselectFolder2")
 
 var selectedFolder2 = "2_Pt_Layups"
 var selectedTeam2 = "LAL"
 
-folderMenu2.data(selectFolder)
+folderMenu2.data(selectFolder2)
         .append("select")
         .selectAll("option")
-        .data(selectFolder)
+        .data(selectFolder2)
         .enter()
         .append("option")
         .attr("value", function(d){
