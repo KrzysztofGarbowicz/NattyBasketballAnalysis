@@ -1,9 +1,3 @@
-function updateFile(fileName, teamName) {
-
-}
-
-
-
 // set the dimensions and margins of the graph
 var margin = {top: 10, right: 30, bottom: 60, left: 50},
     width = 660 - margin.left - margin.right,
