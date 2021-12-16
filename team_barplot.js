@@ -140,6 +140,7 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
         .attr("x", function(d) { return x(d.Name); })
         .attr("y", function(d) { return y(d.NumberOfShots); })
         .attr("width", x.bandwidth())
+        .attr("fill", "#69b3a2")
         .style("shape-rendering", "crispEdges")
         // .attr("height", function(d) { return height - y(d.NumberOfShots); })
         // .attr("fill", "#69b3a2")
@@ -154,10 +155,10 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
         .attr("height", function(d) { return height - y(d.NumberOfShots); })
         .delay(function(d,i){console.log(i) ; return(i*100)})
 
-    svg.selectAll("rect")
-        .on('mouseenter', function (actual, i) {
-            d3.select(this).attr('opacity', 0.5)
-        })
+    // svg.selectAll("rect")
+    //     .on('mouseenter', function (actual, i) {
+    //         d3.select(this).attr('opacity', 0.5)
+    //     })
 }
 
 drawGraph() 

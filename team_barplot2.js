@@ -140,15 +140,16 @@ var drawGraph2 = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2
         .attr("x", function(d) { return x2(d.Name); })
         .attr("y", function(d) { return y2(d.NumberOfShots); })
         .attr("width", x2.bandwidth())
+        .attr("fill", "#69b3a2")
         .style("shape-rendering", "crispEdges")
         // .attr("height", function(d) { return height - y2(d.NumberOfShots); })
         // .attr("fill", "#69b3a2")
 
 
-    svg2.selectAll("rect")
-        .on('mouseenter', function (actual, i) {
-            d3.select(this).attr('opacity', 0.5)
-        })
+    // svg2.selectAll("rect")
+    //     .on('mouseenter', function (actual, i) {
+    //         d3.select(this).attr('opacity', 0.5)
+    //     })
 
         // Animation
     svg2.selectAll("rect")
