@@ -65,7 +65,7 @@
 // })
 
 // set the dimensions and margins of the graph
-var margin = {top: 10, right: 30, bottom: 50, left: 50},
+var margin = {top: 10, right: 30, bottom: 60, left: 50},
     width = 660 - margin.left - margin.right,
     height = 550 - margin.top - margin.bottom;
 
@@ -80,6 +80,18 @@ var svg = d3.select("#my_dataviz")
 
 // Parse the Data
 d3.csv("data/2_pt_jump_shots/HOU_2pt_jumpshts.csv", function(data) {
+
+// List of groups (here I have one group per column)
+var allGroup = ["valueA", "valueB", "valueC"]
+
+// add the options to the button
+d3.select("#selectButton")
+   .selectAll('myOptions')
+      .data(allGroup)
+   .enter()
+     .append('option')
+   .text(function (d) { return d; }) // text showed in the menu
+   .attr("value", function (d) { return d; }) // corresponding value returned by the button
 
 var team_range = d3.map(data, function(d) { return d.NumberOfShots; }).keys()
 
