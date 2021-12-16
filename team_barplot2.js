@@ -155,7 +155,7 @@ var drawGraph2 = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2
 
     svg2.selectAll("rect")
     .on('mouseenter', function (actual, i) {
-        d3.select(this).attr(‘opacity’, 0.5)
+        d3.select(this).attr('opacity', 0.5)
     })
 }
 
