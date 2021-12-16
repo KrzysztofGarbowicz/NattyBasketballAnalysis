@@ -104,6 +104,7 @@ var drawGraph2 = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2
       .attr('class', 'title')
       .attr('x', width2)
       .attr('y', 40)
+      .style("font-size", "34px")
       .attr('text-anchor', 'middle')
       .text(teamName2)
 
