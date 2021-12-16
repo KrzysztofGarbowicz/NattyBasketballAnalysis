@@ -96,8 +96,8 @@ svg.append("g")
     .style("text-anchor", "end");
 
 // Add Y axis
-var y = d3.scaleLinear()
-  .domain([0, (team_range[0] + 50) ])
+var y = d3.scaleBand()
+  .domain([0, (team_range[0] + 50)])
   .range([ height, 0]);
 svg.append("g")
   .call(d3.axisLeft(y));
@@ -107,7 +107,7 @@ svg.selectAll("mybar")
   .data(data)
   .enter()
   .append("rect")
-    .attr("x", function(d) { return x(d.Name.split(" - ")[0]); })
+    .attr("x", function(d) { return x(d.Name); })
     .attr("y", function(d) { return y(d.NumberOfShots); })
     .attr("width", x.bandwidth())
     .attr("height", function(d) { return height - y(d.NumberOfShots); })
