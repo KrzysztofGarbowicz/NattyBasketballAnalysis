@@ -99,14 +99,16 @@ var drawGraph2 = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2
             "translate(" + margin2.left + "," + margin2.top + ")");
             
     d3.csv(`data/${fileName2}/${teamName2}_${fileName2}.csv`, function(data2) {
+    
 
+    var title2 = `${fileName2} : ${teamName2}`  
     svg2.append('text')
       .attr('class', 'title')
       .attr('x', width2)
-      .attr('y', 40)
+      .attr('y', 50)
       .style("font-size", "25px")
       .attr('text-anchor', 'middle')
-      .text(teamName2)
+      .text(title2)
 
 
     var team_range2 = d3.map(data2, function(d) { return d.NumberOfShots; }).keys()

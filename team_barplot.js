@@ -100,13 +100,16 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
             
     d3.csv(`data/${fileName}/${teamName}_${fileName}.csv`, function(data) {
 
+
+
+    var title = `${fileName} : ${teamName}`
     svg.append('text')
         .attr('class', 'title')
         .attr('x', width)
-        .attr('y', 40)
+        .attr('y', 50)
         .style("font-size", "25px")
         .attr('text-anchor', 'middle')
-        .text(teamName)
+        .text(title)
 
 
     var team_range = d3.map(data, function(d) { return d.NumberOfShots; }).keys()
