@@ -136,6 +136,14 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
         .attr("fill", "#69b3a2")
 
     })  
+
+    // Animation
+    svg.selectAll("rect")
+        .transition()
+        .duration(800)
+        .attr("y", function(d) { return y(d.NumberOfShots); })
+        .attr("height", function(d) { return height - y(d.NumberOfShots); })
+        .delay(function(d,i){console.log(i) ; return(i*100)})
 }
 
 drawGraph() 
