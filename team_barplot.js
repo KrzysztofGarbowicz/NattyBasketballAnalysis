@@ -85,7 +85,8 @@ d3.csv("data/2_pt_jump_shots/HOU_2pt_jumpshts.csv", function(data) {
 var selectFolder = ["2_pt_hook_shots", "2_pt_jump_shots", "2_pt_layups", "3_ptrs", "Dunks"]
 var folderMenu = d3.select("#MyselectFolder")
 
-folderMenu.append("select")
+folderMenu.data(selectFolder)
+        .append("select")
         .selectAll("option")
         .data(selectFolder)
         .enter()
