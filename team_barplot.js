@@ -120,10 +120,7 @@ folderMenu.data(selectFolder)
         })
 
 
-console.log('***********')
-console.log(d3.select("#MyselectFolder").property())
-console.log(d3.select("#MyselectTeam").node().value)
-console.log('***********')
+
 // Parse the Data
 d3.csv("data/2_pt_jump_shots/HOU_2pt_jumpshts.csv", function(data) {
 
@@ -168,6 +165,11 @@ var y = d3.scaleLinear()
   .range([ height, 0]);
 svg.append("g")
   .call(d3.axisLeft(y));
+
+console.log('***********')
+console.log(d3.select("#MyselectFolder").property())
+console.log(d3.select("#MyselectTeam").node().value)
+console.log('***********')
 
 // Bars
 svg.selectAll("mybar")
