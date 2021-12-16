@@ -72,7 +72,7 @@ folderMenu.on('change', function(){
 });        
 
 // Parse the Data
-d3.csv("data/2_pt_jump_shots/HOU_2pt_jumpshts.csv", function(data) {
+d3.csv("data/2pt_jumpshts/HOU_2pt_jumpshts.csv", function(data) {
 
 
 // add the options to the button
