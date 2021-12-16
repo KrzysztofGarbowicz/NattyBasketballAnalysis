@@ -150,7 +150,7 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
     // Animation
     svg.selectAll("rect")
         .transition()
-        .duration(200)
+        .duration(50)
         .attr("y", function(d) { return y(d.NumberOfShots); })
         .attr("height", function(d) { return height2 - y(d.NumberOfShots); })
 
