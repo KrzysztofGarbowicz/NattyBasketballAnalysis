@@ -1,3 +1,9 @@
+function updateFile(fileName, teamName) {
+
+}
+
+
+
 // set the dimensions and margins of the graph
 var margin = {top: 10, right: 30, bottom: 60, left: 50},
     width = 660 - margin.left - margin.right,
@@ -71,70 +77,70 @@ folderMenu.on('change', function(){
        console.log('***********')
 });        
 
-var teamName = d3.select(teamMenu).property("value")
-var folderName = d3.select(folderMenu).property("value")
+var teamName = d3.select(teamMenu).on('change').property("value")
+var folderName = d3.select(folderMenu).on('change').property("value")
 
-console.log('------------')
-console.log(teamName)
-console.log(folderName)
-console.log('------------')
+
+console.log('let\'s see')
 
 // Parse the Data
-d3.csv("data/2pt_jumpshts/HOU_2pt_jumpshts.csv", function(data) {
+var drawGraph = function(fileName = '3ptrs', teamName = 'HOU') {
+    d3.csv(`data/${fileName}/${teamName}_${fileName}.csv`, function(data) {
 
 
-// add the options to the button
-// d3.select("#selectTeam")
-//    .selectAll('folderOptions')
-//       .data(selectFolder)
-//    .enter()
-//      .append('option')
-//    .text(function (d) { return d; }) // text showed in the menu
-//    .attr("value", function (d) { return d; }) // corresponding value returned by the button
-
-
-
-// add the options to the button
-// d3.select("#selectFolder")
-//    .selectAll('teamOptions')
-//       .data(selectTeam)
-//    .enter()
-//      .append('option')
-//    .text(function (d) { return d; }) // text showed in the menu
-//    .attr("value", function (d) { return d; }) // corresponding value returned by the button
-
-var team_range = d3.map(data, function(d) { return d.NumberOfShots; }).keys()
-
-// X axis
-var x = d3.scaleBand()
-  .range([ 0, width ])
-  .domain(data.map(function(d) { return d.Name; }))
-  .padding(0.2);
-svg.append("g")
-  .attr("transform", "translate(0," + height + ")")
-  .call(d3.axisBottom(x))
-  .selectAll("text")
-    .attr("transform", "translate(-10,0)rotate(-45)")
-    .style("text-anchor", "end");
-
-// Add Y axis
-var y = d3.scaleLinear()
-  .domain([0, (parseInt(team_range[0]) + 20.0) ])
-  .range([ height, 0]);
-svg.append("g")
-  .call(d3.axisLeft(y));
+    // add the options to the button
+    // d3.select("#selectTeam")
+    //    .selectAll('folderOptions')
+    //       .data(selectFolder)
+    //    .enter()
+    //      .append('option')
+    //    .text(function (d) { return d; }) // text showed in the menu
+    //    .attr("value", function (d) { return d; }) // corresponding value returned by the button
 
 
 
-// Bars
-svg.selectAll("mybar")
-  .data(data)
-  .enter()
-  .append("rect")
-    .attr("x", function(d) { return x(d.Name); })
-    .attr("y", function(d) { return y(d.NumberOfShots); })
-    .attr("width", x.bandwidth())
-    .attr("height", function(d) { return height - y(d.NumberOfShots); })
-    .attr("fill", "#69b3a2")
+    // add the options to the button
+    // d3.select("#selectFolder")
+    //    .selectAll('teamOptions')
+    //       .data(selectTeam)
+    //    .enter()
+    //      .append('option')
+    //    .text(function (d) { return d; }) // text showed in the menu
+    //    .attr("value", function (d) { return d; }) // corresponding value returned by the button
 
-})
+    var team_range = d3.map(data, function(d) { return d.NumberOfShots; }).keys()
+
+    // X axis
+    var x = d3.scaleBand()
+      .range([ 0, width ])
+      .domain(data.map(function(d) { return d.Name; }))
+      .padding(0.2);
+    svg.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x))
+      .selectAll("text")
+        .attr("transform", "translate(-10,0)rotate(-45)")
+        .style("text-anchor", "end");
+
+    // Add Y axis
+    var y = d3.scaleLinear()
+      .domain([0, (parseInt(team_range[0]) + 20.0) ])
+      .range([ height, 0]);
+    svg.append("g")
+      .call(d3.axisLeft(y));
+
+
+
+    // Bars
+    svg.selectAll("mybar")
+      .data(data)
+      .enter()
+      .append("rect")
+        .attr("x", function(d) { return x(d.Name); })
+        .attr("y", function(d) { return y(d.NumberOfShots); })
+        .attr("width", x.bandwidth())
+        .attr("height", function(d) { return height - y(d.NumberOfShots); })
+        .attr("fill", "#69b3a2")
+
+    })
+}
