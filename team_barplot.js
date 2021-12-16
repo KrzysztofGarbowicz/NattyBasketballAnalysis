@@ -45,11 +45,11 @@ svg.append("g")
 // Add Y axis
 var y = d3.scaleBand()
     .range([height, 0]) 
-    .domain(d3.extent(data, function(d) {return d.NumberOfShots}));
+    .domain([0, team_range[0]]);
 svg.append("g")
   .call(d3.axisLeft(y));
 
-console.log('aa$$')
+console.log('!aa')
 
 // Bars
 svg.selectAll("rect")
