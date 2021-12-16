@@ -110,7 +110,7 @@ var drawGraph = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2)
       .padding(0.2);
     svg2.append("g")
       .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x))
+      .call(d3.axisBottom(x2))
       .selectAll("text")
         .attr("transform", "translate(-10,0)rotate(-45)")
         .style("text-anchor", "end");
