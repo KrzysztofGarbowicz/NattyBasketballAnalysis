@@ -105,7 +105,7 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
     var title = `${fileName} : ${teamName}`
     svg.append('text')
         .attr('class', 'title')
-        .attr('x', width)
+        .attr('x', width / 2 )
         .attr('y', 30)
         .style("font-size", "25px")
         .attr('text-anchor', 'middle')
