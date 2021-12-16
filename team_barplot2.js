@@ -120,12 +120,12 @@ var drawGraph = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2)
       .domain([0, (parseInt(team_range2[0]) + 20.0) ])
       .range([ height, 0]);
     svg2.append("g")
-      .call(d3.axisLeft(y));
+      .call(d3.axisLeft(y2));
 
 
 
     // Bars
-    svg2.selectAll("mybar")
+    svg2.selectAll("mybar2")
       .data(data)
       .enter()
       .append("rect")
