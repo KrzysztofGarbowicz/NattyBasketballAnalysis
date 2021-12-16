@@ -89,7 +89,7 @@ console.log(names)
 // X axis
 var x = d3.scaleBand()
   .range([ 0, width ])
-  .domain()
+  .domain(names)
   .padding(0.2);
 svg.append("g")
   .attr("transform", "translate(0," + height + ")")
