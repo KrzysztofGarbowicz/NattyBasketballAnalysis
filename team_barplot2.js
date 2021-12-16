@@ -155,7 +155,7 @@ var drawGraph2 = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2
         .transition()
         .duration(800)
         .attr("y", function(d) { return y2(d.NumberOfShots); })
-        .attr("height", function(d) { return height2 - y(d2.NumberOfShots); })
+        .attr("height", function(d) { return height2 - y2(d.NumberOfShots); })
         .delay(function(d,i){console.log(i) ; return(i*100)})
 
     })  
