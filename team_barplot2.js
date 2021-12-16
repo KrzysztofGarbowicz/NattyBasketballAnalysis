@@ -100,6 +100,13 @@ var drawGraph2 = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2
             
     d3.csv(`data/${fileName2}/${teamName2}_${fileName2}.csv`, function(data2) {
 
+    svg2.append('text')
+      .attr('class', 'title')
+      .attr('x', width2)
+      .attr('y', 40)
+      .attr('text-anchor', 'middle')
+      .text(teamName2)
+
 
     var team_range2 = d3.map(data2, function(d) { return d.NumberOfShots; }).keys()
 
@@ -132,7 +139,7 @@ var drawGraph2 = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2
         .attr("x", function(d) { return x2(d.Name); })
         .attr("y", function(d) { return y2(d.NumberOfShots); })
         .attr("width", x2.bandwidth())
-        .attr("height", function(d) { return 0; })
+        .attr("height", function(d) { return height - y2(d.NumberOfShots); })
         .attr("fill", "#69b3a2")
 
 
@@ -145,6 +152,11 @@ var drawGraph2 = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2
         .delay(function(d,i){console.log(i) ; return(i*100)})
 
     })  
+
+    svg2.selectAll("rect")
+    .on('mouseenter', function (actual, i) {
+        d3.select(this).attr(‘opacity’, 0.5)
+    })
 }
 
 drawGraph2() 
