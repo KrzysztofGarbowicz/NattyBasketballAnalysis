@@ -166,10 +166,23 @@ var y = d3.scaleLinear()
 svg.append("g")
   .call(d3.axisLeft(y));
 
-console.log('***********')
-console.log(d3.select("#MyselectFolder").property())
-console.log(d3.select("#MyselectTeam").node().value)
-console.log('***********')
+teamMenu.on('change', function(){
+    var selectedTeam = d3.select(this)
+       .select("select")
+       .property("value")
+       console.log('***********')
+       console.log(selectedTeam)
+       console.log('***********')
+});
+
+folderMenu.on('change', function(){
+    var selectedFolder = d3.select(this)
+       .select("select")
+       .property("value")
+       console.log('***********')
+       console.log(selectedFolder)
+       console.log('***********')
+});
 
 // Bars
 svg.selectAll("mybar")
