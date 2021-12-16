@@ -92,10 +92,10 @@ folderMenu.data(selectFolder)
         .enter()
         .append("option")
         .attr("value", function(d){
-            return d.key;
+            return d;
         })
         .text(function(d){
-            return d.key;
+            return d;
         })
 
 // add the options to the button
@@ -113,20 +113,20 @@ var selectTeam = ["NOP","TOR","LAL","LAC","CHI",
 "MIA","BOS","PHI","WAS","DAL","NYK","SAS","OKC",
 "UTA","SAC","PHO","DEN","POR","ATL","MIL","HOU","GSW"]
 
-// var teamMenu = d3.select("#MyselectTeam")
+var teamMenu = d3.select("#MyselectTeam")
 
-// teamMenu.data(selectTeam)
-//         .append("select")
-//         .selectAll("option")
-//         .data(selectTeam)
-//        	.enter()
-//         .append("option")
-//         .attr("value", function(d){
-//             return d;
-//         })
-//         .text(function(d){
-//             return d;
-//         })
+teamMenu.data(selectTeam)
+        .append("select")
+        .selectAll("option")
+        .data(selectTeam)
+       	.enter()
+        .append("option")
+        .attr("value", function(d){
+            return d;
+        })
+        .text(function(d){
+            return d;
+        })
 
 // add the options to the button
 // d3.select("#selectFolder")
