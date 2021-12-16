@@ -93,7 +93,7 @@ console.log('let\'s see')
 // Parse the Data
 var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
     
-    d3.selectAll("svg > *").remove();
+    d3.selectAll("#my_dataviz > *").remove();
 
     // Create the svg canvas in the "graph" div
     svg = d3.select("#my_dataviz")
