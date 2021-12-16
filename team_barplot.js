@@ -143,21 +143,25 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
         .style("shape-rendering", "crispEdges")
         .attr("height", function(d) { return height - y(d.NumberOfShots); })
         .attr("fill", "#69b3a2")
-    })  
-    
-
-    // Animation
-    svg.selectAll("rect")
         .transition()
         .duration(800)
         .attr("y", function(d) { return y(d.NumberOfShots); })
         .attr("height", function(d) { return height - y(d.NumberOfShots); })
         .delay(function(d,i){console.log(i) ; return(i*100)})
-
-    svg.selectAll("rect")
         .on('mouseenter', function (actual, i) {
             d3.select(this).attr('opacity', 0.5)
         })
+    })  
+    
+
+    // // Animation
+    // svg.selectAll("rect")
+    //     .transition()
+    //     .duration(800)
+    //     .attr("y", function(d) { return y(d.NumberOfShots); })
+    //     .attr("height", function(d) { return height - y(d.NumberOfShots); })
+    //     .delay(function(d,i){console.log(i) ; return(i*100)})
+       
 }
 
 drawGraph() 
