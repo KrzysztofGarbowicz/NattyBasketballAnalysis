@@ -89,27 +89,17 @@ folderMenu.on('change', function(){
 
 
 console.log('let\'s see')
-
+var x = d3.scaleBand()
+var y = d3.scaleLinear()
 // Parse the Data
 var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
-    
-    // Create the svg canvas in the "graph" div
-    svg = d3.select("#my_dataviz")
-    .append("svg")
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-      .attr("transform",
-            "translate(" + margin.left + "," + margin.top + ")");
-            
     d3.csv(`data/${fileName}/${teamName}_${fileName}.csv`, function(data) {
 
 
     var team_range = d3.map(data, function(d) { return d.NumberOfShots; }).keys()
 
     // X axis
-    var x = d3.scaleBand()
-      .range([ 0, width ])
+    x.range([ 0, width ])
       .domain(data.map(function(d) { return d.Name; }))
       .padding(0.2);
     svg.append("g")
@@ -120,13 +110,10 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
         .style("text-anchor", "end");
 
     // Add Y axis
-    var y = d3.scaleLinear()
-      .domain([0, (parseInt(team_range[0]) + 20.0) ])
+    y.domain([0, (parseInt(team_range[0]) + 20.0) ])
       .range([ height, 0]);
     svg.append("g")
       .call(d3.axisLeft(y));
-
-
 
     // Bars
     svg.selectAll("mybar")
