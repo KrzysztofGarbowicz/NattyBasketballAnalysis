@@ -104,7 +104,7 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
         .attr('class', 'title')
         .attr('x', width)
         .attr('y', 40)
-        .style("font-size", "34px")
+        .style("font-size", "25px")
         .attr('text-anchor', 'middle')
         .text(teamName)
 
@@ -140,6 +140,7 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
         .attr("x", function(d) { return x(d.Name); })
         .attr("y", function(d) { return y(d.NumberOfShots); })
         .attr("width", x.bandwidth())
+        .style("shape-rendering", "crispEdges")
         .attr("height", function(d) { return height - y(d.NumberOfShots); })
         .attr("fill", "#69b3a2")
     })  
