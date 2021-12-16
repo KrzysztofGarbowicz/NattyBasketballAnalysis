@@ -85,6 +85,8 @@ var team_range = d3.map(data, function(d) { return d.NumberOfShots; }).keys()
 var names = d3.map(data, function(d) { return d.Name; })
 
 console.log(names)
+console.log(names[0])
+console.log(names[1])
 
 // X axis
 var x = d3.scaleBand()
