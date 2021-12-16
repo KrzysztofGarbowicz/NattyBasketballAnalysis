@@ -86,7 +86,7 @@ var selectFolder = ["2_pt_hook_shots", "2_pt_jump_shots", "2_pt_layups", "3_ptrs
 
 // add the options to the button
 d3.select("#selectFolder")
-   .selectAll('myOptions')
+   .selectAll('folderOptions')
       .data(selectFolder)
    .enter()
      .append('option')
@@ -101,7 +101,7 @@ var selectTeam = ["NOP","TOR","LAL","LAC","CHI",
 
 // add the options to the button
 d3.select("#selectTeam")
-   .selectAll('myOptions')
+   .selectAll('teamOptions')
       .data(selectTeam)
    .enter()
      .append('option')
