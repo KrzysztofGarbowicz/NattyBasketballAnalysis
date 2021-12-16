@@ -74,10 +74,10 @@ folderMenu.on('change', function(){
 var teamName = d3.select(teamMenu).property("value")
 var folderName = d3.select(folderMenu).property("value")
 
-print('------------')
-print(teamName)
-print(folderName)
-print('------------')
+console.log('------------')
+console.log(teamName)
+console.log(folderName)
+console.log('------------')
 
 // Parse the Data
 d3.csv("data/2pt_jumpshts/HOU_2pt_jumpshts.csv", function(data) {
