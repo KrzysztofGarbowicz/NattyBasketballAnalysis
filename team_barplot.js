@@ -148,7 +148,7 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
     
 
     // Animation
-    svg.select("mybar").selectAll("rect")
+    svg.selectAll("rect")
         .transition()
         .duration(800)
         .attr("y", function(d) { return y(d.NumberOfShots); })

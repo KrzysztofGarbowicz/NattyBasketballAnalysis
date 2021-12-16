@@ -136,7 +136,7 @@ var drawGraph2 = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2
     svg2.selectAll("mybar2")
       .data(data2)
       .enter()
-      .append("rect")
+      .append("rect2")
         .attr("x", function(d) { return x2(d.Name); })
         .attr("y", function(d) { return y2(d.NumberOfShots); })
         .attr("width", x2.bandwidth())
@@ -152,7 +152,7 @@ var drawGraph2 = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2
     //     })
 
         // Animation
-    svg2.select("mybar2").selectAll("rect")
+    svg2.selectAll("rect2")
         .transition()
         .duration(800)
         .attr("y", function(d) { return y2(d.NumberOfShots); })
