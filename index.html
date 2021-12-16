@@ -56,8 +56,8 @@ html {
     <div class="w3-twothird">
       <h1 id="start">Substitutions</h1>
       <form>
-			<label for="team">Select team:</label>
-			<select id="selectTeam" name="team" onchange="switchTeam()">
+			<label for="team">div team:</label>
+			<div id="divTeam" name="team" onchange="switchTeam()">
 				<option value="ATL">ATL</option>
 				<option value="BOS">BOS</option>
 				<option value="BRK">BRK</option>
@@ -88,7 +88,7 @@ html {
 				<option value="TOR">TOR</option>
 				<option value="UTA">UTA</option>
 				<option value="WAS">WAS</option>
-			</select>			
+			</div>			
 		</form>
 		<span>
 			  Zoom: <input type="range" min="0" max="10000" value="5" class="slider" id="fdg_zoom">
@@ -96,7 +96,7 @@ html {
 			  y: <input type="range" min="0" max="100" value="50" class="slider" id="fdg_y">
 		</span>
 		<br>
-		<svg style="border: 10px solid; user-select: none" width="200px" height="200px" id="fdg"></svg>
+		<svg style="border: 10px solid; user-div: none" width="200px" height="200px" id="fdg"></svg>
 		<script src="fdg.js"></script>
 	</div>			
 
@@ -108,8 +108,8 @@ html {
   <div class="w3-content">
       <h1>Point distribution</h1>
 	<p>
-		<label>Select Quarter</label>
-		<select id="selectquarter"></select>
+		<label>div Quarter</label>
+		<div id="divquarter"></div>
 	</p>
 	<p>
 		<label>bin size</label>
@@ -141,10 +141,11 @@ html {
   <div class="w3-content">
     <div class="w3-twothird">
         <h1>Some Team Data</h1>
-		<!-- Initialize a select button -->
-		<select id="selectFolder"></select>
+		<!-- Initialize a div button -->
+		<div id="divFolder"></div>
+		<div id="divTeam"></div>
         <div id="my_dataviz"></div>
-		<select id="selectTeam"></select>
+		
 <script src="team_barplot.js"></script>
 	</div>
   </div>
