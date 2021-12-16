@@ -78,34 +78,6 @@ var svg = d3.select("#my_dataviz")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
 
-// Parse the Data
-d3.csv("data/2_pt_jump_shots/HOU_2pt_jumpshts.csv", function(data) {
-
-// List of groups (here I have one group per column)
-var selectFolder = ["2_pt_hook_shots", "2_pt_jump_shots", "2_pt_layups", "3_ptrs", "Dunks"]
-var folderMenu = d3.select("#MyselectFolder")
-
-folderMenu.data(selectFolder)
-        .append("select")
-        .selectAll("option")
-        .data(selectFolder)
-        .enter()
-        .append("option")
-        .attr("value", function(d){
-            return d;
-        })
-        .text(function(d){
-            return d;
-        })
-
-// add the options to the button
-// d3.select("#selectTeam")
-//    .selectAll('folderOptions')
-//       .data(selectFolder)
-//    .enter()
-//      .append('option')
-//    .text(function (d) { return d; }) // text showed in the menu
-//    .attr("value", function (d) { return d; }) // corresponding value returned by the button
 
 // List of Teams
 var selectTeam = ["NOP","TOR","LAL","LAC","CHI",
@@ -127,6 +99,40 @@ teamMenu.data(selectTeam)
         .text(function(d){
             return d;
         })
+
+
+
+// List of groups (here I have one group per column)
+var selectFolder = ["2_pt_hook_shots", "2_pt_jump_shots", "2_pt_layups", "3_ptrs", "Dunks"]
+var folderMenu = d3.select("#MyselectFolder")
+
+folderMenu.data(selectFolder)
+        .append("select")
+        .selectAll("option")
+        .data(selectFolder)
+        .enter()
+        .append("option")
+        .attr("value", function(d){
+            return d;
+        })
+        .text(function(d){
+            return d;
+        })
+
+// Parse the Data
+d3.csv("data/2_pt_jump_shots/HOU_2pt_jumpshts.csv", function(data) {
+
+
+// add the options to the button
+// d3.select("#selectTeam")
+//    .selectAll('folderOptions')
+//       .data(selectFolder)
+//    .enter()
+//      .append('option')
+//    .text(function (d) { return d; }) // text showed in the menu
+//    .attr("value", function (d) { return d; }) // corresponding value returned by the button
+
+
 
 // add the options to the button
 // d3.select("#selectFolder")
