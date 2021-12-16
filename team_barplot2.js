@@ -19,9 +19,9 @@ var selectTeam = ["NOP","TOR","LAL","LAC","CHI",
 "MIA","BOS","PHI","WAS","DAL","NYK","SAS","OKC",
 "UTA","SAC","PHO","DEN","POR","ATL","MIL","HOU","GSW"]
 
-var teamMenu = d3.select("#MyselectTeam2")
+var teamMenu2 = d3.select("#MyselectTeam2")
 
-teamMenu.data(selectTeam)
+teamMenu2.data(selectTeam)
         .append("select")
         .selectAll("option")
         .data(selectTeam)
@@ -38,12 +38,12 @@ teamMenu.data(selectTeam)
 
 // List of groups (here I have one group per column)
 var selectFolder = ["3_Pt_Shots", "2_Pt_Jump_Shots", "2_Pt_Hook_Shots", "2_Pt_Layups", "Dunks"]
-var folderMenu = d3.select("#MyselectFolder2")
+var folderMenu2 = d3.select("#MyselectFolder2")
 
-var selectedFolder = "Dunks"
-var selectedTeam = "HOU"
+var selectedFolder2 = "Dunks"
+var selectedTeam2 = "HOU"
 
-folderMenu.data(selectFolder)
+folderMenu2.data(selectFolder)
         .append("select")
         .selectAll("option")
         .data(selectFolder)
@@ -56,36 +56,36 @@ folderMenu.data(selectFolder)
             return d;
         })
 
-teamMenu.on('change', function(){
-    selectedTeam = d3.select(this)
+teamMenu2.on('change', function(){
+    selectedTeam2 = d3.select(this)
        .select("select")
        .property("value")
-       console.log('***********')
-       console.log(selectedTeam)
-       console.log('***********')
+       console.log('2222222222222')
+       console.log(selectedTeam2)
+       console.log('2222222222222')
 
-       drawGraph(selectedFolder, selectedTeam)
+       drawGraph(selectedFolder2, selectedTeam2)
 });
 
-folderMenu.on('change', function(){
-    selectedFolder = d3.select(this)
+folderMenu2.on('change', function(){
+    selectedFolder2 = d3.select(this)
        .select("select")
        .property("value")
-       console.log('***********')
-       console.log(selectedFolder)
-       console.log('***********')
+       console.log('2222222222222')
+       console.log(selectedFolder2)
+       console.log('2222222222222')
 
-       drawGraph(selectedFolder, selectedTeam)
+       drawGraph(selectedFolder2, selectedTeam2)
 });        
 
 // var teamName = d3.select(teamMenu).on('change').property("value")
 // var folderName = d3.select(folderMenu).on('change').property("value")
 
 
-console.log('let\'s see')
+console.log('let\'s see 2')
 
 // Parse the Data
-var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
+var drawGraph = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2) {
     
     d3.selectAll("#my_dataviz2 > *").remove();
 
@@ -98,13 +98,13 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
       .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
             
-    d3.csv(`data/${fileName}/${teamName}_${fileName}.csv`, function(data) {
+    d3.csv(`data/${fileName2}/${teamName2}_${fileName2}.csv`, function(data) {
 
 
-    var team_range = d3.map(data, function(d) { return d.NumberOfShots; }).keys()
+    var team_range2 = d3.map(data, function(d) { return d.NumberOfShots; }).keys()
 
     // X axis
-    var x = d3.scaleBand()
+    var x2 = d3.scaleBand()
       .range([ 0, width ])
       .domain(data.map(function(d) { return d.Name; }))
       .padding(0.2);
@@ -116,8 +116,8 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
         .style("text-anchor", "end");
 
     // Add Y axis
-    var y = d3.scaleLinear()
-      .domain([0, (parseInt(team_range[0]) + 20.0) ])
+    var y2 = d3.scaleLinear()
+      .domain([0, (parseInt(team_range2[0]) + 20.0) ])
       .range([ height, 0]);
     svg2.append("g")
       .call(d3.axisLeft(y));
@@ -129,10 +129,10 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
       .data(data)
       .enter()
       .append("rect")
-        .attr("x", function(d) { return x(d.Name); })
-        .attr("y", function(d) { return y(d.NumberOfShots); })
-        .attr("width", x.bandwidth())
-        .attr("height", function(d) { return height - y(d.NumberOfShots); })
+        .attr("x", function(d) { return x2(d.Name); })
+        .attr("y", function(d) { return y2(d.NumberOfShots); })
+        .attr("width", x2.bandwidth())
+        .attr("height", function(d) { return height - y2(d.NumberOfShots); })
         .attr("fill", "#69b3a2")
 
     })  
