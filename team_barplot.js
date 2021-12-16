@@ -67,7 +67,7 @@
 // set the dimensions and margins of the graph
 var margin = {top: 10, right: 30, bottom: 20, left: 50},
     width = 660 - margin.left - margin.right,
-    height = 350 - margin.top - margin.bottom;
+    height = 550 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
@@ -97,7 +97,7 @@ svg.append("g")
 
 // Add Y axis
 var y = d3.scaleLinear()
-  .domain([0, (team_range[0] + 60.0) ])
+  .domain([0, (parseInt(team_range[0]) + 60.0) ])
   .range([ height, 0]);
 svg.append("g")
   .call(d3.axisLeft(y));
