@@ -95,6 +95,15 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
     
     d3.selectAll("svg > *").remove();
 
+    // Create the svg canvas in the "graph" div
+    svg = d3.select("#my_dataviz")
+    .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+            
     d3.csv(`data/${fileName}/${teamName}_${fileName}.csv`, function(data) {
 
 
