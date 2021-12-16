@@ -14,7 +14,7 @@ var svg2 = d3.select("#my_dataviz2")
 
 
 // List of Teams
-var selectTeam2 = ["NOP","TOR","LAL","LAC","CHI",
+var selectTeam2 = ["LAL", "NOP","TOR","LAC","CHI",
 "CHO","DET","IND","CLE","ORL","MIN","BRK","MEM",
 "MIA","BOS","PHI","WAS","DAL","NYK","SAS","OKC",
 "UTA","SAC","PHO","DEN","POR","ATL","MIL","HOU","GSW"]

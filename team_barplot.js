@@ -14,10 +14,10 @@ var svg = d3.select("#my_dataviz")
 
 
 // List of Teams
-var selectTeam = ["NOP","TOR","LAL","LAC","CHI",
+var selectTeam = ["HOU", "NOP","TOR","LAL","LAC","CHI",
 "CHO","DET","IND","CLE","ORL","MIN","BRK","MEM",
 "MIA","BOS","PHI","WAS","DAL","NYK","SAS","OKC",
-"UTA","SAC","PHO","DEN","POR","ATL","MIL","HOU","GSW"]
+"UTA","SAC","PHO","DEN","POR","ATL","MIL","GSW"]
 
 var teamMenu = d3.select("#MyselectTeam")
 
@@ -40,7 +40,7 @@ teamMenu.data(selectTeam)
 var selectFolder = ["3_Pt_Shots", "2_Pt_Jump_Shots", "2_Pt_Hook_Shots", "2_Pt_Layups", "Dunks"]
 var folderMenu = d3.select("#MyselectFolder")
 
-var selectedFolder = "Dunks"
+var selectedFolder = "2_Pt_Jump_Shots"
 var selectedTeam = "HOU"
 
 folderMenu.data(selectFolder)
