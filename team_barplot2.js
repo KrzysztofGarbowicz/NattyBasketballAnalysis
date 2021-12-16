@@ -150,10 +150,14 @@ var drawGraph2 = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2
 
 
     svg2.selectAll("rect")
-        .on('mouseenter', function (actual, i) {
-            d3.select(this).attr('opacity', 0.5)
+        .on("mouseover", function (d) {
+          d3.select(this).attr('opacity', 0.5);
+        }).on("mouseout", function (d) {
+          d3.select(this).attr('opacity', 1);
         })
-
+        .on('mouseenter', function (actual, i) {
+          d3.select(this).attr('opacity', 0.5)
+      })
         // Animation
     svg2.selectAll("rect")
         .transition()
@@ -162,7 +166,6 @@ var drawGraph2 = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2
         .attr("height", function(d) { return height2 - y2(d.NumberOfShots); })
 
     })  
-
     
 }
 

@@ -150,8 +150,10 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
         // .attr("fill", "#69b3a2")
     
     svg.selectAll("rect")
-        .on('mouseenter', function (actual, i) {
-            d3.select(this).attr('opacity', 0.5)
+        .on("mouseover", function (d) {
+          d3.select(this).attr('opacity', 0.5);
+        }).on("mouseout", function (d) {
+          d3.select(this).attr('opacity', 1);
         })
 
 
