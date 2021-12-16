@@ -85,7 +85,7 @@ d3.csv("data/2_pt_jump_shots/HOU_2pt_jumpshts.csv", function(data) {
 var selectFolder = ["2_pt_hook_shots", "2_pt_jump_shots", "2_pt_layups", "3_ptrs", "Dunks"]
 
 // add the options to the button
-d3.select("#selectFolder")
+d3.select("#selectTeam")
    .selectAll('folderOptions')
       .data(selectFolder)
    .enter()
@@ -100,9 +100,9 @@ var selectTeam = ["NOP","TOR","LAL","LAC","CHI",
 "UTA","SAC","PHO","DEN","POR","ATL","MIL","HOU","GSW"]
 
 // add the options to the button
-d3.select("#selectTeam")
+d3.select("#selectFolder")
    .selectAll('teamOptions')
-      .data(selectFolder)
+      .data(selectTeam)
    .enter()
      .append('option')
    .text(function (d) { return d; }) // text showed in the menu
