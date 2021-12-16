@@ -45,17 +45,17 @@ svg.append("g")
 // Add Y axis
 var y = d3.scaleBand()
     .range([height, 0]) 
-    .domain([0, team_range[0]]);
+    .domain(d3.extent(data, function(d) {return d.NumberOfShots}));
 svg.append("g")
   .call(d3.axisLeft(y));
 
-console.log('!aa')
+console.log('aa$$')
 
 // Bars
-svg.selectAll("teambar_bar")
-  .data(data)
-  .enter()
-  .append("rect")
+svg.selectAll("rect")
+   .data(data)
+   .enter()
+   .append("rect")
     .attr("x", function(d) { return x(d.Name.split(' - ')[0]); })
     .attr("y", function(d) { return y(d.NumberOfShots); })
     .attr("width", x.bandwidth())
