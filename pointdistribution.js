@@ -27,15 +27,15 @@ var pd_data = {1: [707, 654, 637, 617, 611, 579, 542, 514, 503, 477, 452, 419, 3
     .attr("value", function (d) { return d; }) // corresponding value returned by the button
     
   // X axis: scale and draw:
-  var x = d3.scaleLinear()
-      .domain([0, d3.max(pd_data[quarter])])     // can use this instead of 1000 to have the max of data: d3.max(data, function(d) { return +d.price })
+  var pd_x = d3.scaleLinear()
+      .domain([0,d3.max(pd_data[quarter])])
       .range([0, pd_width]);
   pd_svg.append("g")
       .attr("transform", "translate(0," + pd_height + ")")
-      .call(d3.axisBottom(x));
+      .call(d3.axisBottom(pd_x));
 
   // Y axis: initialization
-  var y = d3.scaleLinear()
+  var pd_y = d3.scaleLinear()
       .range([pd_height, 0]);
   var yAxis = pd_svg.append("g")
 
@@ -45,18 +45,18 @@ var pd_data = {1: [707, 654, 637, 617, 611, 579, 542, 514, 503, 477, 452, 419, 3
     // set the parameters for the histogram
     var histogram = d3.histogram()
         .value(function(d) { return d; })   // I need to give the vector of value
-        .domain(x.domain())  // then the domain of the graphic
-        .thresholds(x.ticks(nBin)); // then the numbers of bins
+        .domain(pd_x.domain())  // then the domain of the graphic
+        .thresholds(pd_x.ticks(nBin)); // then the numbers of bins
 
     // And apply this function to data to get the bins
     var bins = histogram(pd_data[quarter]);
 
     // Y axis: update now that we know the domain
-    y.domain([0, d3.max(bins, function(d) { return d.length; })]);   // d3.hist has to be called before the Y axis obviously
+    pd_y.domain([0, d3.max(bins, function(d) { return d.length; })]);   // d3.hist has to be called before the Y axis obviously
     yAxis
         .transition()
         .duration(1000)
-        .call(d3.axisLeft(y));
+        .call(d3.axisLeft(pd_y));
 
     // Join the rect with the bins data
     var u = pd_svg.selectAll("rect")
@@ -70,9 +70,9 @@ var pd_data = {1: [707, 654, 637, 617, 611, 579, 542, 514, 503, 477, 452, 419, 3
         .transition() // and apply changes to all of them
         .duration(1000)
           .attr("x", 1)
-          .attr("transform", function(d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")"; })
-          .attr("width", function(d) { return x(d.x1) - x(d.x0) -1 ; })
-          .attr("height", function(d) { return pd_height - y(d.length); })
+          .attr("transform", function(d) { return "translate(" + pd_x(d.x0) + "," + pd_y(d.length) + ")"; })
+          .attr("width", function(d) { return pd_x(d.x1) - pd_x(d.x0) -1 ; })
+          .attr("height", function(d) { return pd_height - pd_y(d.length); })
           .style("fill", "#69b3a2")
 
 
