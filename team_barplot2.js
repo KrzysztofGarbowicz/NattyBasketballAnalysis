@@ -123,7 +123,8 @@ var drawGraph2 = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2
       .call(d3.axisBottom(x2))
       .selectAll("text")
         .attr("transform", "translate(-10,0)rotate(-45)")
-        .style("text-anchor", "end");
+        .style("text-anchor", "end")
+        .style("font-size", "10px");
 
     // Add Y axis
     var y2 = d3.scaleLinear()
@@ -148,10 +149,10 @@ var drawGraph2 = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2
         // .attr("fill", "#69b3a2")
 
 
-    // svg2.selectAll("rect")
-    //     .on('mouseenter', function (actual, i) {
-    //         d3.select(this).attr('opacity', 0.5)
-    //     })
+    svg2.selectAll("rect")
+        .on('mouseenter', function (actual, i) {
+            d3.select(this).attr('opacity', 0.5)
+        })
 
         // Animation
     svg2.selectAll("rect")

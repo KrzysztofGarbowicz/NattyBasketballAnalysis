@@ -124,7 +124,8 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
       .call(d3.axisBottom(x))
       .selectAll("text")
         .attr("transform", "translate(-10,0)rotate(-45)")
-        .style("text-anchor", "end");
+        .style("text-anchor", "end")
+        .style("font-size", "10px");
 
     // Add Y axis
     var y = d3.scaleLinear()
@@ -147,6 +148,11 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
         .style("shape-rendering", "crispEdges")
         // .attr("height", function(d) { return height - y(d.NumberOfShots); })
         // .attr("fill", "#69b3a2")
+    
+    svg.selectAll("rect")
+        .on('mouseenter', function (actual, i) {
+            d3.select(this).attr('opacity', 0.5)
+        })
 
 
     // Animation
@@ -160,10 +166,7 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
 
    
 
-    // svg.selectAll("rect")
-    //     .on('mouseenter', function (actual, i) {
-    //         d3.select(this).attr('opacity', 0.5)
-    //     })
+    
 }
 
 drawGraph() 
