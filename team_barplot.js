@@ -66,6 +66,8 @@ teamMenu.on('change', function(){
        console.log('***********')
        console.log(selectedTeam)
        console.log('***********')
+
+       drawGraph(teamName=selectedTeam)
 });
 
 folderMenu.on('change', function(){
@@ -75,6 +77,8 @@ folderMenu.on('change', function(){
        console.log('***********')
        console.log(selectedFolder)
        console.log('***********')
+
+       drawGraph(fileName=selectedFolder)
 });        
 
 // var teamName = d3.select(teamMenu).on('change').property("value")
@@ -87,26 +91,6 @@ console.log('let\'s see')
 var drawGraph = function(fileName = '3ptrs', teamName = 'HOU') {
     d3.csv(`data/${fileName}/${teamName}_${fileName}.csv`, function(data) {
 
-
-    // add the options to the button
-    // d3.select("#selectTeam")
-    //    .selectAll('folderOptions')
-    //       .data(selectFolder)
-    //    .enter()
-    //      .append('option')
-    //    .text(function (d) { return d; }) // text showed in the menu
-    //    .attr("value", function (d) { return d; }) // corresponding value returned by the button
-
-
-
-    // add the options to the button
-    // d3.select("#selectFolder")
-    //    .selectAll('teamOptions')
-    //       .data(selectTeam)
-    //    .enter()
-    //      .append('option')
-    //    .text(function (d) { return d; }) // text showed in the menu
-    //    .attr("value", function (d) { return d; }) // corresponding value returned by the button
 
     var team_range = d3.map(data, function(d) { return d.NumberOfShots; }).keys()
 
@@ -144,3 +128,5 @@ var drawGraph = function(fileName = '3ptrs', teamName = 'HOU') {
 
     })
 }
+
+drawGraph() 
