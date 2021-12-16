@@ -40,7 +40,7 @@ teamMenu2.data(selectTeam2)
 var selectFolder2 = ["3_Pt_Shots", "2_Pt_Jump_Shots", "2_Pt_Hook_Shots", "2_Pt_Layups", "Dunks"]
 var folderMenu2 = d3.select("#MyselectFolder2")
 
-var selectedFolder2 = "2_Pt_Layups"
+var selectedFolder2 = "3_Pt_Shots"
 var selectedTeam2 = "LAL"
 
 folderMenu2.data(selectFolder2)
