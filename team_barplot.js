@@ -132,7 +132,7 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
         .attr("x", function(d) { return x(d.Name); })
         .attr("y", function(d) { return y(d.NumberOfShots); })
         .attr("width", x.bandwidth())
-        .attr("height", function(d) { return height - y(d.NumberOfShots); })
+        .attr("height", function(d) { return 0; })
         .attr("fill", "#69b3a2")
 
     })  
