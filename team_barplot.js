@@ -144,15 +144,18 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
         .style("shape-rendering", "crispEdges")
         // .attr("height", function(d) { return height - y(d.NumberOfShots); })
         // .attr("fill", "#69b3a2")
-    })  
-    
+
 
     // Animation
     svg.selectAll("rect")
         .transition()
-        .duration(50)
+        .duration(800)
         .attr("y", function(d) { return y(d.NumberOfShots); })
         .attr("height", function(d) { return height2 - y(d.NumberOfShots); })
+    })  
+    
+
+   
 
     // svg.selectAll("rect")
     //     .on('mouseenter', function (actual, i) {
