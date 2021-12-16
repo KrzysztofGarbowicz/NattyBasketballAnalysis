@@ -82,7 +82,7 @@ var svg = d3.select("#my_dataviz")
 d3.csv("data/2_pt_jump_shots/HOU_2pt_jumpshts.csv", function(data) {
 
 var team_range = d3.map(data, function(d) { return d.NumberOfShots; }).keys()
-var names = d3.map(data, function(d) { return d.Name; })
+var names = d3.map(data, function(d) { return d.Name; }).keys()
 
 console.log(names)
 console.log(names[0])
