@@ -77,8 +77,8 @@ folderMenu.on('change', function(){
        console.log('***********')
 });        
 
-var teamName = d3.select(teamMenu).on('change').property("value")
-var folderName = d3.select(folderMenu).on('change').property("value")
+// var teamName = d3.select(teamMenu).on('change').property("value")
+// var folderName = d3.select(folderMenu).on('change').property("value")
 
 
 console.log('let\'s see')
