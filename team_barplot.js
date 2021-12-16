@@ -82,16 +82,11 @@ var svg = d3.select("#my_dataviz")
 d3.csv("data/2_pt_jump_shots/HOU_2pt_jumpshts.csv", function(data) {
 
 var team_range = d3.map(data, function(d) { return d.NumberOfShots; }).keys()
-var names = d3.map(data, function(d) { return d.Name; }).keys()
-
-for (let i = 0; i < names.length; i++) {
-    names[i] = names[i].split(" - ")[0]
-}
 
 // X axis
 var x = d3.scaleBand()
   .range([ 0, width ])
-  .domain(names)
+  .domain(data.map(function(d) { return d.Name; }))
   .padding(0.2);
 svg.append("g")
   .attr("transform", "translate(0," + height + ")")
@@ -112,7 +107,7 @@ svg.selectAll("mybar")
   .data(data)
   .enter()
   .append("rect")
-    .attr("x", x(names) )
+    .attr("x", function(d) { return x(d.Name); })
     .attr("y", function(d) { return y(d.NumberOfShots); })
     .attr("width", x.bandwidth())
     .attr("height", function(d) { return height - y(d.NumberOfShots); })
