@@ -92,6 +92,16 @@ console.log('let\'s see')
 
 // Parse the Data
 var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
+    
+    // Create the svg canvas in the "graph" div
+    svg = d3.select("#my_dataviz")
+    .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+            
     d3.csv(`data/${fileName}/${teamName}_${fileName}.csv`, function(data) {
 
 
@@ -129,7 +139,7 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
         .attr("height", function(d) { return height - y(d.NumberOfShots); })
         .attr("fill", "#69b3a2")
 
-    })
+    })  
 }
 
 drawGraph() 
