@@ -86,7 +86,7 @@ var team_range = d3.map(data, function(d) { return d.NumberOfShots; }).keys()
 // X axis
 var x = d3.scaleBand()
   .range([ 0, width ])
-  .domain(data.map(function(d) { return d.Name.split(" - ")[0] }))
+  .domain(data.map(function(d) { return d.Name; }))
   .padding(0.2);
 svg.append("g")
   .attr("transform", "translate(0," + height + ")")
