@@ -98,15 +98,15 @@ var drawGraph = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2)
       .attr("transform",
             "translate(" + margin2.left + "," + margin2.top + ")");
             
-    d3.csv(`data/${fileName2}/${teamName2}_${fileName2}.csv`, function(data) {
+    d3.csv(`data/${fileName2}/${teamName2}_${fileName2}.csv`, function(data2) {
 
 
-    var team_range2 = d3.map(data, function(d) { return d.NumberOfShots; }).keys()
+    var team_range2 = d3.map(data2, function(d) { return d.NumberOfShots; }).keys()
 
     // X axis
     var x2 = d3.scaleBand()
       .range([ 0, width2 ])
-      .domain(data.map(function(d) { return d.Name; }))
+      .domain(data2.map(function(d) { return d.Name; }))
       .padding(0.2);
     svg2.append("g")
       .attr("transform", "translate(0," + height2 + ")")
@@ -126,7 +126,7 @@ var drawGraph = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2)
 
     // Bars
     svg2.selectAll("mybar2")
-      .data(data)
+      .data(data2)
       .enter()
       .append("rect")
         .attr("x", function(d) { return x2(d.Name); })
