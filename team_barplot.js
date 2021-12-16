@@ -102,7 +102,7 @@ var selectTeam = ["NOP","TOR","LAL","LAC","CHI",
 // add the options to the button
 d3.select("#selectTeam")
    .selectAll('teamOptions')
-      .data(selectTeam)
+      .data(selectFolder)
    .enter()
      .append('option')
    .text(function (d) { return d; }) // text showed in the menu
