@@ -79,12 +79,14 @@ var svg = d3.select("#my_dataviz")
           "translate(" + margin.left + "," + margin.top + ")");
 
 // Parse the Data
-d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/7_OneCatOneNum_header.csv", function(data) {
+d3.csv("data/2_pt_jump_shots/HOU_2pt_jumpshts.csv", function(data) {
+
+var team_range = d3.map(data, function(d) { return d.NumberOfShots; }).keys()
 
 // X axis
 var x = d3.scaleBand()
   .range([ 0, width ])
-  .domain(data.map(function(d) { return d.Country; }))
+  .domain(data.map(function(d) { return d.Name; }))
   .padding(0.2);
 svg.append("g")
   .attr("transform", "translate(0," + height + ")")
@@ -95,7 +97,7 @@ svg.append("g")
 
 // Add Y axis
 var y = d3.scaleLinear()
-  .domain([0, 13000])
+  .domain([0, team_range[0]])
   .range([ height, 0]);
 svg.append("g")
   .call(d3.axisLeft(y));
@@ -105,10 +107,10 @@ svg.selectAll("mybar")
   .data(data)
   .enter()
   .append("rect")
-    .attr("x", function(d) { return x(d.Country); })
-    .attr("y", function(d) { return y(d.Value); })
+    .attr("x", function(d) { return x(d.Name); })
+    .attr("y", function(d) { return y(d.NumberOfShots); })
     .attr("width", x.bandwidth())
-    .attr("height", function(d) { return height - y(d.Value); })
+    .attr("height", function(d) { return team_range[0] - y(d.NumberOfShots); })
     .attr("fill", "#69b3a2")
 
 })
