@@ -4,7 +4,7 @@ var margin = {top: 10, right: 30, bottom: 60, left: 50},
     height = 550 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
-var svg = d3.select("#my_dataviz2")
+var svg2 = d3.select("#my_dataviz2")
   .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -90,7 +90,7 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
     d3.selectAll("#my_dataviz2 > *").remove();
 
     // Create the svg canvas in the "graph" div
-    svg = d3.select("#my_dataviz2")
+    svg2 = d3.select("#my_dataviz2")
     .append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
@@ -108,7 +108,7 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
       .range([ 0, width ])
       .domain(data.map(function(d) { return d.Name; }))
       .padding(0.2);
-    svg.append("g")
+    svg2.append("g")
       .attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom(x))
       .selectAll("text")
@@ -119,13 +119,13 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
     var y = d3.scaleLinear()
       .domain([0, (parseInt(team_range[0]) + 20.0) ])
       .range([ height, 0]);
-    svg.append("g")
+    svg2.append("g")
       .call(d3.axisLeft(y));
 
 
 
     // Bars
-    svg.selectAll("mybar")
+    svg2.selectAll("mybar")
       .data(data)
       .enter()
       .append("rect")
