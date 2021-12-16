@@ -148,12 +148,11 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
     
 
     // Animation
-    // svg.selectAll("rect")
-    //     .transition()
-    //     .duration(800)
-    //     .attr("y", function(d) { return y(d.NumberOfShots); })
-    //     .attr("height", function(d) { return height - y(d.NumberOfShots); })
-    //     .delay(function(d,i){console.log(i) ; return(i*100)})
+    svg.selectAll("rect")
+        .transition()
+        .duration(200)
+        .attr("y", function(d) { return y(d.NumberOfShots); })
+        .attr("height", function(d) { return height2 - y(d.NumberOfShots); })
 
     // svg.selectAll("rect")
     //     .on('mouseenter', function (actual, i) {
