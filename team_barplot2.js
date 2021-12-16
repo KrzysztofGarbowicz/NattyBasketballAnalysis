@@ -92,11 +92,11 @@ var drawGraph = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2)
     // Create the svg canvas in the "graph" div
     svg2 = d3.select("#my_dataviz2")
     .append("svg")
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
+      .attr("width", width2 + margin2.left + margin2.right)
+      .attr("height", height2 + margin2.top + margin2.bottom)
     .append("g")
       .attr("transform",
-            "translate(" + margin.left + "," + margin.top + ")");
+            "translate(" + margin2.left + "," + margin2.top + ")");
             
     d3.csv(`data/${fileName2}/${teamName2}_${fileName2}.csv`, function(data) {
 
@@ -105,11 +105,11 @@ var drawGraph = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2)
 
     // X axis
     var x2 = d3.scaleBand()
-      .range([ 0, width ])
+      .range([ 0, width2 ])
       .domain(data.map(function(d) { return d.Name; }))
       .padding(0.2);
     svg2.append("g")
-      .attr("transform", "translate(0," + height + ")")
+      .attr("transform", "translate(0," + height2 + ")")
       .call(d3.axisBottom(x2))
       .selectAll("text")
         .attr("transform", "translate(-10,0)rotate(-45)")
@@ -118,7 +118,7 @@ var drawGraph = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2)
     // Add Y axis
     var y2 = d3.scaleLinear()
       .domain([0, (parseInt(team_range2[0]) + 20.0) ])
-      .range([ height, 0]);
+      .range([ height2, 0]);
     svg2.append("g")
       .call(d3.axisLeft(y2));
 
