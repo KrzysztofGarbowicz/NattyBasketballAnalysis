@@ -155,9 +155,7 @@ var drawGraph2 = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2
         }).on("mouseout", function (d) {
           d3.select(this).attr('opacity', 1);
         })
-        .on('mouseenter', function (actual, i) {
-          d3.select(this).attr('opacity', 0.5)
-      })
+   
         // Animation
     svg2.selectAll("rect")
         .transition()
