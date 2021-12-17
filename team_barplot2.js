@@ -14,10 +14,12 @@ var svg2 = d3.select("#my_dataviz2")
 
 
 // List of Teams
-var selectTeam2 = ["LAL", "NOP","TOR","LAC","CHI",
-"CHO","DET","IND","CLE","ORL","MIN","BRK","MEM",
-"MIA","BOS","PHI","WAS","DAL","NYK","SAS","OKC",
-"UTA","SAC","PHO","DEN","POR","ATL","MIL","HOU","GSW"]
+var selectTeam2 = ['LAL', 'ATL', 'BOS', 'BRK', 'CHI',
+ 'CHO', 'CLE', 'DAL', 'DEN', 'DET',
+  'GSW', 'HOU', 'IND', 'LAC',
+   'MEM', 'MIA', 'MIL', 'MIN', 'NOP',
+    'NYK', 'OKC', 'ORL', 'PHI', 'PHO',
+     'POR', 'SAC', 'SAS', 'TOR', 'UTA', 'WAS']
 
 var teamMenu2 = d3.select("#MyselectTeam2")
 

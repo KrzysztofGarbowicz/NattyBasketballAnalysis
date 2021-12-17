@@ -14,10 +14,12 @@ var foulSvg = d3.select("#my_foul_selection_viz")
 
 
 // List of Teams
-var foulTeams = ["LAL", "NOP","TOR","LAC","CHI",
-"CHO","DET","IND","CLE","ORL","MIN","BRK","MEM",
-"MIA","BOS","PHI","WAS","DAL","NYK","SAS","OKC",
-"UTA","SAC","PHO","DEN","POR","ATL","MIL","HOU","GSW"]
+var foulTeams = ['LAL', 'ATL', 'BOS', 'BRK', 'CHI',
+ 'CHO', 'CLE', 'DAL', 'DEN', 'DET',
+  'GSW', 'HOU', 'IND', 'LAC', 
+   'MEM', 'MIA', 'MIL', 'MIN', 'NOP',
+    'NYK', 'OKC', 'ORL', 'PHI', 'PHO',
+     'POR', 'SAC', 'SAS', 'TOR', 'UTA', 'WAS']
 
 var foulTeamMenu = d3.select("#MyTeamSelection")
 
