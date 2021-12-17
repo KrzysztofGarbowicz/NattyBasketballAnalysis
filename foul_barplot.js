@@ -35,7 +35,6 @@ foulTeamMenu.data(foulTeams)
         })
 
 
-
 // List of groups (here I have one group per column)
 var foulTypeSelection = ["all", "shooting", "offensive", "personal", "loose ball", "technical", "away from play", "personal take", "flagrant", "clear path"]
 var foulTypeMenu = d3.select("#MyFoulSelection")
