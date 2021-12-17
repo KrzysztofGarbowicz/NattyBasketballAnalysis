@@ -146,57 +146,12 @@ html {
 
 <!-- 4th Grid -->
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
-        <h1 style="text-align:center" >Team Performance Comparison</h1>
-		<!-- Initialize a select button -->
-		<div class="float-container">
-			<div class="one" style="text-align:center;float: left;margin-left: 15%; position: relative" id="MyselectFolder"></div>
-			<div class="two" style="text-align:center;float: right;margin-right: 15%; position: relative" id="MyselectTeam"></div>
-		</div>
-        <div id="my_dataviz"></div>
-<script src="team_barplot.js"></script>
-	</div>
-  </div>
-  <div class="w3-content">
-	  <div class="w3-twothird">
-		<h1 style="text-align:center">.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;..&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;.</h1>
-		<!-- Initialize a select button -->
-		<div class="float-container">	
-			<div class="one" style="text-align:center;float:left;margin-left: 15%; position: relative;" id="MyselectFolder2"></div>
-			<div class="two" style="text-align:center;float: right;margin-right: 15%; position: relative" id="MyselectTeam2"></div>
-		</div>
-		<div id="my_dataviz2"></div>
-<script src="team_barplot2.js"></script>
-	  </div>
-  </div>
-</div>
-
-<!-- 4th Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
 	<div class="w3-content">
 	  <div class="w3-twothird">
-		  <h1 style="text-align:center" >Team Foul Comparison</h1>
-		  <!-- Initialize a select button -->
-		  <div class="float-container">
-			  <div class="one" style="text-align:center;float: left;margin-left: 15%; position: relative" id="MyFoulSelection"></div>
-			  <div class="two" style="text-align:center;float: right;margin-right: 15%; position: relative" id="MyTeamSelection"></div>
-		  </div>
-		  <div id="my_foul_selection_viz"></div>
-  <script src="foul_barplot.js"></script>
+		  <h1>Make/Miss for each shot type</h1>
+		  <div id="shot_dataviz"></div>
+  <script src="barplot_shot.js"></script>
 	  </div>
-	</div>
-	<div class="w3-content">
-		<div class="w3-twothird">
-		  <h1 style="text-align:center" >Comparison of Fouled Players</h1>
-		  <!-- Initialize a select button -->
-		  <div class="float-container">	
-			  <div class="one" style="text-align:center;float:left;margin-left: 15%; position: relative;" id="MyFoulSelection2"></div>
-			  <div class="two" style="text-align:center;float: right;margin-right: 15%; position: relative" id="MyTeamSelection2"></div>
-		  </div>
-		  <div id="my_foul_selection_viz2"></div>
-  <script src="foul_barplot2.js"></script>
-		</div>
 	</div>
   </div>
 
@@ -226,6 +181,62 @@ html {
         <p>* The intensity is calculated by the average moves per match, which includes shots, rebounds, turnovers, ball fouls, etc.</p>
 	</div>
   </div>
+</div>
+
+<!-- 7th Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+	<div class="w3-content">
+	  <div class="w3-twothird">
+		  <h1 style="text-align:center" >Team Performance Comparison</h1>
+		  <!-- Initialize a select button -->
+		  <div class="float-container">
+			  <div class="one" style="text-align:center;float: left;margin-left: 15%; position: relative" id="MyselectFolder"></div>
+			  <div class="two" style="text-align:center;float: right;margin-right: 15%; position: relative" id="MyselectTeam"></div>
+		  </div>
+		  <div id="my_dataviz"></div>
+  <script src="team_barplot.js"></script>
+	  </div>
+	</div>
+	<div class="w3-content">
+		<div class="w3-twothird">
+		  <h1 style="text-align:center">.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;..&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;.</h1>
+		  <!-- Initialize a select button -->
+		  <div class="float-container">	
+			  <div class="one" style="text-align:center;float:left;margin-left: 15%; position: relative;" id="MyselectFolder2"></div>
+			  <div class="two" style="text-align:center;float: right;margin-right: 15%; position: relative" id="MyselectTeam2"></div>
+		  </div>
+		  <div id="my_dataviz2"></div>
+  <script src="team_barplot2.js"></script>
+		</div>
+	</div>
+</div>
+  
+<!-- 8th Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+	  <div class="w3-content">
+		<div class="w3-twothird">
+			<h1 style="text-align:center" >Team Foul Comparison</h1>
+			<!-- Initialize a select button -->
+			<div class="float-container">
+				<div class="one" style="text-align:center;float: left;margin-left: 15%; position: relative" id="MyFoulSelection"></div>
+				<div class="two" style="text-align:center;float: right;margin-right: 15%; position: relative" id="MyTeamSelection"></div>
+			</div>
+			<div id="my_foul_selection_viz"></div>
+	<script src="foul_barplot.js"></script>
+		</div>
+	  </div>
+	  <div class="w3-content">
+		  <div class="w3-twothird">
+			<h1 style="text-align:center" >Comparison of Fouled Players</h1>
+			<!-- Initialize a select button -->
+			<div class="float-container">	
+				<div class="one" style="text-align:center;float:left;margin-left: 15%; position: relative;" id="MyFoulSelection2"></div>
+				<div class="two" style="text-align:center;float: right;margin-right: 15%; position: relative" id="MyTeamSelection2"></div>
+			</div>
+			<div id="my_foul_selection_viz2"></div>
+	<script src="foul_barplot2.js"></script>
+		  </div>
+	  </div>
 </div>
 
 

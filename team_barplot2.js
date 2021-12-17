@@ -145,7 +145,7 @@ var drawGraph2 = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2
       .attr("y", 6)
       .attr("dy", ".75em")
       .attr("transform", "translate(-65,-10)rotate(-90)")
-      .text("Successful attempts");
+      .text("Number of executions");
 
 
     // Bars
