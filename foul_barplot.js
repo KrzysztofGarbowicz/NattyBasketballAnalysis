@@ -135,7 +135,7 @@ var drawFoulGraph = function(foulFileName = selectedFoul, foulTeamName = selecte
     // Add Y axis
     var foulY = d3.scaleLinear()
       .domain([0, (parseInt(foulTeamRange[0]) + 20.0) ])
-      .range([0, foul_height])
+      .range([foul_height, 0])
 
     foulSvg.append("g")
       .call(d3.axisLeft(foulY));
