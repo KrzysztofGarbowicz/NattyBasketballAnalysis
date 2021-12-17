@@ -37,10 +37,10 @@ foulTeamMenu.data(foulTeams)
 
 
 // List of groups (here I have one group per column)
-var foulTypeSelection = ["shooting", "offensive", "personal", "loose ball", "technical", "away from play", "personal take", "flagrant", "clear path"]
+var foulTypeSelection = ["", "_shooting", "_offensive", "_personal", "_loose ball", "_technical", "_away from play", "_personal take", "_flagrant", "_clear path"]
 var foulTypeMenu = d3.select("#MyFoulSelection")
 
-var selectedFoul = "shooting"
+var selectedFoul = ""
 var selectedFoulTeam = "LAL"
 
 foulTypeMenu.data(foulTypeSelection)
@@ -98,7 +98,7 @@ var drawFoulGraph = function(foulFileName = selectedFoul, foulTeamName = selecte
       .attr("transform",
             "translate(" + foul_margin.left + "," + foul_margin.top + ")");
             
-    d3.csv(`data/Fouls/${foulTeamName}_${foulFileName}_Fouls.csv`, function(foulData) {
+    d3.csv(`data/Fouls/${foulTeamName}${foulFileName}_Fouls.csv`, function(foulData) {
     
 
     var foulTitle = `${foulFileName} : ${foulTeamName}`  
