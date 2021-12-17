@@ -1,3 +1,11 @@
+/*
+Template 1: https://www.d3-graph-gallery.com/graph/circular_barplot_label.html
+Template 2: https://www.d3-graph-gallery.com/graph/barplot_button_data_csv.html
+
+data: data/intensity.csv
+> created from matchAnalysis.ipynb
+*/
+
 // set the dimensions and margins of the graph
 var margin_inten = {top: 100, right: 0, bottom: 00, left: 0},
     width_inten = 660 - margin_inten.left - margin_inten.right,
@@ -15,8 +23,8 @@ var svg_inten = d3.select("#intensity_dataviz")
 
 // Scales
 function intenUpdate(selectedVar) {
-    // function update(selectedVar) {
-    d3.csv("data/intensity_move_.csv", function(data) {
+    // data is computed and created by
+    d3.csv("data/intensity.csv", function(data) {
 
       // Scales
       var x = d3.scaleBand()
@@ -28,7 +36,7 @@ function intenUpdate(selectedVar) {
           .domain([0, 92]); // Domain of Y is from 0 to the max seen in the data
 
 
-      // svg_inten.clear()
+      // To refreash the graph
       svg_inten.selectAll("path.inten").remove()
       svg_inten.selectAll("text.inten").remove()
       // Add the bars
@@ -47,20 +55,6 @@ function intenUpdate(selectedVar) {
               .padAngle(0.01)
               .padRadius(innerRadius_inten))
 
-      // svg_inten.append("g")
-      //   .selectAll("path")
-      //   .data(data)
-      //   .enter()
-      //   .append("path")
-      //     .attr("fill", "#FE5F55")
-      //     .attr("d", d3.arc()     // imagine your doing a part of a donut plot
-      //         .innerRadius(function(d) { return y(d['make']); })
-      //         .outerRadius(function(d) { return y(d['miss']) + innerRadius_inten/2; } )
-      //         .startAngle(function(d) { return x(d.team); })
-      //         .endAngle(function(d) { return x(d.team) + x.bandwidth(); })
-      //         .padAngle(0.01)
-      //         .padRadius(innerRadius_inten))
-
 
       // Add the labels
       svg_inten.append("g")
@@ -78,7 +72,6 @@ function intenUpdate(selectedVar) {
             .attr("alignment-baseline", "middle")
 
     })
-// }
 }
 // Initialize plot
 intenUpdate('move')
