@@ -1,5 +1,5 @@
 // set the dimensions and margins of the graph
-var margin = {top: 10, right: 30, bottom: 60, left: 50},
+var margin = {top: 10, right: 30, bottom: 80, left: 50},
     width = 900 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
 
@@ -125,7 +125,7 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
       .selectAll("text")
         .attr("transform", "translate(-10,0)rotate(-45)")
         .style("text-anchor", "end")
-        .style("font-size", "10px");
+        .style("font-size", "15px");
 
     // Add Y axis
     var y = d3.scaleLinear()
