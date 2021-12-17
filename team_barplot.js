@@ -133,14 +133,14 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
     svg.append("g")
       .call(d3.axisLeft(y));
 
-    svg.append("text1")
-      .attr("class", "y label")
-      .attr("text-anchor", "end")
-      .attr("y", 6)
-      .attr("dy", ".75em")
-      .attr("transform", "rotate(-90)")
-      .attr("transform", "translate(-10,10)")
-      .text("Successful attempts");
+    // svg.append("text")
+    //   .attr("class", "y label")
+    //   .attr("text-anchor", "end")
+    //   .attr("y", 6)
+    //   .attr("dy", ".75em")
+    //   .attr("transform", "rotate(-90)")
+    //   .attr("transform", "translate(-10,10)")
+    //   .text("Successful attempts");
   
 
 
