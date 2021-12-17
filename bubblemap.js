@@ -1,4 +1,7 @@
-
+/*
+code adapted from 
+https://www.d3-graph-gallery.com/graph/bubblemap_circleFeatures.html
+*/
 var bm_x = -97;
 var bm_y = 38;
 var bm_zoom = 700;

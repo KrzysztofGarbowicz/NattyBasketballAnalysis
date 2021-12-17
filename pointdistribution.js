@@ -1,3 +1,7 @@
+/*
+code adapted from
+https://www.d3-graph-gallery.com/graph/histogram_binSize.html
+*/
 var quarter=1
 var binsize=30
 
