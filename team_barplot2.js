@@ -55,7 +55,6 @@ folderMenu2.data(selectFolder2)
         .text(function(d){
             return d;
         })
-        
 
 teamMenu2.on('change', function(){
     selectedTeam2 = d3.select(this)
@@ -125,7 +124,7 @@ var drawGraph2 = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2
       .selectAll("text")
         .attr("transform", "translate(-10,0)rotate(-45)")
         .style("text-anchor", "end")
-        .style("font-size", "10px");
+        .style("font-size", "20px");
 
     // Add Y axis
     var y2 = d3.scaleLinear()
