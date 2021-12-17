@@ -160,6 +160,8 @@ var drawFoulGraph = function(foulFileName = selectedFoul, foulTeamName = selecte
         .attr("fill", "#eb3a34")
         .style("shape-rendering", "crispEdges")
         .style("stroke", "black")
+        .attr("y", function(d) { return foulY(d.NumberOfShots); })
+        .attr("height", function(d) { return foul_height - foulY(parseInt(d.NumberOfShots)); })
 
       var foulInfo = d3.select("#my_foul_selection_viz")
         .append("div")
@@ -187,8 +189,8 @@ var drawFoulGraph = function(foulFileName = selectedFoul, foulTeamName = selecte
     // foulSvg.selectAll("rect")
     //     .transition()
     //     .duration(800)
-    //     .attr("y", function(d) { return foulY(d.NumberOfShots); })
-    //     .attr("height", function(d) { return foul_height - foulY(parseInt(d.NumberOfShots)); })
+        // .attr("y", function(d) { return foulY(d.NumberOfShots); })
+        // .attr("height", function(d) { return foul_height - foulY(parseInt(d.NumberOfShots)); })
 
     })  
     
