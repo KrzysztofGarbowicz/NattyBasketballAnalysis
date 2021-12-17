@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-1825,personal,Chris Paul,184.0,OKC
-1800,shooting,Shai Gilgeous-Alexander,158.0,OKC
-1801,personal,Shai Gilgeous-Alexander,144.0,OKC
-1820,shooting,Danilo Gallinari,121.0,OKC
-1821,personal,Danilo Gallinari,110.0,OKC
-1833,shooting,Dennis Schröder,102.0,OKC
-1814,shooting,Steven Adams,96.0,OKC
-1815,personal,Steven Adams,94.0,OKC
-1834,personal,Dennis Schröder,73.0,OKC
-1826,shooting,Chris Paul,47.0,OKC
+,Name,NumberOfShots,Team
+388,Shai Gilgeous-Alexander,334.0,OKC
+393,Chris Paul,273.0,OKC
+392,Danilo Gallinari,257.0,OKC
+391,Steven Adams,228.0,OKC
+395,Dennis Schröder,227.0,OKC
+386,Nerlens Noel,113.0,OKC
+396,Luguentz Dort,85.0,OKC
+397,Hamidou Diallo,69.0,OKC
+389,Darius Bazley,55.0,OKC
+385,Abdel Nader,50.0,OKC

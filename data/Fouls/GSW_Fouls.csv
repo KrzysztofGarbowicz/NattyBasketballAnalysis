@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-1009,shooting,Andrew Wiggins,84.0,GSW
-960,shooting,Willie Cauley-Stein,67.0,GSW
-924,shooting,Glenn Robinson,60.0,GSW
-979,shooting,Marquese Chriss,57.0,GSW
-929,personal,Alec Burks,56.0,GSW
-1019,shooting,Eric Paschall,54.0,GSW
-930,shooting,Alec Burks,51.0,GSW
-941,personal,Ky Bowman,49.0,GSW
-954,shooting,Draymond Green,48.0,GSW
-1020,personal,Eric Paschall,47.0,GSW
+,Name,NumberOfShots,Team
+178,Alec Burks,136.0,GSW
+187,Marquese Chriss,129.0,GSW
+194,Andrew Wiggins,128.0,GSW
+196,Eric Paschall,126.0,GSW
+183,Draymond Green,124.0,GSW
+184,Willie Cauley-Stein,123.0,GSW
+176,Damion Lee,116.0,GSW
+181,Ky Bowman,103.0,GSW
+177,Glenn Robinson,100.0,GSW
+182,Jordan Poole,96.0,GSW

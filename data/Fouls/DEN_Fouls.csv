@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-777,shooting,Nikola Jokić,127.0,DEN
-736,shooting,Paul Millsap,104.0,DEN
-726,shooting,Torrey Craig,101.0,DEN
-771,shooting,Jerami Grant,99.0,DEN
-778,personal,Nikola Jokić,86.0,DEN
-794,shooting,Mason Plumlee,84.0,DEN
-759,shooting,Michael Porter,78.0,DEN
-764,shooting,Jamal Murray,72.0,DEN
-743,personal,Gary Harris,69.0,DEN
-772,personal,Jerami Grant,68.0,DEN
+,Name,NumberOfShots,Team
+149,Nikola Jokić,293.0,DEN
+148,Jerami Grant,215.0,DEN
+142,Paul Millsap,202.0,DEN
+153,Mason Plumlee,183.0,DEN
+140,Torrey Craig,179.0,DEN
+143,Gary Harris,162.0,DEN
+147,Jamal Murray,145.0,DEN
+146,Michael Porter,143.0,DEN
+138,Will Barton,124.0,DEN
+141,Monte Morris,93.0,DEN

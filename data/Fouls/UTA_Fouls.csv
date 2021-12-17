@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-2979,shooting,Rudy Gobert,122.0,UTA
-2911,shooting,Royce O'Neale,96.0,UTA
-2912,personal,Royce O'Neale,91.0,UTA
-2959,personal,Joe Ingles,84.0,UTA
-2905,shooting,Tony Bradley,78.0,UTA
-2918,shooting,Donovan Mitchell,72.0,UTA
-2919,personal,Donovan Mitchell,57.0,UTA
-2973,shooting,Jeff Green,55.0,UTA
-2948,personal,Mike Conley,52.0,UTA
-2934,shooting,Jordan Clarkson,47.0,UTA
+,Name,NumberOfShots,Team
+563,Rudy Gobert,252.0,UTA
+550,Royce O'Neale,229.0,UTA
+551,Donovan Mitchell,190.0,UTA
+559,Joe Ingles,176.0,UTA
+553,Jordan Clarkson,127.0,UTA
+549,Tony Bradley,120.0,UTA
+562,Jeff Green,117.0,UTA
+556,Mike Conley,114.0,UTA
+552,Bojan Bogdanović,113.0,UTA
+545,Georges Niang,84.0,UTA

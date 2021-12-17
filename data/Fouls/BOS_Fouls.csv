@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-164,shooting,Daniel Theis,146.0,BOS
-121,shooting,Grant Williams,106.0,BOS
-133,shooting,Marcus Smart,91.0,BOS
-108,personal,Jaylen Brown,89.0,BOS
-134,personal,Marcus Smart,89.0,BOS
-109,shooting,Jaylen Brown,86.0,BOS
-165,personal,Daniel Theis,79.0,BOS
-144,shooting,Kemba Walker,76.0,BOS
-150,personal,Brad Wanamaker,76.0,BOS
-151,shooting,Brad Wanamaker,70.0,BOS
+,Name,NumberOfShots,Team
+32,Daniel Theis,287.0,BOS
+26,Marcus Smart,226.0,BOS
+22,Jaylen Brown,218.0,BOS
+24,Grant Williams,197.0,BOS
+34,Jayson Tatum,187.0,BOS
+29,Brad Wanamaker,166.0,BOS
+28,Kemba Walker,139.0,BOS
+36,Gordon Hayward,108.0,BOS
+25,Semi Ojeleye,89.0,BOS
+23,Robert Williams,69.0,BOS

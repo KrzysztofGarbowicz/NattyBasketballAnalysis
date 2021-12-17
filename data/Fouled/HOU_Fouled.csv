@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-929,shooting,James Harden,377.0,HOU
-970,shooting,Russell Westbrook,202.0,HOU
-930,personal,James Harden,173.0,HOU
-971,personal,Russell Westbrook,68.0,HOU
-975,shooting,Eric Gordon,67.0,HOU
-936,shooting,Robert Covington,60.0,HOU
-946,shooting,Austin Rivers,56.0,HOU
-920,shooting,Clint Capela,54.0,HOU
-981,offensive,P.J. Tucker,52.0,HOU
-908,shooting,Jeff Green,50.0,HOU
+,Name,NumberOfShots,Team
+202,James Harden,607.0,HOU
+211,Russell Westbrook,302.0,HOU
+203,Robert Covington,138.0,HOU
+213,P.J. Tucker,126.0,HOU
+212,Eric Gordon,119.0,HOU
+206,Austin Rivers,116.0,HOU
+200,Clint Capela,107.0,HOU
+196,Danuel House,98.0,HOU
+197,Jeff Green,90.0,HOU
+195,Ben McLemore,64.0,HOU

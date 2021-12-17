@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-3049,shooting,Isaac Bonga,89.0,WAS
-3094,shooting,Ish Smith,71.0,WAS
-3077,shooting,Moritz Wagner,70.0,WAS
-2990,shooting,Dāvis Bertāns,68.0,WAS
-3070,shooting,Jerome Robinson,60.0,WAS
-3053,shooting,Ian Mahinmi,60.0,WAS
-3008,personal,Troy Brown,53.0,WAS
-3009,shooting,Troy Brown,53.0,WAS
-3050,personal,Isaac Bonga,53.0,WAS
-2999,shooting,Bradley Beal,52.0,WAS
+,Name,NumberOfShots,Team
+582,Moritz Wagner,156.0,WAS
+576,Isaac Bonga,156.0,WAS
+565,Dāvis Bertāns,145.0,WAS
+566,Bradley Beal,134.0,WAS
+568,Troy Brown,132.0,WAS
+577,Ian Mahinmi,115.0,WAS
+580,Jerome Robinson,112.0,WAS
+584,Thomas Bryant,109.0,WAS
+585,Ish Smith,107.0,WAS
+579,Rui Hachimura,105.0,WAS

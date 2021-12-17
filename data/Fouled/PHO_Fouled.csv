@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-2117,personal,Devin Booker,214.0,PHO
-2118,shooting,Devin Booker,187.0,PHO
-2070,shooting,Kelly Oubre,120.0,PHO
-2064,shooting,Ricky Rubio,91.0,PHO
-2065,personal,Ricky Rubio,67.0,PHO
-2112,shooting,Dario Šarić,58.0,PHO
-2113,personal,Dario Šarić,52.0,PHO
-2066,offensive,Ricky Rubio,49.0,PHO
-2071,personal,Kelly Oubre,45.0,PHO
-2106,shooting,Deandre Ayton,44.0,PHO
+,Name,NumberOfShots,Team
+453,Devin Booker,447.0,PHO
+442,Ricky Rubio,222.0,PHO
+443,Kelly Oubre,200.0,PHO
+452,Dario Šarić,140.0,PHO
+455,Mikal Bridges,137.0,PHO
+446,Aron Baynes,98.0,PHO
+451,Deandre Ayton,92.0,PHO
+444,Frank Kaminsky,73.0,PHO
+439,Elie Okobo,60.0,PHO
+441,Cameron Johnson,56.0,PHO

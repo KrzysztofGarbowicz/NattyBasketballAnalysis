@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-1147,shooting,Montrezl Harrell,219.0,LAC
-1098,shooting,Kawhi Leonard,200.0,LAC
-1099,personal,Kawhi Leonard,193.0,LAC
-1116,shooting,Lou Williams,155.0,LAC
-1117,personal,Lou Williams,113.0,LAC
-1131,shooting,Paul George,110.0,LAC
-1107,shooting,Ivica Zubac,93.0,LAC
-1090,shooting,Marcus Morris,91.0,LAC
-1132,personal,Paul George,79.0,LAC
-1148,personal,Montrezl Harrell,62.0,LAC
+,Name,NumberOfShots,Team
+239,Kawhi Leonard,425.0,LAC
+249,Montrezl Harrell,348.0,LAC
+243,Lou Williams,301.0,LAC
+246,Paul George,236.0,LAC
+237,Marcus Morris,179.0,LAC
+241,Ivica Zubac,154.0,LAC
+244,Patrick Beverley,98.0,LAC
+234,Landry Shamet,73.0,LAC
+235,Reggie Jackson,54.0,LAC
+248,Maurice Harkless,52.0,LAC

@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-2225,shooting,Nikola Vučević,92.0,ORL
-2184,shooting,Mohamed Bamba,77.0,ORL
-2248,personal,Evan Fournier,72.0,ORL
-2210,shooting,Markelle Fultz,69.0,ORL
-2219,shooting,James Ennis,69.0,ORL
-2211,personal,Markelle Fultz,63.0,ORL
-2220,personal,James Ennis,57.0,ORL
-2249,shooting,Evan Fournier,56.0,ORL
-2163,shooting,Aaron Gordon,55.0,ORL
-2169,shooting,Terrence Ross,55.0,ORL
+,Name,NumberOfShots,Team
+427,Evan Fournier,173.0,ORL
+419,Markelle Fultz,162.0,ORL
+421,James Ennis,158.0,ORL
+422,Nikola Vučević,152.0,ORL
+410,Aaron Gordon,131.0,ORL
+411,Terrence Ross,124.0,ORL
+413,Mohamed Bamba,117.0,ORL
+423,Khem Birch,102.0,ORL
+426,Michael Carter-Williams,91.0,ORL
+412,Wesley Iwundu,88.0,ORL

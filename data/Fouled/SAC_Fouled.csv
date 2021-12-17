@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-2301,shooting,De'Aaron Fox,169.0,SAC
-2254,shooting,Harrison Barnes,122.0,SAC
-2302,personal,De'Aaron Fox,77.0,SAC
-2255,personal,Harrison Barnes,68.0,SAC
-2311,shooting,Kent Bazemore,60.0,SAC
-2271,personal,Bogdan Bogdanović,58.0,SAC
-2266,shooting,Richaun Holmes,55.0,SAC
-2224,shooting,Alex Len,51.0,SAC
-2312,personal,Kent Bazemore,46.0,SAC
-2282,shooting,Buddy Hield,46.0,SAC
+,Name,NumberOfShots,Team
+494,De'Aaron Fox,283.0,SAC
+484,Harrison Barnes,225.0,SAC
+496,Kent Bazemore,152.0,SAC
+488,Bogdan Bogdanović,128.0,SAC
+497,Cory Joseph,113.0,SAC
+487,Richaun Holmes,104.0,SAC
+490,Buddy Hield,99.0,SAC
+489,Nemanja Bjelica,95.0,SAC
+477,Alex Len,88.0,SAC
+481,Trevor Ariza,80.0,SAC

@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-2471,shooting,Pascal Siakam,164.0,TOR
-2477,shooting,Kyle Lowry,144.0,TOR
-2478,personal,Kyle Lowry,139.0,TOR
-2409,personal,Fred VanVleet,97.0,TOR
-2472,personal,Pascal Siakam,87.0,TOR
-2410,shooting,Fred VanVleet,86.0,TOR
-2448,shooting,Norman Powell,74.0,TOR
-2461,shooting,Rondae Hollis-Jefferson,71.0,TOR
-2467,shooting,Serge Ibaka,66.0,TOR
-2479,offensive,Kyle Lowry,66.0,TOR
+,Name,NumberOfShots,Team
+532,Kyle Lowry,383.0,TOR
+531,Pascal Siakam,272.0,TOR
+517,Fred VanVleet,217.0,TOR
+525,Norman Powell,138.0,TOR
+529,Rondae Hollis-Jefferson,135.0,TOR
+530,Serge Ibaka,114.0,TOR
+527,OG Anunoby,111.0,TOR
+520,Marc Gasol,103.0,TOR
+519,Chris Boucher,96.0,TOR
+518,Terence Davis,54.0,TOR

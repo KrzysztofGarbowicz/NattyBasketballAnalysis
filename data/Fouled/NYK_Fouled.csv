@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-1767,shooting,Julius Randle,163.0,NYK
-1728,shooting,RJ Barrett,121.0,NYK
-1779,shooting,Marcus Morris,91.0,NYK
-1768,personal,Julius Randle,81.0,NYK
-1757,shooting,Mitchell Robinson,74.0,NYK
-1780,personal,Marcus Morris,57.0,NYK
-1729,personal,RJ Barrett,49.0,NYK
-1713,shooting,Kevin Knox,47.0,NYK
-1773,shooting,Elfrid Payton,45.0,NYK
-1739,shooting,Bobby Portis,44.0,NYK
+,Name,NumberOfShots,Team
+381,Julius Randle,278.0,NYK
+373,RJ Barrett,195.0,NYK
+383,Marcus Morris,179.0,NYK
+379,Mitchell Robinson,131.0,NYK
+375,Bobby Portis,89.0,NYK
+369,Kevin Knox,81.0,NYK
+382,Elfrid Payton,77.0,NYK
+374,Frank Ntilikina,69.0,NYK
+376,Taj Gibson,61.0,NYK
+380,Maurice Harkless,52.0,NYK

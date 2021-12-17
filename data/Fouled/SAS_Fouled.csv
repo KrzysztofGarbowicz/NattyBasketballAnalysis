@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-2338,shooting,DeMar DeRozan,216.0,SAS
-2343,shooting,Derrick White,94.0,SAS
-2339,personal,DeMar DeRozan,89.0,SAS
-2360,shooting,LaMarcus Aldridge,83.0,SAS
-2361,personal,LaMarcus Aldridge,70.0,SAS
-2332,shooting,Rudy Gay,60.0,SAS
-2373,shooting,Dejounte Murray,55.0,SAS
-2344,offensive,Derrick White,53.0,SAS
-2345,personal,Derrick White,48.0,SAS
-2385,personal,Patty Mills,40.0,SAS
+,Name,NumberOfShots,Team
+501,DeMar DeRozan,334.0,SAS
+502,Derrick White,215.0,SAS
+505,LaMarcus Aldridge,163.0,SAS
+511,Patty Mills,118.0,SAS
+500,Rudy Gay,107.0,SAS
+508,Dejounte Murray,106.0,SAS
+503,Jakob Poeltl,56.0,SAS
+499,Bryn Forbes,56.0,SAS
+514,Marco Belinelli,51.0,SAS
+512,Lonnie Walker,51.0,SAS

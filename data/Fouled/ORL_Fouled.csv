@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-1865,shooting,Aaron Gordon,105.0,ORL
-1946,shooting,Evan Fournier,95.0,ORL
-1924,shooting,Nikola Vučević,81.0,ORL
-1872,shooting,Terrence Ross,75.0,ORL
-1909,shooting,Markelle Fultz,73.0,ORL
-1925,personal,Nikola Vučević,72.0,ORL
-1897,shooting,D.J. Augustin,72.0,ORL
-1866,personal,Aaron Gordon,68.0,ORL
-1898,personal,D.J. Augustin,64.0,ORL
-1947,personal,Evan Fournier,56.0,ORL
+,Name,NumberOfShots,Team
+401,Aaron Gordon,206.0,ORL
+418,Evan Fournier,189.0,ORL
+413,Nikola Vučević,172.0,ORL
+408,D.J. Augustin,161.0,ORL
+410,Markelle Fultz,152.0,ORL
+402,Terrence Ross,128.0,ORL
+417,Michael Carter-Williams,115.0,ORL
+412,James Ennis,98.0,ORL
+414,Khem Birch,90.0,ORL
+407,Jonathan Isaac,80.0,ORL

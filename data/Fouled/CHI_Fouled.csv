@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-326,shooting,Zach LaVine,143.0,CHI
-327,personal,Zach LaVine,80.0,CHI
-319,shooting,Lauri Markkanen,67.0,CHI
-303,shooting,Wendell Carter,66.0,CHI
-345,shooting,Coby White,62.0,CHI
-350,personal,Tomáš Satoranský,58.0,CHI
-351,shooting,Tomáš Satoranský,51.0,CHI
-304,personal,Wendell Carter,47.0,CHI
-320,personal,Lauri Markkanen,39.0,CHI
-314,shooting,Chandler Hutchison,39.0,CHI
+,Name,NumberOfShots,Team
+69,Zach LaVine,243.0,CHI
+65,Wendell Carter,145.0,CHI
+74,Tomáš Satoranský,141.0,CHI
+68,Lauri Markkanen,122.0,CHI
+73,Coby White,117.0,CHI
+72,Thaddeus Young,97.0,CHI
+75,Ryan Arcidiacono,74.0,CHI
+67,Chandler Hutchison,64.0,CHI
+61,Daniel Gafford,57.0,CHI
+66,Kris Dunn,56.0,CHI

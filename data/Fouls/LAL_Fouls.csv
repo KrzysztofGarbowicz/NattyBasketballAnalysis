@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-1392,shooting,Anthony Davis,127.0,LAL
-1430,shooting,Dwight Howard,124.0,LAL
-1356,shooting,Kyle Kuzma,105.0,LAL
-1369,shooting,Markieff Morris,103.0,LAL
-1336,shooting,Danny Green,84.0,LAL
-1349,shooting,JaVale McGee,84.0,LAL
-1409,shooting,Kentavious Caldwell-Pope,81.0,LAL
-1337,personal,Danny Green,77.0,LAL
-1423,personal,Alex Caruso,66.0,LAL
-1410,personal,Kentavious Caldwell-Pope,65.0,LAL
+,Name,NumberOfShots,Team
+272,Dwight Howard,291.0,LAL
+265,Anthony Davis,216.0,LAL
+261,Markieff Morris,195.0,LAL
+256,Danny Green,186.0,LAL
+258,JaVale McGee,184.0,LAL
+259,Kyle Kuzma,177.0,LAL
+268,Kentavious Caldwell-Pope,173.0,LAL
+257,LeBron James,161.0,LAL
+271,Alex Caruso,154.0,LAL
+260,Avery Bradley,111.0,LAL

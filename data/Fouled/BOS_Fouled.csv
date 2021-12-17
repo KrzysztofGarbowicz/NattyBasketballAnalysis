@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-160,shooting,Jayson Tatum,184.0,BOS
-99,shooting,Jaylen Brown,144.0,BOS
-133,shooting,Kemba Walker,118.0,BOS
-161,personal,Jayson Tatum,105.0,BOS
-134,personal,Kemba Walker,93.0,BOS
-121,personal,Marcus Smart,81.0,BOS
-122,shooting,Marcus Smart,79.0,BOS
-100,personal,Jaylen Brown,78.0,BOS
-138,shooting,Brad Wanamaker,69.0,BOS
-171,shooting,Gordon Hayward,67.0,BOS
+,Name,NumberOfShots,Team
+34,Jayson Tatum,325.0,BOS
+28,Kemba Walker,282.0,BOS
+22,Jaylen Brown,251.0,BOS
+26,Marcus Smart,225.0,BOS
+32,Daniel Theis,178.0,BOS
+36,Gordon Hayward,141.0,BOS
+29,Brad Wanamaker,108.0,BOS
+24,Grant Williams,68.0,BOS
+25,Semi Ojeleye,47.0,BOS
+23,Robert Williams,39.0,BOS

@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-552,shooting,Andre Drummond,83.0,CLE
-534,shooting,Cedi Osman,73.0,CLE
-579,shooting,Kevin Porter,61.0,CLE
-527,shooting,Tristan Thompson,61.0,CLE
-516,personal,Collin Sexton,61.0,CLE
-580,personal,Kevin Porter,56.0,CLE
-535,personal,Cedi Osman,55.0,CLE
-553,personal,Andre Drummond,55.0,CLE
-504,shooting,Kevin Love,53.0,CLE
-510,shooting,Darius Garland,49.0,CLE
+,Name,NumberOfShots,Team
+108,Andre Drummond,211.0,CLE
+104,Cedi Osman,161.0,CLE
+100,Collin Sexton,143.0,CLE
+113,Kevin Porter,139.0,CLE
+97,Jordan Clarkson,127.0,CLE
+103,Tristan Thompson,126.0,CLE
+99,Darius Garland,93.0,CLE
+106,Larry Nance,92.0,CLE
+98,Kevin Love,90.0,CLE
+109,Matthew Dellavedova,79.0,CLE

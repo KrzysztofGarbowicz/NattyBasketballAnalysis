@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-864,shooting,Markieff Morris,103.0,DET
-874,shooting,Bruce Brown,85.0,DET
-910,shooting,Andre Drummond,83.0,DET
-894,shooting,Thon Maker,64.0,DET
-911,personal,Andre Drummond,55.0,DET
-875,personal,Bruce Brown,53.0,DET
-900,shooting,Tony Snell,50.0,DET
-819,shooting,Christian Wood,49.0,DET
-865,personal,Markieff Morris,46.0,DET
-858,personal,Langston Galloway,45.0,DET
+,Name,NumberOfShots,Team
+175,Andre Drummond,211.0,DET
+166,Markieff Morris,195.0,DET
+168,Bruce Brown,165.0,DET
+172,Thon Maker,102.0,DET
+173,Tony Snell,101.0,DET
+158,Christian Wood,100.0,DET
+165,Langston Galloway,97.0,DET
+171,Svi Mykhailiuk,87.0,DET
+174,Sekou Doumbouya,80.0,DET
+154,John Henson,78.0,DET

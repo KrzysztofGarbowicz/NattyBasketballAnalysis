@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-1670,shooting,Brook Lopez,118.0,MIL
-1738,offensive,Giannis Antetokounmpo,76.0,MIL
-1662,shooting,Khris Middleton,72.0,MIL
-1693,personal,Wesley Matthews,65.0,MIL
-1719,personal,Eric Bledsoe,65.0,MIL
-1663,personal,Khris Middleton,63.0,MIL
-1739,personal,Giannis Antetokounmpo,61.0,MIL
-1740,shooting,Giannis Antetokounmpo,60.0,MIL
-1646,personal,Donte DiVincenzo,58.0,MIL
-1656,shooting,Robin Lopez,57.0,MIL
+,Name,NumberOfShots,Team
+332,Giannis Antetokounmpo,230.0,MIL
+320,Brook Lopez,199.0,MIL
+319,Khris Middleton,184.0,MIL
+329,Eric Bledsoe,151.0,MIL
+316,Donte DiVincenzo,134.0,MIL
+324,Wesley Matthews,127.0,MIL
+327,Marvin Williams,118.0,MIL
+330,George Hill,101.0,MIL
+325,Ersan İlyasova,99.0,MIL
+318,Robin Lopez,99.0,MIL

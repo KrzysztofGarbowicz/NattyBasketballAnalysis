@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-234,shooting,Jarrett Allen,95.0,BRK
-198,shooting,Joe Harris,79.0,BRK
-283,personal,Spencer Dinwiddie,71.0,BRK
-284,shooting,Spencer Dinwiddie,64.0,BRK
-306,shooting,DeAndre Jordan,58.0,BRK
-272,shooting,Garrett Temple,57.0,BRK
-301,personal,Timothé Luwawu-Cabarrot,50.0,BRK
-302,shooting,Timothé Luwawu-Cabarrot,49.0,BRK
-203,shooting,Taurean Prince,48.0,BRK
-215,shooting,Wilson Chandler,46.0,BRK
+,Name,NumberOfShots,Team
+55,Spencer Dinwiddie,187.0,BRK
+44,Jarrett Allen,170.0,BRK
+37,Joe Harris,168.0,BRK
+38,Taurean Prince,125.0,BRK
+53,Garrett Temple,121.0,BRK
+59,Timothé Luwawu-Cabarrot,120.0,BRK
+60,DeAndre Jordan,119.0,BRK
+51,Rodions Kurucs,99.0,BRK
+56,Caris LeVert,88.0,BRK
+40,Wilson Chandler,79.0,BRK

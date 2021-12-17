@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-1473,shooting,Dillon Brooks,121.0,MEM
-1513,shooting,Jaren Jackson,116.0,MEM
-1474,personal,Dillon Brooks,106.0,MEM
-1450,shooting,Jonas Valančiūnas,99.0,MEM
-1500,shooting,Jae Crowder,96.0,MEM
-1501,personal,Jae Crowder,65.0,MEM
-1489,shooting,Gorgui Dieng,62.0,MEM
-1526,shooting,Kyle Anderson,60.0,MEM
-1507,shooting,Brandon Clarke,55.0,MEM
-1514,personal,Jaren Jackson,55.0,MEM
+,Name,NumberOfShots,Team
+282,Dillon Brooks,287.0,MEM
+290,Jaren Jackson,234.0,MEM
+288,Jae Crowder,204.0,MEM
+277,Jonas Valančiūnas,199.0,MEM
+285,Gorgui Dieng,129.0,MEM
+292,Kyle Anderson,116.0,MEM
+291,De'Anthony Melton,111.0,MEM
+283,Ja Morant,111.0,MEM
+289,Brandon Clarke,103.0,MEM
+294,Solomon Hill,91.0,MEM

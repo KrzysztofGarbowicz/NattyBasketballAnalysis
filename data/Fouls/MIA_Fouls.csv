@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-1549,shooting,Duncan Robinson,144.0,MIA
-1598,shooting,Bam Adebayo,130.0,MIA
-1639,shooting,Kelly Olynyk,97.0,MIA
-1565,shooting,Jae Crowder,96.0,MIA
-1616,shooting,Kendrick Nunn,94.0,MIA
-1550,personal,Duncan Robinson,76.0,MIA
-1622,shooting,Derrick Jones,74.0,MIA
-1583,shooting,Meyers Leonard,70.0,MIA
-1572,personal,Goran Dragić,69.0,MIA
-1573,shooting,Goran Dragić,68.0,MIA
+,Name,NumberOfShots,Team
+296,Duncan Robinson,259.0,MIA
+306,Bam Adebayo,240.0,MIA
+315,Kelly Olynyk,209.0,MIA
+300,Jae Crowder,204.0,MIA
+301,Goran Dragić,176.0,MIA
+311,Kendrick Nunn,174.0,MIA
+312,Derrick Jones,142.0,MIA
+304,Jimmy Butler,125.0,MIA
+303,Meyers Leonard,112.0,MIA
+308,Tyler Herro,107.0,MIA

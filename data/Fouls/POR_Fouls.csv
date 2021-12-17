@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-2461,shooting,Hassan Whiteside,127.0,POR
-2560,shooting,Kent Bazemore,94.0,POR
-2492,shooting,CJ McCollum,90.0,POR
-2561,personal,Kent Bazemore,80.0,POR
-2515,shooting,Carmelo Anthony,72.0,POR
-2516,personal,Carmelo Anthony,67.0,POR
-2501,personal,Trevor Ariza,66.0,POR
-2493,personal,CJ McCollum,65.0,POR
-2469,shooting,Anfernee Simons,64.0,POR
-2470,personal,Anfernee Simons,61.0,POR
+,Name,NumberOfShots,Team
+466,Hassan Whiteside,227.0,POR
+483,Kent Bazemore,203.0,POR
+472,CJ McCollum,201.0,POR
+476,Carmelo Anthony,201.0,POR
+467,Anfernee Simons,142.0,POR
+481,Damian Lillard,127.0,POR
+479,Mario Hezonja,119.0,POR
+473,Trevor Ariza,114.0,POR
+468,Gary Trent,109.0,POR
+482,Skal Labissière,89.0,POR

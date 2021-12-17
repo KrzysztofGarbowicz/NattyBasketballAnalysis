@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-525,shooting,Luka Dončić,270.0,DAL
-526,personal,Luka Dončić,202.0,DAL
-543,shooting,Kristaps Porziņģis,129.0,DAL
-544,personal,Kristaps Porziņģis,83.0,DAL
-537,shooting,Tim Hardaway,72.0,DAL
-538,personal,Tim Hardaway,57.0,DAL
-557,shooting,Dorian Finney-Smith,53.0,DAL
-595,shooting,Dwight Powell,51.0,DAL
-606,personal,Jalen Brunson,45.0,DAL
-600,shooting,Maxi Kleber,44.0,DAL
+,Name,NumberOfShots,Team
+112,Luka Dončić,511.0,DAL
+116,Kristaps Porziņģis,237.0,DAL
+115,Tim Hardaway,173.0,DAL
+129,Jalen Brunson,118.0,DAL
+127,Dwight Powell,116.0,DAL
+128,Maxi Kleber,113.0,DAL
+121,Delon Wright,99.0,DAL
+119,Dorian Finney-Smith,98.0,DAL
+122,Seth Curry,84.0,DAL
+125,Willie Cauley-Stein,70.0,DAL

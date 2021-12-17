@@ -1,11 +1,11 @@
-,FoulType,Name,NumberOfShots,Team
-14,shooting,Damian Jones,84.0,ATL
-77,shooting,De'Andre Hunter,81.0,ATL
-0,shooting,John Collins,78.0,ATL
-46,shooting,Alex Len,76.0,ATL
-78,personal,De'Andre Hunter,73.0,ATL
-98,shooting,Cam Reddish,72.0,ATL
-52,shooting,Dewayne Dedmon,68.0,ATL
-64,shooting,Bruno Fernando,65.0,ATL
-92,shooting,Kevin Huerter,61.0,ATL
-93,personal,Kevin Huerter,54.0,ATL
+,Name,NumberOfShots,Team
+16,De'Andre Hunter,182.0,ATL
+3,Damian Jones,149.0,ATL
+19,Kevin Huerter,140.0,ATL
+0,John Collins,137.0,ATL
+11,Dewayne Dedmon,136.0,ATL
+20,Cam Reddish,134.0,ATL
+10,Alex Len,130.0,ATL
+8,Trae Young,115.0,ATL
+13,Bruno Fernando,108.0,ATL
+7,Jeff Teague,105.0,ATL
