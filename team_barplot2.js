@@ -140,7 +140,7 @@ var drawGraph2 = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2
       .attr("y", 6)
       .attr("dy", ".75em")
       .attr("transform", "rotate(-90)")
-      .attr("transform", "translate(' + -10 + ', ' + 10 + ')")
+      .attr("transform", "translate(-10,10)")
       .text("Successful attempts");
 
 
