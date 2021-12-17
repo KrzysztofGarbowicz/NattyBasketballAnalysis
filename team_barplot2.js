@@ -1,3 +1,27 @@
+/*
+Template 1: https://www.d3-graph-gallery.com/graph/barplot_basic.html
+Template 2: https://www.d3-graph-gallery.com/graph/barplot_animation_start.html
+Template 3: https://www.d3-graph-gallery.com/graph/barplot_button_data_csv.html
+
+data: data/All_Shots
+      data/3_Pt_Shots
+      data/2_Pt_Jump_Shots
+      data/2_Pt_Hook_Shots
+      data/2_Pt_Layups
+      data/Dunks
+      data/Free_Throws
+      data/Assists
+      data/Blocks
+      data/Steals
+      data/All_Rebounds
+      data/Offensive_Rebounds
+      data/Defensive_Rebounds
+      data/Bad_Plays
+      data/Bad_Passes
+      data/Lost_Balls
+> created from DataVis.ipynb
+*/
+
 // set the dimensions and margins of the graph
 var margin2 = {top: 10, right: 30, bottom: 140, left: 80},
     width2 = 1000 - margin2.left - margin2.right,
