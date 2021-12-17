@@ -1,5 +1,5 @@
 // set the dimensions and margins of the graph
-var margin2 = {top: 10, right: 30, bottom: 120, left: 80},
+var margin2 = {top: 10, right: 30, bottom: 140, left: 80},
     width2 = 1200 - margin2.left - margin2.right,
     height2 = 600 - margin2.top - margin2.bottom;
 
@@ -156,13 +156,27 @@ var drawGraph2 = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2
         .style("shape-rendering", "crispEdges")
         .style("stroke", "black")
 
+    var teamInfo2 = d3.select("#my_dataviz2")
+        .append("div")
+        .style("opacity", 1)
+        .attr("class", "tooltip")
 
 
     svg2.selectAll("rect")
         .on("mouseover", function (d) {
           d3.select(this).attr('opacity', 0.5);
-        }).on("mouseout", function (d) {
+          teamInfo2.style("opacity", 1);
+        })
+        .on("mousemove", function (d) {
+          teamInfo2
+            .html(d.Name + "<br>" + `Number of ${fileName2}: ${parseInt(d.NumberOfShots)}`)
+        })
+        .on("mouseout", function (d) {
           d3.select(this).attr('opacity', 1);
+          teamInfo2
+          .transition()
+          .duration(200)
+          .style("opacity", 0);
         })
    
         // Animation

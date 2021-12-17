@@ -1,5 +1,5 @@
 // set the dimensions and margins of the graph
-var foul_margin = {top: 10, right: 30, bottom: 120, left: 80},
+var foul_margin = {top: 10, right: 30, bottom: 140, left: 80},
 foul_width = 1200 - foul_margin.left - foul_margin.right,
 foul_height = 600 - foul_margin.top - foul_margin.bottom;
 
