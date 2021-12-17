@@ -166,7 +166,12 @@ var drawFoulGraph2 = function(foulFileName2 = selectedFoul2, foulTeamName2 = sel
         .on("mouseover", function (d) {
           d3.select(this).attr('opacity', 0.5);
           tooltip.style("opacity", 1);
-        }).on("mouseout", function (d) {
+        })
+        .on("mousemove", function (d) {
+          tooltip
+            .html("Name: " + d.Name + "<br>" + `${foulFileName2} : ${d.NumberOfShots}`)
+        })
+        .on("mouseout", function (d) {
           d3.select(this).attr('opacity', 1);
           tooltip
           .transition()
