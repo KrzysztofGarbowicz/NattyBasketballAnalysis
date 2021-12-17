@@ -138,7 +138,8 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
       .attr("text-anchor", "end")
       .attr("y", 6)
       .attr("dy", ".75em")
-      .attr("transform", "translate(' + -10 + ', ' + 10 + '), rotate(-90)")
+      .attr("transform", "rotate(-90)")
+      .attr("transform", "translate(' + -10 + ', ' + 10 + ')")
       .text("Successful attempts");
   
 
