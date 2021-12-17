@@ -190,7 +190,7 @@ var drawFoulGraph = function(foulFileName = selectedFoul, foulTeamName = selecte
     //     .attr("y", function(d) { return foulY(d.NumberOfShots); })
     //     .attr("height", function(d) { return foul_height - foulY(parseInt(d.NumberOfShots)); })
 
-    // })  
+    })  
     
 }
 
