@@ -37,7 +37,7 @@ teamMenu.data(selectTeam)
 
 
 // List of groups (here I have one group per column)
-var selectFolder = ["3_Pt_Shots", "2_Pt_Jump_Shots", "2_Pt_Hook_Shots", "2_Pt_Layups", "Dunks"]
+var selectFolder = {"3_Pt_Shots" : "Three Pointers", "2_Pt_Jump_Shots" : "Jump Shots", "2_Pt_Hook_Shots" : "Hook Shots", "2_Pt_Layups" : "Layups", "Dunks" : "Dunks" }
 var folderMenu = d3.select("#MyselectFolder")
 
 var selectedFolder = "3_Pt_Shots"
@@ -100,8 +100,6 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
             
     d3.csv(`data/${fileName}/${teamName}_${fileName}.csv`, function(data) {
 
-
-
     var title = `${fileName} : ${teamName}`
     svg.append('text')
         .attr('class', 'title')
@@ -134,6 +132,15 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
 
     svg.append("g")
       .call(d3.axisLeft(y));
+
+    svg.append("text")
+      .attr("class", "y label")
+      .attr("text-anchor", "end")
+      .attr("y", 6)
+      .attr("dy", ".75em")
+      .attr("transform", "rotate(-90)")
+      .text("Successful attempts");
+  
 
 
 

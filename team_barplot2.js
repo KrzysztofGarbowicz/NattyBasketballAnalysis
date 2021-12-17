@@ -134,6 +134,13 @@ var drawGraph2 = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2
     svg2.append("g")
       .call(d3.axisLeft(y2));
 
+    svg2.append("text")
+      .attr("class", "y label")
+      .attr("text-anchor", "end")
+      .attr("y", 6)
+      .attr("dy", ".75em")
+      .attr("transform", "rotate(-90)")
+      .text("Successful attempts");
 
 
     // Bars
@@ -146,8 +153,6 @@ var drawGraph2 = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2
         .attr("width", x2.bandwidth())
         .attr("fill", "#69b3a2")
         .style("shape-rendering", "crispEdges")
-        // .attr("height", function(d) { return height - y2(d.NumberOfShots); })
-        // .attr("fill", "#69b3a2")
 
 
     svg2.selectAll("rect")
