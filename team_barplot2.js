@@ -124,13 +124,13 @@ var drawGraph2 = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2
       .selectAll("text")
         .attr("transform", "translate(-10,0)rotate(-45)")
         .style("text-anchor", "end")
-        .style("font-size", "8px");
+        .style("font-size", "15px");
 
     // Add Y axis
     var y2 = d3.scaleLinear()
       .domain([0, (parseInt(team_range2[0]) + 20.0) ])
       .range([ height2, 0])
-      .style("font-size", "15px");
+      .style("font-size", "8px");
     svg2.append("g")
       .call(d3.axisLeft(y2));
 
