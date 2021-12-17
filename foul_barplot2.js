@@ -1,3 +1,13 @@
+/*
+Template 1: https://www.d3-graph-gallery.com/graph/barplot_basic.html
+Template 2: https://www.d3-graph-gallery.com/graph/barplot_animation_start.html
+Template 3: https://www.d3-graph-gallery.com/graph/barplot_button_data_csv.html
+
+data: data/Fouls
+      data/Fouled
+> created from DataVis.ipynb
+*/
+
 // set the dimensions and margins of the graph
 var foul_margin2 = {top: 10, right: 30, bottom: 140, left: 80},
 foul_width2 = 1200 - foul_margin2.left - foul_margin2.right,
