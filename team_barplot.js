@@ -105,13 +105,13 @@ folderMenu.on('change', function(){
        console.log('***********')
 
        drawGraph(selectedFolder, selectedTeam)
+       drawGraph2(selectedFolder, selectedTeam2)
 });        
 
 // var teamName = d3.select(teamMenu).on('change').property("value")
 // var folderName = d3.select(folderMenu).on('change').property("value")
 
 
-console.log('let\'s see')
 
 // Parse the Data
 var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {

@@ -190,6 +190,9 @@ html {
 <div class="w3-row-padding w3-padding-64 w3-container"  id="graph4">
 	<div class="w3-content">
 		  <h1>Make/Miss for each shot type</h1>
+		  <p>
+		  The succes ratio for each shot type.
+		  </p>
 		  <div id="shot_dataviz"></div>
   <script src="barplot_shot.js"></script>
 	</div>
@@ -199,6 +202,10 @@ html {
 <div class="w3-row-padding w3-padding-64 w3-light-grey w3-container"  id="graph5">
   <div class="w3-content">
       <h1>The height & weight</h1>
+      <p>
+	The scatterplot below shows how height and weight correlate for all NBA-players.
+	Hoover over a player to show more details.
+      </p>
       <div id="player_dataviz"></div>
 <script src="scatter_player.js"></script>
   </div>
@@ -210,9 +217,12 @@ html {
 <div class="w3-row-padding  w3-padding-64 w3-container"  id="graph6">
 	<div class="w3-content">
 		  <h1 style="text-align:center" >Team Performance Comparison</h1>
+		  <p>
+			You can select a statistic and two teams to compare below.
+		  </p>
+		  <label><b>Select a statistic: &emsp;</b></label> 		  <div id="MyselectFolder"></div>
 		  <!-- Initialize a select button -->
 		  <div class="float-container">
-			  <div class="one" style="text-align:center;float: left;margin-left: 15%; position: relative" id="MyselectFolder"></div>
 			  <div class="two" style="text-align:center;float: right;margin-right: 15%; position: relative" id="MyselectTeam"></div>
 		  </div>
 		  <div id="my_dataviz"></div>
@@ -221,7 +231,7 @@ html {
 	<div class="w3-content">
 		  <!-- Initialize a select button -->
 		  <div class="float-container">
-			  <div class="one" style="text-align:center;float:left;margin-left: 15%; position: relative;" id="MyselectFolder2"></div>
+			  <!-- <div class="one" style="text-align:center;float:left;margin-left: 15%; position: relative;" id="MyselectFolder2"></div> -->
 			  <div class="two" style="text-align:center;float: right;margin-right: 15%; position: relative" id="MyselectTeam2"></div>
 		  </div>
 		  <div id="my_dataviz2"></div>
@@ -233,6 +243,10 @@ html {
 <div class="w3-row-padding w3-padding-64 w3-light-grey w3-container"  id="graph7">
 	  <div class="w3-content">
 			<h1 style="text-align:center" >Team Foul Comparison</h1>
+			<p>
+			Which team and players commit the most fouls?
+			Select a foul type and team to found out.
+			</p>
 			<!-- Initialize a select button -->
 			<div class="float-container">
 				<div class="one" style="text-align:center;float: left;margin-left: 15%; position: relative" id="MyFoulSelection"></div>
@@ -243,6 +257,10 @@ html {
 	  </div>
 	  <div class="w3-content">
 			<h1 style="text-align:center" >Comparison of Fouled Players</h1>
+			<p>
+			And which players get fouled most often?
+			Select a foul type and team to found out.
+			</p>
 			<!-- Initialize a select button -->
 			<div class="float-container">
 				<div class="one" style="text-align:center;float:left;margin-left: 15%; position: relative;" id="MyFoulSelection2"></div>

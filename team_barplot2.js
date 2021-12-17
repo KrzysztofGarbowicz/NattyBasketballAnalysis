@@ -67,11 +67,12 @@ var selectFolder2 = ["All_Shots", "3_Pt_Shots", "2_Pt_Jump_Shots", "2_Pt_Hook_Sh
  "Free_Throws", "Assists", "Blocks",
  "Steals", "All_Rebounds", "Offensive_Rebounds", "Defensive_Rebounds",
  "Bad_Plays", "Bad_Passes", "Lost_Balls" ]
-var folderMenu2 = d3.select("#MyselectFolder2")
+//var folderMenu2 = d3.select("#MyselectFolder2")
 
 var selectedFolder2 = "All_Shots"
 var selectedTeam2 = "LAL"
 
+/*
 folderMenu2.data(selectFolder2)
         .append("select")
         .selectAll("option")
@@ -84,25 +85,25 @@ folderMenu2.data(selectFolder2)
         .text(function(d){
             return d;
         })
+*/	
 
 teamMenu2.on('change', function(){
     selectedTeam2 = d3.select(this)
        .select("select")
        .property("value")
-       console.log('2222222222222')
-       console.log(selectedTeam2)
-       console.log('2222222222222')
 
        drawGraph2(selectedFolder, selectedTeam2)
 });
 
+/*
 folderMenu2.on('change', function(){
     selectedFolder2 = d3.select(this)
        .select("select")
        .property("value")
 
        drawGraph2(selectedFolder, selectedTeam2)
-});        
+});    
+*/    
 
 // var teamName = d3.select(teamMenu).on('change').property("value")
 // var folderName = d3.select(folderMenu).on('change').property("value")
