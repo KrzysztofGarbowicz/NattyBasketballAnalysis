@@ -192,7 +192,7 @@ var drawFoulGraph2 = function(foulFileName2 = selectedFoul2, foulTeamName2 = sel
         .transition()
         .duration(800)
         .attr("y", function(d) { return foulY2(d.NumberOfShots); })
-        .attr("height", function(d) { return foul_height2 - foulY2(d.NumberOfShots); })
+        .attr("height", function(d) { return foul_height2 - foulY2(parseInt(d.NumberOfShots)); })
 
     })  
     

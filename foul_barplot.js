@@ -188,7 +188,7 @@ var drawFoulGraph = function(foulFileName = selectedFoul, foulTeamName = selecte
         .transition()
         .duration(800)
         .attr("y", function(d) { return foulY(d.NumberOfShots); })
-        .attr("height", function(d) { return foul_height - foulY(d.NumberOfShots); })
+        .attr("height", function(d) { return foul_height - foulY(parseInt(d.NumberOfShots)); })
 
     })  
     
