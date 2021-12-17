@@ -37,16 +37,16 @@ teamMenu.data(selectTeam)
 
 
 // List of groups (here I have one group per column)
-var selectFolder = {"3_Pt_Shots" : "Three Pointers", "2_Pt_Jump_Shots" : "Jump Shots", "2_Pt_Hook_Shots" : "Hook Shots", "2_Pt_Layups" : "Layups", "Dunks" : "Dunks" }
+var selectFolder = ["3_Pt_Shots", "2_Pt_Jump_Shots", "2_Pt_Hook_Shots", "2_Pt_Layups", "Dunks"]
 var folderMenu = d3.select("#MyselectFolder")
 
 var selectedFolder = "3_Pt_Shots"
 var selectedTeam = "HOU"
 
-folderMenu.data(selectFolder.keys())
+folderMenu.data(selectFolder)
         .append("select")
         .selectAll("option")
-        .data(selectFolder.keys())
+        .data(selectFolder)
         .enter()
         .append("option")
         .attr("value", function(d){
