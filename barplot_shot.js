@@ -20,10 +20,10 @@ var svg_shot = d3.select("#shot_dataviz")
     .attr("transform",
           "translate(" + margin_shot.left + "," + margin_shot.top + ")");
 	  
-svg_shot.append("circle").attr("cx",500).attr("cy",130).attr("r", 6).style("fill", "#C7EFCF")
-svg_shot.append("circle").attr("cx",500).attr("cy",160).attr("r", 6).style("fill", "#FE5F55")
-svg_shot.append("text").attr("x", 520).attr("y", 130).text("Make").style("font-size", "15px").attr("alignment-baseline","middle")
-svg_shot.append("text").attr("x", 520).attr("y", 160).text("Miss").style("font-size", "15px").attr("alignment-baseline","middle")
+svg_shot.append("circle").attr("cx",1000).attr("cy",130).attr("r", 6).style("fill", "#C7EFCF")
+svg_shot.append("circle").attr("cx",1000).attr("cy",160).attr("r", 6).style("fill", "#FE5F55")
+svg_shot.append("text").attr("x", 1020).attr("y", 130).text("Make").style("font-size", "15px").attr("alignment-baseline","middle")
+svg_shot.append("text").attr("x", 1020).attr("y", 160).text("Miss").style("font-size", "15px").attr("alignment-baseline","middle")
 
 
 // Parse the Data
