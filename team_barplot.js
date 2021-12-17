@@ -133,7 +133,7 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
     svg.append("g")
       .call(d3.axisLeft(y));
 
-    svg.append("text")
+    svg.append("text1")
       .attr("class", "y label")
       .attr("text-anchor", "end")
       .attr("y", 6)

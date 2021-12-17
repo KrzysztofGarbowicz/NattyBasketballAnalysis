@@ -134,7 +134,7 @@ var drawGraph2 = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2
     svg2.append("g")
       .call(d3.axisLeft(y2));
 
-    svg2.append("text")
+    svg2.append("text2")
       .attr("class", "y label")
       .attr("text-anchor", "end")
       .attr("y", 6)
