@@ -64,7 +64,7 @@ foulTeamMenu2.on('change', function(){
        console.log(selectedFoulTeam2)
        console.log('2222222222222')
 
-       drawFoulGraph(selectedFoul2, selectedFoulTeam2)
+       drawFoulGraph2(selectedFoul2, selectedFoulTeam2)
 });
 
 foulTypeMenu2.on('change', function(){
@@ -75,7 +75,7 @@ foulTypeMenu2.on('change', function(){
        console.log(selectedFoul2)
        console.log('2222222222222')
 
-       drawFoulGraph(selectedFoul2, selectedFoulTeam2)
+       drawFoulGraph2(selectedFoul2, selectedFoulTeam2)
 });        
 
 // var teamName = d3.select(teamMenu).on('change').property("value")
@@ -85,7 +85,7 @@ foulTypeMenu2.on('change', function(){
 console.log('let\'s see foul 2')
 
 // Parse the Data
-var drawFoulGraph = function(foulFileName2 = selectedFoul2, foulTeamName2 = selectedFoulTeam2) {
+var drawFoulGraph2 = function(foulFileName2 = selectedFoul2, foulTeamName2 = selectedFoulTeam2) {
     
     d3.selectAll("#my_foul_selection_viz2 > *").remove();
 
@@ -173,4 +173,4 @@ var drawFoulGraph = function(foulFileName2 = selectedFoul2, foulTeamName2 = sele
     
 }
 
-drawFoulGraph() 
+drawFoulGraph2() 
