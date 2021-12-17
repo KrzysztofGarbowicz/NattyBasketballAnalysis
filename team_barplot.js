@@ -130,7 +130,9 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
     // Add Y axis
     var y = d3.scaleLinear()
       .domain([0, (parseInt(team_range[0]) + 20.0) ])
-      .range([ height, 0]);
+      .range([ height, 0])
+      .style("font-size", "15px");
+
     svg.append("g")
       .call(d3.axisLeft(y));
 
