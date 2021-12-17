@@ -44,10 +44,13 @@ html {
   <div class="w3-bar w3-red w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 1</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 2</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 3</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 4</a>
+    <a href="#start" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Vis 1</a>
+    <a href="#graph2" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Vis 2</a>
+    <a href="#graph3" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Vis 3</a>
+    <a href="#graph4" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Vis 4</a>
+    <a href="#graph5" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Vis 5</a>
+    <a href="#graph6" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Vis 6</a>
+    <a href="#graph7" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Vis 7</a>
   </div>
 </div>
 
@@ -59,10 +62,10 @@ html {
 </header>
 
 <!-- First Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
+<div class="w3-row-padding w3-padding-64 w3-container" id="start">
   <div class="w3-content">
     <div class="w3-twothird">
-      <h1 id="start">Substitutions</h1>
+      <h1>Substitutions</h1>
       <form>
 			<label for="team">Select a team to analyse: &emsp;</label>
 			<select id="selectTeam" name="team" onchange="switchTeam()">
@@ -96,7 +99,7 @@ html {
 				<option value="TOR">Toronto Raptors</option>
 				<option value="UTA">Utah Jazz</option>
 				<option value="WAS">Washington Wizards</option>
-			</select>			
+			</select>
 		</form>
 		<span>
 			  Zoom: <input type="range" min="0" max="10000" value="5" class="slider" id="fdg_zoom">
@@ -106,13 +109,13 @@ html {
 		<br>
 		<svg style="border: 10px solid; user-select: none" width="200px" height="200px" id="fdg"></svg>
 		<script src="fdg.js"></script>
-	</div>			
+	</div>
 
   </div>
 </div>
 
 <!-- Second Grid -->
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container"  id="graph2">
   <div class="w3-content">
 	<label>Select a quarter to analyse: &emsp; </label>
 	<button onclick="intenUpdate('move');histo_button_click('overall')">Overall</button>
@@ -132,7 +135,7 @@ html {
   <div class="w3-content">
     <div class="w3-twothird">
         <h1>Intensity analysis*</h1>
-	
+
         <div id="intensity_dataviz"></div>
 <script src="circular_intensity.js"></script>
         <p>* The intensity is calculated by the average moves per match, which includes shots, rebounds, turnovers, ball fouls, etc.</p>
@@ -142,7 +145,7 @@ html {
 
 
 <!-- Third Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
+<div class="w3-row-padding w3-padding-64 w3-container"  id="graph3">
   <div class="w3-content">
     <div class="w3-twothird">
       <h1>Statistics per Location</h1>
@@ -155,7 +158,7 @@ html {
 </div>
 
 <!-- 4th Grid -->
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container"  id="graph4">
 	<div class="w3-content">
 	  <div class="w3-twothird">
 		  <h1>Make/Miss for each shot type</h1>
@@ -166,7 +169,7 @@ html {
   </div>
 
 <!-- 5th Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
+<div class="w3-row-padding w3-padding-64 w3-container"  id="graph5">
   <div class="w3-content">
     <div class="w3-twothird">
       <h1>The height & weight</h1>
@@ -178,8 +181,8 @@ html {
 
 
 
-<!-- 7th Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
+<!-- 6th Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container"  id="graph6">
 	<div class="w3-content">
 	  <div class="w3-twothird">
 		  <h1 style="text-align:center" >Team Performance Comparison</h1>
@@ -194,9 +197,9 @@ html {
 	</div>
 	<div class="w3-content">
 		<div class="w3-twothird">
-		  <h1 style="text-align:center">.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;..&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;.</h1>
+		  <!-- <h1 style="text-align:center">.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;..&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;.</h1> -->
 		  <!-- Initialize a select button -->
-		  <div class="float-container">	
+		  <div class="float-container">
 			  <div class="one" style="text-align:center;float:left;margin-left: 15%; position: relative;" id="MyselectFolder2"></div>
 			  <div class="two" style="text-align:center;float: right;margin-right: 15%; position: relative" id="MyselectTeam2"></div>
 		  </div>
@@ -205,9 +208,9 @@ html {
 		</div>
 	</div>
 </div>
-  
-<!-- 8th Grid -->
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+
+<!-- 7th Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container"  id="graph7">
 	  <div class="w3-content">
 		<div class="w3-twothird">
 			<h1 style="text-align:center" >Team Foul Comparison</h1>
@@ -224,7 +227,7 @@ html {
 		  <div class="w3-twothird">
 			<h1 style="text-align:center" >Comparison of Fouled Players</h1>
 			<!-- Initialize a select button -->
-			<div class="float-container">	
+			<div class="float-container">
 				<div class="one" style="text-align:center;float:left;margin-left: 15%; position: relative;" id="MyFoulSelection2"></div>
 				<div class="two" style="text-align:center;float: right;margin-right: 15%; position: relative" id="MyTeamSelection2"></div>
 			</div>
@@ -241,7 +244,7 @@ html {
 
 <!-- Footer -->
 
-<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">
 
  <p>Template by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
