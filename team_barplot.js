@@ -1,5 +1,5 @@
 // set the dimensions and margins of the graph
-var margin = {top: 10, right: 30, bottom: 120, left: 50},
+var margin = {top: 10, right: 30, bottom: 120, left: 80},
     width = 1200 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
 
@@ -137,6 +137,7 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
       .attr("class", "y label")
       .attr("text-anchor", "end")
       .attr("y", 6)
+      .attr("dy", ".75em")
       .text("Successful attempts");
   
 
