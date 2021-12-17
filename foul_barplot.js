@@ -155,10 +155,9 @@ var drawFoulGraph = function(foulFileName = selectedFoul, foulTeamName = selecte
       .enter()
       .append("rect")
         .attr("x", function(d) { return foulX(d.Name); })
-        .attr("y", function(d) { return foulY(d.NumberOfShots); })
+        .attr("y", function(d) { return foulY(parseInt(d.NumberOfShots)); })
         .attr("width", foulX.bandwidth())
         .attr("fill", "#eb3a34")
-        .style("stroke", "black")
 
       var foulInfo = d3.select("#my_foul_selection_viz")
         .append("div")

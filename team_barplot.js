@@ -150,7 +150,7 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
       .enter()
       .append("rect")
         .attr("x", function(d) { return x(d.Name); })
-        .attr("y", function(d) { return y(d.NumberOfShots); })
+        .attr("y", function(d) { return y(parseInt(d.NumberOfShots)); })
         .attr("width", x.bandwidth())
         .attr("fill", "#69b3a2")
         .style("shape-rendering", "crispEdges")

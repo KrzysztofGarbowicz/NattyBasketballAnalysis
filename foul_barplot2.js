@@ -157,10 +157,9 @@ var drawFoulGraph2 = function(foulFileName2 = selectedFoul2, foulTeamName2 = sel
       .enter()
       .append("rect")
         .attr("x", function(d) { return foulX2(d.Name); })
-        .attr("y", function(d) { return foulY2(d.NumberOfShots); })
+        .attr("y", function(d) { return foulY2(parseInt(d.NumberOfShots)); })
         .attr("width", foulX2.bandwidth())
         .attr("fill", "#eb3477")
-        .style("stroke", "black")
 
       var foulInfo2 = d3.select("#my_foul_selection_viz2")
         .append("div")
