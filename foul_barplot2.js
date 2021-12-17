@@ -27,11 +27,11 @@ foulTeamMenu2.data(foulTeams2)
         .data(foulTeams2)
        	.enter()
         .append("option")
-        .attr("value", function(d){
-            return d;
+        .attr("value", function(fd2){
+            return fd2;
         })
-        .text(function(d){
-            return d;
+        .text(function(fd2){
+            return fd2;
         })
 
 
@@ -49,11 +49,11 @@ foulTypeMenu2.data(foulTypeSelection2)
         .data(foulTypeSelection2)
         .enter()
         .append("option")
-        .attr("value", function(d){
-            return d;
+        .attr("value", function(fd2){
+            return fd2;
         })
-        .text(function(d){
-            return d;
+        .text(function(fd2){
+            return fd2;
         })
 
 foulTeamMenu2.on('change', function(){
@@ -119,12 +119,12 @@ var drawFoulGraph2 = function(foulFileName2 = selectedFoul2, foulTeamName2 = sel
       .text(foulTitle2)
 
 
-    var foulTeamRange2 = d3.map(foulData2, function(d) { return d.NumberOfShots; }).keys()
+    var foulTeamRange2 = d3.map(foulData2, function(fd2) { return fd2.NumberOfShots; }).keys()
 
     // X axis
     var foulX2 = d3.scaleBand()
       .range([ 0, foul_width2 ])
-      .domain(foulData2.map(function(d) { return d.Name; }))
+      .domain(foulData2.map(function(fd2) { return fd2.Name; }))
       .padding(0.2);
     foulSvg2.append("g")
       .attr("transform", "translate(0," + foul_height2 + ")")
@@ -156,8 +156,8 @@ var drawFoulGraph2 = function(foulFileName2 = selectedFoul2, foulTeamName2 = sel
       .data(foulData2)
       .enter()
       .append("rect")
-        .attr("x", function(d) { return foulX2(d.Name); })
-        .attr("y", function(d) { return foulY2(parseInt(d.NumberOfShots)); })
+        .attr("x", function(fd2) { return foulX2(fd2.Name); })
+        .attr("y", function(fd2) { return foulY2(parseInt(fd2.NumberOfShots)); })
         .attr("width", foulX2.bandwidth())
         .attr("fill", "#eb3477")
         .style("stroke", "black")
@@ -174,9 +174,9 @@ var drawFoulGraph2 = function(foulFileName2 = selectedFoul2, foulTeamName2 = sel
           d3.select(this).attr('opacity', 0.5);
           foulInfo2.style("opacity", 1);
         })
-        .on("mousemove", function (d) {
+        .on("mousemove", function (fd2) {
           foulInfo2
-            .html(d.Name + "<br>" + `Number of ${foulFileName2} fouls experienced: ${parseInt(d.NumberOfShots)}`)
+            .html(fd2.Name + "<br>" + `Number of ${foulFileName2} fouls experienced: ${parseInt(fd2.NumberOfShots)}`)
         })
         .on("mouseout", function (d) {
           d3.select(this).attr('opacity', 1);
@@ -190,8 +190,8 @@ var drawFoulGraph2 = function(foulFileName2 = selectedFoul2, foulTeamName2 = sel
     foulSvg2.selectAll("rect")
         .transition()
         .duration(800)
-        .attr("y", function(d) { return foulY2(d.NumberOfShots); })
-        .attr("height", function(d) { return foul_height2 - foulY2(d.NumberOfShots); })
+        .attr("y", function(fd2) { return foulY2(fd2.NumberOfShots); })
+        .attr("height", function(fd2) { return foul_height2 - foulY2(fd2.NumberOfShots); })
 
     })  
     
