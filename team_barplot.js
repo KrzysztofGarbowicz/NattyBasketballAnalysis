@@ -43,10 +43,10 @@ var folderMenu = d3.select("#MyselectFolder")
 var selectedFolder = "3_Pt_Shots"
 var selectedTeam = "HOU"
 
-folderMenu.data(selectFolder)
+folderMenu.data(selectFolder.keys())
         .append("select")
         .selectAll("option")
-        .data(selectFolder)
+        .data(selectFolder.keys())
         .enter()
         .append("option")
         .attr("value", function(d){
