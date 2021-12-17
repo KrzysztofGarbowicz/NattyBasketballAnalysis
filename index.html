@@ -55,16 +55,21 @@ html {
 <header class="w3-container w3-red w3-center" style="padding:128px 16px">
   <h1 class="w3-margin w3-jumbo">NattyBasketballAnalysis</h1>
   <p class="w3-xlarge">Smart analytics of the NBA.</p>
+  <p>
+	This website presents a visual overview of relevant NBA statistics for the 2019-2020 season.
+	<br>
+	Click the button below to get started!
+  </p>
   <a class="w3-button w3-black w3-padding-large w3-large w3-margin-top" href="#start">Get Started</a>
+  <p>Data sources: <a href="https://sports-statistics.com/sports-data/nba-basketball-datasets-csv-files/">1</a> and 
+	<a href="https://www.basketball-reference.com/">2</a>.</p>
 </header>
 
 <!-- First Grid -->
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
-    <div class="w3-twothird">
-      <h1 id="start">Substitutions</h1>
-      <form>
-			<label for="team">Select a team to analyse: &emsp;</label>
+  <form>
+			<label for="team"><b>Select a team to analyse: &emsp;</b></label>
 			<select id="selectTeam" name="team" onchange="switchTeam()">
 				<option value="ATL">Atlanta Hawks</option>
 				<option value="BOS">Boston Celtics</option>
@@ -98,45 +103,54 @@ html {
 				<option value="WAS">Washington Wizards</option>
 			</select>			
 		</form>
-		<span>
-			  Zoom: <input type="range" min="0" max="10000" value="5" class="slider" id="fdg_zoom">
-			  x: <input type="range" min="0" max="100" value="50" class="slider" id="fdg_x">
-			  y: <input type="range" min="0" max="100" value="50" class="slider" id="fdg_y">
-		</span>
-		<br>
+      <h1 id="start">Substitutions</h1>
+      <p>
+	Select a team and see which players often get substituted with for each other. 
+	A larger circle means that a player is substituted more frequently; a thicker line between
+	two players means that they are substituted for each other more frequently.
+      </p>
+      
 		<svg style="border: 10px solid; user-select: none" width="200px" height="200px" id="fdg"></svg>
+				<span>
+			  Zoom: &emsp; <input type="range" min="0" max="10000" value="5" class="slider" id="fdg_zoom">
+			  &emsp; horizontal scroll: &emsp;<input type="range" min="0" max="100" value="50" class="slider" id="fdg_x">
+			  &emsp; vertical scroll: &emsp;<input type="range" min="0" max="100" value="50" class="slider" id="fdg_y">
+		</span>
 		<script src="fdg.js"></script>
-	</div>			
-
   </div>
 </div>
 
 <!-- Second Grid -->
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
   <div class="w3-content">
-	<label>Select a quarter to analyse: &emsp; </label>
-	<button onclick="intenUpdate('move');histo_button_click('overall')">Overall</button>
+	<label><b>Select a quarter to analyse: &emsp; </b></label>	
         <button onclick="intenUpdate('move_q1');histo_button_click(1)">Q1</button>
         <button onclick="intenUpdate('move_q2');histo_button_click(2)">Q2</button>
         <button onclick="intenUpdate('move_q3');histo_button_click(3)">Q3</button>
         <button onclick="intenUpdate('move_q4');histo_button_click(4)">Q4</button>
+	<button onclick="intenUpdate('move');histo_button_click('overall')">Overall</button>
       <h1>Point distribution</h1>
+      <p>
+	This graphs shows when points are scored during the game. You can select a specific quarter
+	or the aggregate of all quarters. It is also possible to change the size of the bins to show more detail.	
+      </p>
 	<div id="distribution"></div>
 	<p>
-		<label>Change the bin size: &emsp;</label>
+		<label><b>Number of bins: &emsp;</b></label>
 		<input type="range" min="10" max="70" step="10" value="20" id="nBin">
 	</p>
 	<script src="pointdistribution.js"></script>
 
   </div>
   <div class="w3-content">
-    <div class="w3-twothird">
-        <h1>Intensity analysis*</h1>
-	
+        <h1>Intensity analysis</h1>
+	<p>
+		In this graph the intensity per team is shown.
+		The intensity is calculated by the average moves per match, which includes shots, rebounds, 
+		turnovers, ball fouls.
+	</p>
         <div id="intensity_dataviz"></div>
 <script src="circular_intensity.js"></script>
-        <p>* The intensity is calculated by the average moves per match, which includes shots, rebounds, turnovers, ball fouls, etc.</p>
-	</div>
   </div>
 </div>
 
@@ -144,35 +158,35 @@ html {
 <!-- Third Grid -->
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
-    <div class="w3-twothird">
       <h1>Statistics per Location</h1>
+      <p>
+		On the map below all location of NBA games are represented with a circle
+		where the size of the circle represented the average number of points that is scored
+		during a match at that location.
+		Hover over a circle for more details.
+      </p>
       <div class="tooltip" id="maptooltip"><br><br></div>
 <svg style="border:solid" id="bubblemap" width="1000" height="500"></svg>
 <script src="./bubblemap.js"></script>
 
-	</div>
   </div>
 </div>
 
 <!-- 4th Grid -->
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
 	<div class="w3-content">
-	  <div class="w3-twothird">
 		  <h1>Make/Miss for each shot type</h1>
 		  <div id="shot_dataviz"></div>
   <script src="barplot_shot.js"></script>
-	  </div>
 	</div>
   </div>
 
 <!-- 5th Grid -->
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
-    <div class="w3-twothird">
       <h1>The height & weight</h1>
       <div id="player_dataviz"></div>
 <script src="scatter_player.js"></script>
-	</div>
   </div>
 </div>
 
@@ -181,7 +195,6 @@ html {
 <!-- 7th Grid -->
 <div class="w3-row-padding w3-padding-64 w3-container">
 	<div class="w3-content">
-	  <div class="w3-twothird">
 		  <h1 style="text-align:center" >Team Performance Comparison</h1>
 		  <!-- Initialize a select button -->
 		  <div class="float-container">
@@ -190,10 +203,8 @@ html {
 		  </div>
 		  <div id="my_dataviz"></div>
   <script src="team_barplot.js"></script>
-	  </div>
 	</div>
 	<div class="w3-content">
-		<div class="w3-twothird">
 		  <h1 style="text-align:center">.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;..&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;.</h1>
 		  <!-- Initialize a select button -->
 		  <div class="float-container">	
@@ -202,14 +213,12 @@ html {
 		  </div>
 		  <div id="my_dataviz2"></div>
   <script src="team_barplot2.js"></script>
-		</div>
 	</div>
 </div>
   
 <!-- 8th Grid -->
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
 	  <div class="w3-content">
-		<div class="w3-twothird">
 			<h1 style="text-align:center" >Team Foul Comparison</h1>
 			<!-- Initialize a select button -->
 			<div class="float-container">
@@ -218,10 +227,8 @@ html {
 			</div>
 			<div id="my_foul_selection_viz"></div>
 	<script src="foul_barplot.js"></script>
-		</div>
 	  </div>
 	  <div class="w3-content">
-		  <div class="w3-twothird">
 			<h1 style="text-align:center" >Comparison of Fouled Players</h1>
 			<!-- Initialize a select button -->
 			<div class="float-container">	
@@ -230,7 +237,6 @@ html {
 			</div>
 			<div id="my_foul_selection_viz2"></div>
 	<script src="foul_barplot2.js"></script>
-		  </div>
 	  </div>
 </div>
 

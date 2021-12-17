@@ -230,7 +230,7 @@ updateSimulation()
 
 function switchTeam(){
 	var obj = document.getElementById("selectTeam");
-        team = obj.options[obj.selectedIndex].text;
+        team = obj.options[obj.selectedIndex].value;
 	nodes = fdg_data["nodes"][team];
         links = fdg_data["links"][team];
 	weight = 0.01;
