@@ -151,7 +151,7 @@ var drawFoulGraph = function(foulFileName = selectedFoul, foulTeamName = selecte
         .attr("x", function(d) { return foulX(d.Name); })
         .attr("y", function(d) { return foulY(d.NumberOfShots); })
         .attr("width", foulX.bandwidth())
-        .attr("fill", "#69b3a2")
+        .attr("fill", "#eb3a34")
         .style("shape-rendering", "crispEdges")
 
 
