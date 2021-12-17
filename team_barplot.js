@@ -170,7 +170,7 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
         .transition()
         .duration(800)
         .attr("y", function(d) { return y(d.NumberOfShots); })
-        .attr("height", function(d) { return height2 - y(d.NumberOfShots); })
+        .attr("height", function(d) { return height - y(d.NumberOfShots); })
     })  
     
 
