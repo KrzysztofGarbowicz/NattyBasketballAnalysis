@@ -155,14 +155,17 @@ var drawFoulGraph = function(foulFileName = selectedFoul, foulTeamName = selecte
         .style("shape-rendering", "crispEdges")
         .style("stroke", "black")
 
-
+      var foulInfo = d3.select("#my_foul_selection_viz2")
+        .append("div")
+        .style("opacity", 1)
+        .attr("class", "tooltip")
 
     foulSvg.selectAll("rect")
         .on("mouseover", function (d) {
           d3.select(this).attr('opacity', 0.5);
         })
         .on("mousemove", function (d) {
-          tooltip
+          foulInfo
             .html(d.Name + "<br>" + `Number of ${foulFileName2} fouls commited: ${parseInt(d.NumberOfShots)}`)
         })
         .on("mouseout", function (d) {
