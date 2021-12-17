@@ -155,13 +155,23 @@ var drawFoulGraph2 = function(foulFileName2 = selectedFoul2, foulTeamName2 = sel
         .style("shape-rendering", "crispEdges")
         .style("stroke", "black")
 
+      var tooltip = d3.select("#player_dataviz")
+        .append("div")
+        .style("opacity", 1)
+        .attr("class", "tooltip")
 
+      
 
     foulSvg2.selectAll("rect")
         .on("mouseover", function (d) {
           d3.select(this).attr('opacity', 0.5);
+          tooltip.style("opacity", 1);
         }).on("mouseout", function (d) {
           d3.select(this).attr('opacity', 1);
+          tooltip
+          .transition()
+          .duration(200)
+          .style("opacity", 0);
         })
    
         // Animation
