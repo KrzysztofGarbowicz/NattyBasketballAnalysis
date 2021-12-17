@@ -125,7 +125,7 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
       .selectAll("text")
         .attr("transform", "translate(-10,0)rotate(-45)")
         .style("text-anchor", "end")
-        .style("font-size", "15px");
+        .style("font-size", "8px");
 
     // Add Y axis
     var y = d3.scaleLinear()
