@@ -160,7 +160,6 @@ var drawFoulGraph2 = function(foulFileName2 = selectedFoul2, foulTeamName2 = sel
         .attr("y", function(d) { return foulY2(d.NumberOfShots); })
         .attr("width", foulX2.bandwidth())
         .attr("fill", "#eb3477")
-        .style("shape-rendering", "crispEdges")
         .style("stroke", "black")
 
       var foulInfo2 = d3.select("#my_foul_selection_viz2")
