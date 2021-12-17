@@ -108,10 +108,6 @@ folderMenu.on('change', function(){
        drawGraph2(selectedFolder, selectedTeam2)
 });        
 
-// var teamName = d3.select(teamMenu).on('change').property("value")
-// var folderName = d3.select(folderMenu).on('change').property("value")
-
-
 
 // Parse the Data
 var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
@@ -219,9 +215,6 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
         .attr("height", function(d) { return height - y(d.NumberOfShots); })
     })  
     
-
-   
-
     
 }
 
