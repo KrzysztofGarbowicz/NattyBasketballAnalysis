@@ -55,6 +55,7 @@ folderMenu2.data(selectFolder2)
         .text(function(d){
             return d;
         })
+        
 
 teamMenu2.on('change', function(){
     selectedTeam2 = d3.select(this)
