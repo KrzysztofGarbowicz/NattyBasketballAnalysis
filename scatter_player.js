@@ -1,3 +1,11 @@
+/*
+Template 1: https://www.d3-graph-gallery.com/graph/scatter_tooltip.html
+Template 2: https://www.d3-graph-gallery.com/graph/scatter_grouped.html
+
+data: data/players_new.csv
+> created from playersAnalysis.ipynb
+*/
+
 // set the dimensions and margins of the graph
 var margin_player = {top: 10, right: 50, bottom: 30, left: 60},
     width_player = 680 - margin_player.right,

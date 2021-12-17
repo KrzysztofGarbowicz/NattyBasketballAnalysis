@@ -1,3 +1,10 @@
+/*
+Template: https://www.d3-graph-gallery.com/graph/barplot_stacked_hover.html
+
+data: data/shot.csv
+> created from shotsAnalysis.ipynb
+*/
+
 // set the dimensions and margins of the graph
 var margin_shot = {top: 10, right: 30, bottom: 20, left: 50},
     width_shot = 660 - margin_shot.left - margin_shot.right,
