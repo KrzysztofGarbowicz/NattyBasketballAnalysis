@@ -140,7 +140,7 @@ var drawFoulGraph2 = function(foulFileName2 = selectedFoul2, foulTeamName2 = sel
       .attr("y", 6)
       .attr("dy", ".75em")
       .attr("transform", "translate(-65,-10)rotate(-90)")
-      .text("Successful Attempts");
+      .text("Fouls Experienced");
 
 
     // Bars
