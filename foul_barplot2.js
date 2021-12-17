@@ -152,7 +152,7 @@ var drawFoulGraph2 = function(foulFileName2 = selectedFoul2, foulTeamName2 = sel
 
 
     // Bars
-    foulSvg2.selectAll("foulbar")
+    foulSvg2.selectAll("foulbar2")
       .data(foulData2)
       .enter()
       .append("rect")
