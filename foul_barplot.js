@@ -184,13 +184,13 @@ var drawFoulGraph = function(foulFileName = selectedFoul, foulTeamName = selecte
         })
    
         // Animation
-    foulSvg.selectAll("rect")
-        .transition()
-        .duration(800)
-        .attr("y", function(d) { return foulY(d.NumberOfShots); })
-        .attr("height", function(d) { return foul_height - foulY(parseInt(d.NumberOfShots)); })
+    // foulSvg.selectAll("rect")
+    //     .transition()
+    //     .duration(800)
+    //     .attr("y", function(d) { return foulY(d.NumberOfShots); })
+    //     .attr("height", function(d) { return foul_height - foulY(parseInt(d.NumberOfShots)); })
 
-    })  
+    // })  
     
 }
 
