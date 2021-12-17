@@ -44,13 +44,14 @@ html {
   <div class="w3-bar w3-red w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-    <a href="#start" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Vis 1</a>
-    <a href="#graph2" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Vis 2</a>
-    <a href="#graph3" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Vis 3</a>
-    <a href="#graph4" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Vis 4</a>
-    <a href="#graph5" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Vis 5</a>
-    <a href="#graph6" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Vis 6</a>
-    <a href="#graph7" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Vis 7</a>
+    <a href="#start" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Substitutions</a>
+    <a href="#graph2" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Point Distribution</a>
+    <a href="#intensity" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Intensity</a>
+    <a href="#graph3" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Locations</a>
+    <a href="#graph4" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Shot succes</a>
+    <a href="#graph5" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Height/weight</a>
+    <a href="#graph6" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Team performance</a>
+    <a href="#graph7" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Fouls</a>
   </div>
 </div>
 
@@ -64,6 +65,7 @@ html {
 	Click the button below to get started!
   </p>
   <a class="w3-button w3-black w3-padding-large w3-large w3-margin-top" href="#start">Get Started</a>
+  <br>
   <p>Data sources: <a href="https://sports-statistics.com/sports-data/nba-basketball-datasets-csv-files/">1</a> and 
 	<a href="https://www.basketball-reference.com/">2</a>.</p>
 </header>
@@ -71,7 +73,14 @@ html {
 <!-- First Grid -->
 <div class="w3-row-padding w3-padding-64 w3-container" id="start">
   <div class="w3-content">
-  <form>
+  
+      <h1 id="start">Substitutions</h1>
+      <p>
+	Select a team and see which players often get substituted with for each other. 
+	A larger circle means that a player is substituted more frequently; a thicker line between
+	two players means that they are substituted for each other more frequently.
+      </p>
+      <form>
 			<label for="team"><b>Select a team to analyse: &emsp;</b></label>
 			<select id="selectTeam" name="team" onchange="switchTeam()">
 				<option value="ATL">Atlanta Hawks</option>
@@ -106,12 +115,6 @@ html {
 				<option value="WAS">Washington Wizards</option>
 			</select>
 		</form>
-      <h1 id="start">Substitutions</h1>
-      <p>
-	Select a team and see which players often get substituted with for each other. 
-	A larger circle means that a player is substituted more frequently; a thicker line between
-	two players means that they are substituted for each other more frequently.
-      </p>
       
 		<svg style="border: 10px solid; user-select: none" width="200px" height="200px" id="fdg"></svg>
 				<span>
@@ -126,17 +129,17 @@ html {
 <!-- Second Grid -->
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container"  id="graph2">
   <div class="w3-content">
-	<label><b>Select a quarter to analyse: &emsp; </b></label>	
-        <button onclick="intenUpdate('move_q1');histo_button_click(1)">Q1</button>
-        <button onclick="intenUpdate('move_q2');histo_button_click(2)">Q2</button>
-        <button onclick="intenUpdate('move_q3');histo_button_click(3)">Q3</button>
-        <button onclick="intenUpdate('move_q4');histo_button_click(4)">Q4</button>
-	<button onclick="intenUpdate('move');histo_button_click('overall')">Overall</button>
       <h1>Point distribution</h1>
       <p>
 	This graphs shows when points are scored during the game. You can select a specific quarter
 	or the aggregate of all quarters. It is also possible to change the size of the bins to show more detail.	
       </p>
+      <label><b>Select a quarter to analyse: &emsp; </b></label>	
+        <button onclick="intenUpdate('move_q1');histo_button_click(1)">Q1</button>
+        <button onclick="intenUpdate('move_q2');histo_button_click(2)">Q2</button>
+        <button onclick="intenUpdate('move_q3');histo_button_click(3)">Q3</button>
+        <button onclick="intenUpdate('move_q4');histo_button_click(4)">Q4</button>
+	<button onclick="intenUpdate('move');histo_button_click('overall')">Overall</button>
 	<div id="distribution"></div>
 	<p>
 		<label><b>Number of bins: &emsp;</b></label>
@@ -145,13 +148,21 @@ html {
 	<script src="pointdistribution.js"></script>
 
   </div>
+</div>
+<div class="w3-row-padding w3-padding-64 w3-container" id="intensity">  
   <div class="w3-content">
-        <h1>Intensity analysis</h1>
+        <h1>Game Intensity</h1>
 	<p>
 		In this graph the intensity per team is shown.
 		The intensity is calculated by the average moves per match, which includes shots, rebounds, 
 		turnovers, ball fouls.
 	</p>
+	<label><b>Select a quarter to analyse: &emsp; </b></label>	
+        <button onclick="intenUpdate('move_q1');histo_button_click(1)">Q1</button>
+        <button onclick="intenUpdate('move_q2');histo_button_click(2)">Q2</button>
+        <button onclick="intenUpdate('move_q3');histo_button_click(3)">Q3</button>
+        <button onclick="intenUpdate('move_q4');histo_button_click(4)">Q4</button>
+	<button onclick="intenUpdate('move');histo_button_click('overall')">Overall</button>
         <div id="intensity_dataviz"></div>
 <script src="circular_intensity.js"></script>
   </div>
@@ -159,7 +170,7 @@ html {
 
 
 <!-- Third Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container"  id="graph3">
+<div class="w3-row-padding w3-padding-64 w3-light-grey w3-container"  id="graph3">
   <div class="w3-content">
       <h1>Statistics per Location</h1>
       <p>
@@ -176,7 +187,7 @@ html {
 </div>
 
 <!-- 4th Grid -->
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container"  id="graph4">
+<div class="w3-row-padding w3-padding-64 w3-container"  id="graph4">
 	<div class="w3-content">
 		  <h1>Make/Miss for each shot type</h1>
 		  <div id="shot_dataviz"></div>
@@ -185,7 +196,7 @@ html {
   </div>
 
 <!-- 5th Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container"  id="graph5">
+<div class="w3-row-padding w3-padding-64 w3-light-grey w3-container"  id="graph5">
   <div class="w3-content">
       <h1>The height & weight</h1>
       <div id="player_dataviz"></div>
@@ -196,7 +207,7 @@ html {
 
 
 <!-- 6th Grid -->
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container"  id="graph6">
+<div class="w3-row-padding  w3-padding-64 w3-container"  id="graph6">
 	<div class="w3-content">
 		  <h1 style="text-align:center" >Team Performance Comparison</h1>
 		  <!-- Initialize a select button -->
@@ -219,7 +230,7 @@ html {
 </div>
 
 <!-- 7th Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container"  id="graph7">
+<div class="w3-row-padding w3-padding-64 w3-light-grey w3-container"  id="graph7">
 	  <div class="w3-content">
 			<h1 style="text-align:center" >Team Foul Comparison</h1>
 			<!-- Initialize a select button -->
@@ -250,7 +261,8 @@ html {
 <!-- Footer -->
 
 <footer class="w3-container w3-padding-64 w3-center w3-opacity">
-
+ <p>Haoyang Dong, Krzysztof Garbowicz, Dyon van der Ende</p>
+ <br>
  <p>Template by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
 

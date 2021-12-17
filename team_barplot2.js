@@ -93,25 +93,19 @@ teamMenu2.on('change', function(){
        console.log(selectedTeam2)
        console.log('2222222222222')
 
-       drawGraph2(selectedFolder2, selectedTeam2)
+       drawGraph2(selectedFolder, selectedTeam2)
 });
 
 folderMenu2.on('change', function(){
     selectedFolder2 = d3.select(this)
        .select("select")
        .property("value")
-       console.log('2222222222222')
-       console.log(selectedFolder2)
-       console.log('2222222222222')
 
-       drawGraph2(selectedFolder2, selectedTeam2)
+       drawGraph2(selectedFolder, selectedTeam2)
 });        
 
 // var teamName = d3.select(teamMenu).on('change').property("value")
 // var folderName = d3.select(folderMenu).on('change').property("value")
-
-
-console.log('let\'s see 2')
 
 // Parse the Data
 var drawGraph2 = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2) {

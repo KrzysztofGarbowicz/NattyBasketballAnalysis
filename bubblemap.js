@@ -21,10 +21,7 @@ var projection = d3.geoMercator()
 // Create data for circles:
 var markers = [
   { name:'AT&T Center San Antonio Texas', size: 225.86, long: -98.4375228881836, lat: 29.426937103271484},
- // { name:'AccorHotels Arena Paris France', size: 219, long: , lat: },
  { name:'American Airlines Center Dallas Texas', size: 226.11, long: 96.8102721, lat: 32.7905076},
-//{ name:'AmericanAirlines Arena Miami Florida', size: 223.5, long: -80.173529, lat: 25.775927},
- //{ name:'Amway Center Orlando Florida', size: 210.19, long:-81.3840071 , lat: 28.5392739},
  { name:'Bankers Life Fieldhouse Indianapolis Indiana', size: 215.71, long: -86.089601, lat: 39.769844},
 { name: 'Barclays Center Brooklyn New York', size: 220.68, long: -73.975279, lat: 40.6826108},
  { name:'Capital One Arena Washington District of Columbia', size: 230.71875, long: -77.0209382, lat: 38.8981835},
@@ -33,10 +30,8 @@ var markers = [
  { name:'FedEx Forum Memphis Tennessee', size: 226.12121212121207, long: -90.0516243, lat: 35.1377966},
  { name:'Fiserv Forum Milwaukee Wisconsin', size: 228.77419354838713, long: -87.9174871, lat: 43.0450096},
  { name:'Golden 1 Center Sacramento California', size: 220.74193548387095, long: -121.4995008, lat: 38.5801405},
- //{ name:'HP Field House Bay Lake Florida', size: 224.1967213114754, long: -81.5572362, lat: 28.3373104},
  { name:'Little Caesars Arena Detroit Michigan', size: 220.28125, long: -83.0551622, lat: 42.34093},
  { name:'Madison Square Garden (IV) New York New York', size: 215.87878787878793, long: -73.987056, lat: 40.742142},
- // { name:'Mexico City Arena Mexico City Mexico', 236.5: 473, long: , lat: },
 { name: 'Moda Center Portland Oregon', size: 231.40625, long: -122.6668337, lat:45.5315787 },
  { name:'Pepsi Center Denver Colorado', size: 216.60606060606054, long: -105.007544, lat: 39.7486838},
  { name:'Quicken Loans Arena Cleveland Ohio', size: 223.6111111111111, long:-81.757972 , lat: 41.412459},
@@ -51,7 +46,6 @@ var markers = [
  { name:'The Arena Bay Lake Florida', size: 224.74712643678168, long: -81.5539707, lat: 28.3387188},
  { name:'Toyota Center Houston Texas', size: 231.21875, long: -95.3622315, lat:29.7507472 },
  { name:'United Center Chicago Illinois', size: 213.73529411764707, long: -87.6741851, lat: 41.8806831},
- //{ name:'Visa Athletic Center Bay Lake Florida', size: 231.87500000000003, long:-87.314059 , lat: 30.919409},
  { name:'Vivint Smart Home Arena Salt Lake City Utah', size: 217.38709677419354, long: -111.9010551, lat: 40.7683273},
  { name:'Wells Fargo Center Philadelphia Pennsylvania', size: 215.38709677419354, long: -75.1720165, lat: 39.9011004},
 ];
