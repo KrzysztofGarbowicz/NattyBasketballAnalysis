@@ -155,7 +155,7 @@ var drawFoulGraph = function(foulFileName = selectedFoul, foulTeamName = selecte
         .style("shape-rendering", "crispEdges")
         .style("stroke", "black")
 
-      var foulInfo = d3.select("#my_foul_selection_viz2")
+      var foulInfo = d3.select("#my_foul_selection_viz")
         .append("div")
         .style("opacity", 1)
         .attr("class", "tooltip")
