@@ -8,8 +8,8 @@ data: data/intensity.csv
 
 // set the dimensions and margins of the graph
 var margin_inten = {top: 100, right: 0, bottom: 00, left: 0},
-    width_inten = 660 - margin_inten.left - margin_inten.right,
-    height_inten = 600 - margin_inten.top - margin_inten.bottom,
+    width_inten = 1000 - margin_inten.left - margin_inten.right,
+    height_inten = 500 - margin_inten.top - margin_inten.bottom,
     innerRadius_inten = 100,
     outerRadius_inten = Math.min(width_inten, height_inten)-80;   // the outerRadius goes from the middle of the SVG area to the border
 

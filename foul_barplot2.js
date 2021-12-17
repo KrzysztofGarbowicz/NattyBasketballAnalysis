@@ -1,7 +1,7 @@
 // set the dimensions and margins of the graph
 var foul_margin2 = {top: 10, right: 30, bottom: 140, left: 80},
-foul_width2 = 1200 - foul_margin2.left - foul_margin2.right,
-foul_height2 = 600 - foul_margin2.top - foul_margin2.bottom;
+foul_width2 = 1000 - foul_margin2.left - foul_margin2.right,
+foul_height2 = 500 - foul_margin2.top - foul_margin2.bottom;
 
 // append the svg object to the body of the page
 var foulSvg2 = d3.select("#my_foul_selection_viz2")

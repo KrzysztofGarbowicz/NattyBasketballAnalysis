@@ -64,7 +64,7 @@ html {
     <div class="w3-twothird">
       <h1 id="start">Substitutions</h1>
       <form>
-			<label for="team">Select team:</label>
+			<label for="team">Select a team to analyse: &emsp;</label>
 			<select id="selectTeam" name="team" onchange="switchTeam()">
 				<option value="ATL">Atlanta Hawks</option>
 				<option value="BOS">Boston Celtics</option>
@@ -114,32 +114,25 @@ html {
 <!-- Second Grid -->
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
   <div class="w3-content">
-      <h1>Point distribution</h1>
-	<p>
-		<label>Select Quarter</label>
-		<select id="selectquarter"></select>
-	</p>
-	<p>
-		<label>bin size</label>
-		<input type="range" min="10" max="70" step="10" value="20" id="nBin">
-	</p>
-	<div id="distribution"></div>
-
-<script src="pointdistribution.js"></script>
-
-  </div>
-</div>
-
-<!-- 6th Grid -->
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
-        <h1>Intensity analysis*</h1>
-    <button onclick="intenUpdate('move');histo_button_click('overall')">Overall</button>
+	<label>Select a quarter to analyse: &emsp; </label>
+	<button onclick="intenUpdate('move');histo_button_click('overall')">Overall</button>
         <button onclick="intenUpdate('move_q1');histo_button_click(1)">Q1</button>
         <button onclick="intenUpdate('move_q2');histo_button_click(2)">Q2</button>
         <button onclick="intenUpdate('move_q3');histo_button_click(3)">Q3</button>
         <button onclick="intenUpdate('move_q4');histo_button_click(4)">Q4</button>
+      <h1>Point distribution</h1>
+	<div id="distribution"></div>
+	<p>
+		<label>Change the bin size: &emsp;</label>
+		<input type="range" min="10" max="70" step="10" value="20" id="nBin">
+	</p>
+	<script src="pointdistribution.js"></script>
+
+  </div>
+  <div class="w3-content">
+    <div class="w3-twothird">
+        <h1>Intensity analysis*</h1>
+	
         <div id="intensity_dataviz"></div>
 <script src="circular_intensity.js"></script>
         <p>* The intensity is calculated by the average moves per match, which includes shots, rebounds, turnovers, ball fouls, etc.</p>
@@ -152,9 +145,9 @@ html {
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-twothird">
-      <h1>Bubblemap</h1>
+      <h1>Statistics per Location</h1>
       <div class="tooltip" id="maptooltip"><br><br></div>
-<svg style="border:solid" id="bubblemap" width="800" height="400"></svg>
+<svg style="border:solid" id="bubblemap" width="1000" height="500"></svg>
 <script src="./bubblemap.js"></script>
 
 	</div>

@@ -7,7 +7,7 @@ data: data/shot.csv
 
 // set the dimensions and margins of the graph
 var margin_shot = {top: 10, right: 30, bottom: 20, left: 50},
-    width_shot = 660 - margin_shot.left - margin_shot.right,
+    width_shot = 1000 - margin_shot.left - margin_shot.right,
     height_shot = 500 - margin_shot.top - margin_shot.bottom;
 
 // append the svg object to the body of the page
