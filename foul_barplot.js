@@ -163,6 +163,7 @@ var drawFoulGraph = function(foulFileName = selectedFoul, foulTeamName = selecte
     foulSvg.selectAll("rect")
         .on("mouseover", function (d) {
           d3.select(this).attr('opacity', 0.5);
+          foulInfo.style("opacity", 1);
         })
         .on("mousemove", function (d) {
           foulInfo
@@ -170,6 +171,10 @@ var drawFoulGraph = function(foulFileName = selectedFoul, foulTeamName = selecte
         })
         .on("mouseout", function (d) {
           d3.select(this).attr('opacity', 1);
+          foulInfo
+          .transition()
+          .duration(200)
+          .style("opacity", 0);
         })
    
         // Animation
