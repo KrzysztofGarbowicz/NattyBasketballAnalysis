@@ -160,7 +160,12 @@ var drawFoulGraph = function(foulFileName = selectedFoul, foulTeamName = selecte
     foulSvg.selectAll("rect")
         .on("mouseover", function (d) {
           d3.select(this).attr('opacity', 0.5);
-        }).on("mouseout", function (d) {
+        })
+        .on("mousemove", function (d) {
+          tooltip
+            .html(d.Name + "<br>" + `Number of ${foulFileName2} fouls commited: ${parseInt(d.NumberOfShots)}`)
+        })
+        .on("mouseout", function (d) {
           d3.select(this).attr('opacity', 1);
         })
    
