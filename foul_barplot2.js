@@ -160,31 +160,30 @@ var drawFoulGraph2 = function(foulFileName2 = selectedFoul2, foulTeamName2 = sel
         .attr("y", function(d) { return foulY2(parseInt(d.NumberOfShots)); })
         .attr("width", foulX2.bandwidth())
         .attr("fill", "#eb3477")
-        .style("shape-rendering", "crispEdges")
         .style("stroke", "black")
 
-      // var foulInfo2 = d3.select("#my_foul_selection_viz2")
-      //   .append("div")
-      //   .style("opacity", 1)
-      //   .attr("class", "tooltip")
+      var foulInfo2 = d3.select("#my_foul_selection_viz2")
+        .append("div")
+        .style("opacity", 1)
+        .attr("class", "tooltip")
 
       
 
     foulSvg2.selectAll("rect")
         .on("mouseover", function (d) {
           d3.select(this).attr('opacity', 0.5);
-          // foulInfo2.style("opacity", 1);
+          foulInfo2.style("opacity", 1);
         })
         .on("mousemove", function (d) {
-          // foulInfo2
-          //   .html(d.Name + "<br>" + `Number of ${foulFileName2} fouls experienced: ${parseInt(d.NumberOfShots)}`)
+          foulInfo2
+            .html(d.Name + "<br>" + `Number of ${foulFileName2} fouls experienced: ${parseInt(d.NumberOfShots)}`)
         })
         .on("mouseout", function (d) {
           d3.select(this).attr('opacity', 1);
-          // foulInfo2
-          // .transition()
-          // .duration(200)
-          // .style("opacity", 0);
+          foulInfo2
+          .transition()
+          .duration(200)
+          .style("opacity", 0);
         })
    
         // Animation
@@ -192,7 +191,7 @@ var drawFoulGraph2 = function(foulFileName2 = selectedFoul2, foulTeamName2 = sel
         .transition()
         .duration(800)
         .attr("y", function(d) { return foulY2(d.NumberOfShots); })
-        .attr("height", function(d) { return foul_height2 - foulY2(parseInt(d.NumberOfShots)); })
+        .attr("height", function(d) { return foul_height2 - foulY2(d.NumberOfShots); })
 
     })  
     
