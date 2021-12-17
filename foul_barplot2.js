@@ -153,6 +153,8 @@ var drawFoulGraph2 = function(foulFileName2 = selectedFoul2, foulTeamName2 = sel
         .attr("width", foulX2.bandwidth())
         .attr("fill", "#eb3477")
         .style("shape-rendering", "crispEdges")
+        .style("stroke", "black")
+
 
 
     foulSvg2.selectAll("rect")

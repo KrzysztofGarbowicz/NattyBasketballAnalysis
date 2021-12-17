@@ -154,6 +154,8 @@ var drawGraph = function(fileName = selectedFolder, teamName = selectedTeam) {
         .attr("width", x.bandwidth())
         .attr("fill", "#69b3a2")
         .style("shape-rendering", "crispEdges")
+        .style("stroke", "black")
+
         // .attr("height", function(d) { return height - y(d.NumberOfShots); })
         // .attr("fill", "#69b3a2")
     

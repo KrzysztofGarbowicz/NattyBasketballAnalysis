@@ -154,6 +154,8 @@ var drawGraph2 = function(fileName2 = selectedFolder2, teamName2 = selectedTeam2
         .attr("width", x2.bandwidth())
         .attr("fill", "#69b3a2")
         .style("shape-rendering", "crispEdges")
+        .style("stroke", "black")
+
 
 
     svg2.selectAll("rect")
