@@ -166,7 +166,7 @@ var drawFoulGraph = function(foulFileName = selectedFoul, foulTeamName = selecte
         })
         .on("mousemove", function (d) {
           foulInfo
-            .html(d.Name + "<br>" + `Number of ${foulFileName2} fouls commited: ${parseInt(d.NumberOfShots)}`)
+            .html(d.Name + "<br>" + `Number of ${foulFileName} fouls commited: ${parseInt(d.NumberOfShots)}`)
         })
         .on("mouseout", function (d) {
           d3.select(this).attr('opacity', 1);
