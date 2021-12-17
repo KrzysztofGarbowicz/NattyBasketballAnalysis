@@ -37,7 +37,7 @@ teamMenu2.data(selectTeam2)
 
 
 // List of groups (here I have one group per column)
-var selectFolder2 = ["3_Pt_Shots", "2_Pt_Jump_Shots", "2_Pt_Hook_Shots", "2_Pt_Layups", "Dunks"]
+var selectFolder2 = ["3_Pt_Shots", "2_Pt_Jump_Shots", "2_Pt_Hook_Shots", "2_Pt_Layups", "Dunks", "Free_Throws", "Assists", "Blocks"]
 var folderMenu2 = d3.select("#MyselectFolder2")
 
 var selectedFolder2 = "3_Pt_Shots"
